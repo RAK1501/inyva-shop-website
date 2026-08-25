@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@theme {
+  /* Ground: warm cream, with charcoal reserved for editorial contrast. */
+  --color-cream: #faf7f2;
+  --color-shell: #f2ece3;
+  --color-ink: #241f1d;
+  --color-ink-soft: #4a4340;
+  --color-muted: #736a64;
+  --color-line: #e4dcd1;
+  --color-line-strong: #d3c7b8;
+  /* Copper, darkened from the brand tone so it holds contrast as text. */
+  --color-copper: #9c5c33;
+  /* The brand tone itself, for rules and for use on charcoal. */
+  --color-copper-warm: #c08457;
+
+  --font-display: var(--font-playfair), "Iowan Old Style", Georgia, serif;
+  --font-sans: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
+
+  --text-eyebrow: 0.6875rem;
+  --text-eyebrow--line-height: 1;
+  --text-eyebrow--letter-spacing: 0.2em;
+
+  --spacing-gutter: 1.25rem;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink-soft);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.012em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-copper-warm);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-copper);
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@utility container-x {
+  width: 100%;
+  max-width: 78.5rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @media (width >= 48rem) {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* An uppercase micro-label. Used sparingly, as the only decorative type. */
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Fluid display sizes. */
+@utility display-hero {
+  font-size: clamp(2.6rem, 1.4rem + 4.6vw, 5rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+
+@utility display-lg {
+  font-size: clamp(1.95rem, 1.3rem + 2.2vw, 3rem);
+  line-height: 1.08;
+}
+
+@utility display-md {
+  font-size: clamp(1.4rem, 1.1rem + 1.1vw, 1.9rem);
+  line-height: 1.15;
+}
+
+/* A hairline that reads as a rule, not a border. */
+@utility rule-copper {
+  display: block;
+  width: 2.25rem;
+  height: 1px;
+  background: var(--color-copper-warm);
+}
+
+/*
+ * Motion: one scroll-driven fade-and-rise, applied to section blocks.
+ * Uses view() so there is no JavaScript and no risk of content staying
+ * hidden in browsers that do not support it. The range is tied to the
+ * entry phase alone, so a block is always fully resolved by the time it
+ * is fully on screen — however tall it is.
+ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal-in linear both;
+      animation-timeline: view();
+      animation-range: entry 10% entry 75%;
+    }
+  }
+}
+
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Underline that draws in on hover, for inline text links. */
+@utility link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 1px;
+  padding-bottom: 2px;
+  transition: background-size 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-size: 0% 1px;
+    background-position: 100% 100%;
+  }
+}
