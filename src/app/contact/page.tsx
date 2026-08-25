@@ -91,7 +91,8 @@ export default function ContactPage() {
                 declaration — so a formula can be checked against a known sensitivity
                 before getting in touch.
               </p>
-              <div className="mt-9">
+              <div className="mt-9 flex flex-wrap gap-4">
+                <Button href="/trade">Trade enquiries</Button>
                 <Button href="/products" variant="outline">
                   Browse the collection
                 </Button>

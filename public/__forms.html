@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Form definitions</title>
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <!--
+      Netlify detects forms by scanning deployed HTML at build time. The trade
+      form itself is rendered by React, which that scan never sees, so the
+      shape of it is declared here and the page posts to this file. Field
+      names must stay in step with src/app/trade/trade-form.tsx.
+    -->
+    <form name="trade-enquiry" data-netlify="true" netlify-honeypot="company-website" hidden>
+      <input type="hidden" name="form-name" value="trade-enquiry" />
+      <input type="text" name="name" />
+      <input type="text" name="company" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="country" />
+      <input type="text" name="business-type" />
+      <input type="text" name="interest" />
+      <input type="text" name="volumes" />
+      <textarea name="message"></textarea>
+      <input type="text" name="company-website" />
+    </form>
+  </body>
+</html>

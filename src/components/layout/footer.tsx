@@ -50,6 +50,11 @@ export function Footer() {
                       Questions
                     </Link>
                   </li>
+                  <li>
+                    <Link href="/trade" className="transition-colors hover:text-cream">
+                      Trade enquiries
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div>
