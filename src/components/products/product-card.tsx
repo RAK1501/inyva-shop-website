@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/data/products";
+import { formatPrice } from "@/lib/price";
 
 export function ProductCard({
   product,
@@ -30,6 +31,11 @@ export function ProductCard({
           {product.name}
         </h3>
         <p className="mt-1 text-sm leading-snug text-muted">{product.subtitle}</p>
+        {typeof product.priceUsd === "number" ? (
+          <p className="mt-2 font-display text-base text-ink">
+            {formatPrice(product.priceUsd)}
+          </p>
+        ) : null}
       </div>
     </Link>
   );

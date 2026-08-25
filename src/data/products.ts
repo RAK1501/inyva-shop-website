@@ -16,6 +16,8 @@ export type Product = {
   category: CategorySlug;
   /** Net content, included only where legible on the packaging. */
   size?: string;
+  /** Retail price in whole US dollars. */
+  priceUsd?: number;
   /** Actives listed on the pack front. */
   keyActives: string[];
   /**
@@ -47,6 +49,8 @@ export const products: Product[] = [
     shortName: "Queen's Time Reverse Cream",
     slug: "queens-time-reverse-anti-aging-cream",
     category: "moisturise",
+    size: "50 ml / 1.69 fl.oz.",
+    priceUsd: 24,
     keyActives: ["Hydrolyzed Collagen", "Hydrolyzed Elastin", "Hyaluronic Acid"],
     marks: ["Natural actives", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
@@ -105,6 +109,8 @@ export const products: Product[] = [
     shortName: "Queen's Time Reverse Serum",
     slug: "queens-time-reverse-face-serum",
     category: "moisturise",
+    size: "30 ml / 1.01 fl.oz.",
+    priceUsd: 22,
     keyActives: ["Hydrolyzed Collagen", "Hydrolyzed Elastin", "Hyaluronic Acid"],
     marks: ["Natural actives", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
@@ -163,6 +169,7 @@ export const products: Product[] = [
     slug: "starlite-radiance-night-cream",
     category: "moisturise",
     size: "100 ml / 3.38 fl.oz.",
+    priceUsd: 18,
     keyActives: ["Vitamin E", "Hyaluronic Acid", "Algae Extract"],
     marks: ["Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
@@ -212,6 +219,7 @@ export const products: Product[] = [
     slug: "silk-dew-light-cream",
     category: "moisturise",
     size: "100 ml / 3.38 fl.oz.",
+    priceUsd: 17,
     keyActives: ["Vitamin E", "Hyaluronic Acid", "Peptides"],
     marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
@@ -252,6 +260,8 @@ export const products: Product[] = [
     subtitle: "Himalayan Make-Up Remover Oil",
     slug: "serene-cleanse-makeup-remover-oil",
     category: "cleanse",
+    size: "100 ml / 3.38 fl.oz.",
+    priceUsd: 16,
     keyActives: ["Vitamin E", "Jojoba Oil"],
     marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
@@ -301,6 +311,7 @@ export const products: Product[] = [
     slug: "deepdive-cleansing-gel",
     category: "cleanse",
     size: "100 ml / 3.38 fl.oz.",
+    priceUsd: 14,
     keyActives: ["Algae Extract", "Tea Tree Oil", "Salicylic Acid"],
     marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
@@ -341,6 +352,8 @@ export const products: Product[] = [
     subtitle: "Micellar Foaming Cleanser",
     slug: "mild-mist-micellar-foaming-cleanser",
     category: "cleanse",
+    size: "100 ml / 3.38 fl.oz.",
+    priceUsd: 15,
     keyActives: ["Peptides", "Herbal Extracts"],
     marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
@@ -389,6 +402,7 @@ export const products: Product[] = [
     slug: "cleanse-core-detox-face-mask",
     category: "mask-exfoliate",
     size: "100 ml / 3.38 fl.oz.",
+    priceUsd: 18,
     keyActives: ["Green Tea", "Neem Leaf", "Algae", "Manjistha"],
     marks: ["Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
@@ -431,6 +445,7 @@ export const products: Product[] = [
     slug: "detox-glow-charcoal-face-mask",
     category: "mask-exfoliate",
     size: "100 ml / 3.38 fl.oz.",
+    priceUsd: 18,
     keyActives: ["Mulberry Extract", "Niacinamide", "Kokum Butter", "Vitamin E"],
     marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
@@ -472,6 +487,7 @@ export const products: Product[] = [
     slug: "sheer-glow-exfoliating-scrub",
     category: "mask-exfoliate",
     size: "100 ml / 3.38 fl.oz.",
+    priceUsd: 16,
     keyActives: ["Algae", "Papaya", "Hibiscus Extract"],
     marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
@@ -513,6 +529,7 @@ export const products: Product[] = [
     slug: "elixir-radiance-dry-beauty-oil",
     category: "body",
     size: "100 ml / 3.38 fl.oz.",
+    priceUsd: 19,
     keyActives: ["Macadamia Oil", "Vitamin E", "Multi Seed Oil"],
     marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
@@ -558,6 +575,8 @@ export const products: Product[] = [
     subtitle: "Anti-Cellulite Slimming Oil",
     slug: "contour-sculpt-slimming-oil",
     category: "body",
+    size: "100 ml / 3.38 fl.oz.",
+    priceUsd: 21,
     keyActives: ["Omega 3 & 6", "Vitamin E", "Ginger"],
     marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
@@ -603,6 +622,7 @@ export const products: Product[] = [
     slug: "floral-fresh-jasmine-shower-gel",
     category: "body",
     size: "200 ml / 6.76 fl.oz.",
+    priceUsd: 14,
     keyActives: ["Jasmine Extract", "Algae", "Gotu Kola"],
     marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
@@ -643,6 +663,7 @@ export const products: Product[] = [
     slug: "himalayan-harmony-body-scrub",
     category: "body",
     size: "200 ml / 6.76 fl.oz.",
+    priceUsd: 17,
     keyActives: ["Vitamin B & E", "Multi Seed Oils"],
     marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:

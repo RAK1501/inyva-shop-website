@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { nav, site } from "@/data/site";
+import { CartLink } from "./cart-link";
 import { MobileNav } from "./mobile-nav";
 
 export function Header() {
@@ -36,10 +37,16 @@ export function Header() {
                 </Link>
               </li>
             ))}
+            <li>
+              <CartLink />
+            </li>
           </ul>
         </nav>
 
-        <MobileNav />
+        <div className="flex items-center gap-5 md:hidden">
+          <CartLink />
+          <MobileNav />
+        </div>
       </div>
     </header>
   );

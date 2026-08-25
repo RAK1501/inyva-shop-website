@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 
 /** Both lists are drawn from the products' own ingredient declarations. */
@@ -40,6 +41,16 @@ export function IngredientFocus() {
               every pack; the botanicals sit further down the declaration. Both are set
               out in full on every product page.
             </p>
+
+            <div className="relative mt-10 aspect-3/2 w-full max-w-md overflow-hidden bg-cream">
+              <Image
+                src="/editorial/texture.webp"
+                alt="Himalayan Harmony body scrub dispensed from the tube"
+                fill
+                sizes="(min-width: 1024px) 32vw, 100vw"
+                className="object-cover"
+              />
+            </div>
           </div>
 
           <div className="grid gap-12 sm:grid-cols-2 lg:col-span-7 lg:gap-16">

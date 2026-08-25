@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { DetailSection } from "@/components/products/detail-section";
 import { ProductCard } from "@/components/products/product-card";
 import { ProductGallery } from "@/components/products/product-gallery";
+import { AddToCart } from "@/components/products/add-to-cart";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import {
@@ -13,6 +14,7 @@ import {
   getProductBySlug,
   getRelatedProducts,
 } from "@/lib/products";
+import { formatPrice } from "@/lib/price";
 import { breadcrumbSchema, productSchema } from "@/lib/structured-data";
 
 export function generateStaticParams() {
@@ -92,9 +94,22 @@ export default async function ProductPage({
                 {product.subtitle}
               </p>
 
+              {typeof product.priceUsd === "number" ? (
+                <p className="mt-6 flex items-baseline gap-3">
+                  <span className="font-display text-2xl text-ink">
+                    {formatPrice(product.priceUsd)}
+                  </span>
+                  {product.size ? (
+                    <span className="text-sm text-muted">{product.size}</span>
+                  ) : null}
+                </p>
+              ) : null}
+
               <p className="mt-7 text-lg leading-relaxed text-ink-soft">
                 {product.shortDescription}
               </p>
+
+              <AddToCart slug={product.slug} />
 
               <dl className="mt-9 flex flex-wrap gap-x-10 gap-y-5 border-y border-line py-6">
                 <div>

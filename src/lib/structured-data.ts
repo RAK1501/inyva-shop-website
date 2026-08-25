@@ -36,6 +36,16 @@ export function productSchema(product: Product) {
     brand: { "@type": "Brand", name: site.name },
     countryOfOrigin: "IN",
     ...(product.size ? { size: product.size } : {}),
+    ...(typeof product.priceUsd === "number"
+      ? {
+          offers: {
+            "@type": "Offer",
+            price: product.priceUsd,
+            priceCurrency: "USD",
+            url: `${siteUrl}/products/${product.slug}`,
+          },
+        }
+      : {}),
     additionalProperty: [
       {
         "@type": "PropertyValue",
