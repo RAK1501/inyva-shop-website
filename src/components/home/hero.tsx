@@ -2,61 +2,51 @@ import Image from "next/image";
 import { Button, Container, Eyebrow } from "@/components/ui/primitives";
 import { site } from "@/data/site";
 
+/**
+ * The photograph was shot with its left third left empty, so from lg upwards
+ * the type sits inside that space rather than beside it. Its ground is within a
+ * point or two of the page cream, so the section takes the photograph's own
+ * ground and nothing frames it: the two read as a single surface. Below lg
+ * there is no room to overlay, and the type stacks above.
+ */
 export function Hero() {
   return (
-    <section className="overflow-hidden pb-20 pt-12 md:pb-28 md:pt-20">
+    <section className="overflow-hidden bg-[#fcf5ee] pb-16 pt-8 md:pb-24 md:pt-12">
       <Container>
-        <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-10">
-          <div className="lg:col-span-5">
-            <Eyebrow className="mb-7">{site.badge}</Eyebrow>
-            <h1 className="display-hero">
+        <div className="relative">
+          {/*
+            Below lg the type stacks above rather than over, so the empty third
+            the photograph reserves for it is cropped away and the frame closes
+            in on the product. From lg the full width is shown again.
+          */}
+          <div className="relative aspect-square w-full overflow-hidden lg:aspect-16/9">
+            <Image
+              src="/editorial/hero-lifestyle.webp"
+              alt="INYVA Queen's Time Reverse Age Defying Rejuvenating Cream, held up to the light"
+              fill
+              priority
+              sizes="(min-width: 1256px) 1176px, 100vw"
+              className="object-cover object-[100%_50%] lg:object-[50%_55%]"
+            />
+          </div>
+
+          <div className="mt-10 lg:absolute lg:inset-y-0 lg:left-0 lg:mt-0 lg:flex lg:w-[46%] lg:flex-col lg:justify-center">
+            <Eyebrow className="mb-6">{site.badge}</Eyebrow>
+            <h1 className="text-[clamp(2.5rem,1rem+3.4vw,3.9rem)] leading-[1.04] tracking-[-0.02em]">
               Nature&rsquo;s wisdom.
               <br />
               <span className="text-copper">Scientific innovation.</span>
             </h1>
-            <p className="mt-8 max-w-md text-lg leading-relaxed text-ink-soft">
+            <p className="mt-7 max-w-md text-lg leading-relaxed text-ink-soft lg:max-w-sm lg:text-base">
               Named actives — collagen, elastin, hyaluronic acid, niacinamide,
               peptides — formulated alongside Ayurvedic botanicals, with the full list
               printed on every pack.
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
+            <div className="mt-9 flex flex-wrap items-center gap-4">
               <Button href="/products">Explore the collection</Button>
               <Button href="/about" variant="outline">
                 Our story
               </Button>
-            </div>
-          </div>
-
-          {/* Two frames, staggered, so the eye travels rather than stopping. */}
-          <div className="lg:col-span-7">
-            <div className="relative mx-auto grid max-w-md grid-cols-5 items-end gap-4 sm:max-w-xl lg:ml-auto lg:mr-0 lg:max-w-none lg:gap-6">
-              <div className="col-span-3 lg:col-start-1">
-                <div className="relative aspect-4/5 overflow-hidden bg-shell">
-                  <Image
-                    src="/editorial/hero.webp"
-                    alt="INYVA Queen's Time Reverse Age Defying Rejuvenating Cream"
-                    fill
-                    priority
-                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 22rem, 55vw"
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-
-              <div className="col-span-2 pb-8 lg:pb-16">
-                <div className="relative aspect-4/5 overflow-hidden bg-shell">
-                  <Image
-                    src="/editorial/hero-2.webp"
-                    alt="INYVA Elixir Radiance 3-in-1 Dry Beauty Oil"
-                    fill
-                    sizes="(min-width: 1024px) 22vw, (min-width: 640px) 15rem, 37vw"
-                    className="object-cover"
-                  />
-                </div>
-                <p className="mt-4 hidden text-sm leading-snug text-muted lg:block">
-                  Fourteen formulations, each declared in full.
-                </p>
-              </div>
             </div>
           </div>
         </div>
