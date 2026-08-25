@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { DetailSection } from "@/components/products/detail-section";
 import { ProductCard } from "@/components/products/product-card";
 import { ProductGallery } from "@/components/products/product-gallery";
+import { JsonLd } from "@/components/seo/json-ld";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import {
   fullName,
@@ -12,6 +13,7 @@ import {
   getProductBySlug,
   getRelatedProducts,
 } from "@/lib/products";
+import { breadcrumbSchema, productSchema } from "@/lib/structured-data";
 
 export function generateStaticParams() {
   return getAllProducts().map((p) => ({ slug: p.slug }));
@@ -51,6 +53,8 @@ export default async function ProductPage({
 
   return (
     <>
+      <JsonLd data={productSchema(product)} />
+      <JsonLd data={breadcrumbSchema(product)} />
       <Container className="pt-8 md:pt-10">
         <nav aria-label="Breadcrumb">
           <ol className="flex flex-wrap items-center gap-2 text-xs text-muted">
