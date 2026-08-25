@@ -261,7 +261,7 @@ export const products: Product[] = [
     slug: "serene-cleanse-makeup-remover-oil",
     category: "cleanse",
     size: "200 ml / 6.76 fl.oz.",
-    priceUsd: 16,
+    priceUsd: 24,
     keyActives: ["Vitamin E", "Jojoba Oil"],
     marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
@@ -353,7 +353,7 @@ export const products: Product[] = [
     slug: "mild-mist-micellar-foaming-cleanser",
     category: "cleanse",
     size: "150 ml / 5.07 fl.oz.",
-    priceUsd: 15,
+    priceUsd: 18,
     keyActives: ["Peptides", "Herbal Extracts"],
     marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
@@ -576,7 +576,7 @@ export const products: Product[] = [
     slug: "contour-sculpt-slimming-oil",
     category: "body",
     size: "200 ml / 6.76 fl.oz.",
-    priceUsd: 21,
+    priceUsd: 30,
     keyActives: ["Omega 3 & 6", "Vitamin E", "Ginger"],
     marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
