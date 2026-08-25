@@ -25,6 +25,19 @@
 }
 
 @layer base {
+  :root {
+    /* One definition of how wide the page runs, so anything that needs to line
+       up with the container edge can derive from it rather than repeat it. */
+    --page-max: 100rem;
+    --page-gutter: 1.25rem;
+  }
+
+  @media (width >= 48rem) {
+    :root {
+      --page-gutter: 2.5rem;
+    }
+  }
+
   html {
     -webkit-text-size-adjust: 100%;
   }
@@ -76,14 +89,11 @@
 
 @utility container-x {
   width: 100%;
-  max-width: 78.5rem;
+  max-width: var(--page-max);
   margin-inline: auto;
-  padding-inline: 1.25rem;
-
-  @media (width >= 48rem) {
-    padding-inline: 2.5rem;
-  }
+  padding-inline: var(--page-gutter);
 }
+
 
 /* An uppercase micro-label. Used sparingly, as the only decorative type. */
 @utility eyebrow {
