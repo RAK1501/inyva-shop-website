@@ -1,10 +1,19 @@
+/**
+ * Where this build is actually served from, used for canonical and Open Graph
+ * URLs. Netlify sets URL to the site's primary address, so previews and the
+ * production deploy each describe themselves correctly. Set
+ * NEXT_PUBLIC_SITE_URL once the brand domain points here.
+ */
+export const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? process.env.URL ?? "http://localhost:3000";
+
 export const site = {
   name: "INYVA",
   badge: "Collagen Boost Skincare",
   title: "INYVA — Collagen Boost Skincare",
   description:
     "Ayurvedic botanicals and scientifically backed actives in the same formula. Discover the INYVA collection of cleansers, masks, serums, creams and body care.",
-  url: "https://www.inyva-skincare.com",
+  url: siteUrl,
 } as const;
 
 export const nav = [
