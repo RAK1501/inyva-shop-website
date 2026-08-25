@@ -133,6 +133,14 @@ export default async function ProductPage({
 
                 <DetailSection title="Ingredients">
                   <p className="text-sm leading-relaxed text-muted">{product.ingredients}</p>
+                  <p className="mt-4">
+                    <Link
+                      href="/ingredients"
+                      className="link-underline eyebrow inline-flex min-h-11 items-center text-copper"
+                    >
+                      What these ingredients are
+                    </Link>
+                  </p>
                 </DetailSection>
               </div>
 

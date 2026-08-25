@@ -40,6 +40,16 @@ export function Footer() {
                       </Link>
                     </li>
                   ))}
+                  <li>
+                    <Link href="/ingredients" className="transition-colors hover:text-cream">
+                      Ingredients
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/faq" className="transition-colors hover:text-cream">
+                      Questions
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div>

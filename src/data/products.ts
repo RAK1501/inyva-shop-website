@@ -7,6 +7,11 @@ export type Product = {
   name: string;
   /** Descriptor line as printed on the pack. */
   subtitle: string;
+  /**
+   * Used where a product is listed by name alone. Only needed where two
+   * products share a name, as the Queen's Time Reverse pair do.
+   */
+  shortName?: string;
   slug: string;
   category: CategorySlug;
   /** Net content, included only where legible on the packaging. */
@@ -39,6 +44,7 @@ export const products: Product[] = [
   {
     name: "Queen's Time Reverse",
     subtitle: "Age Defying Rejuvenating Cream",
+    shortName: "Queen's Time Reverse Cream",
     slug: "queens-time-reverse-anti-aging-cream",
     category: "moisturise",
     keyActives: ["Hydrolyzed Collagen", "Hydrolyzed Elastin", "Hyaluronic Acid"],
@@ -96,6 +102,7 @@ export const products: Product[] = [
   {
     name: "Queen's Time Reverse",
     subtitle: "Elixir Youth Face Serum",
+    shortName: "Queen's Time Reverse Serum",
     slug: "queens-time-reverse-face-serum",
     category: "moisturise",
     keyActives: ["Hydrolyzed Collagen", "Hydrolyzed Elastin", "Hyaluronic Acid"],
