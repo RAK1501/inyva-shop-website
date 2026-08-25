@@ -13,6 +13,12 @@ export type Product = {
   size?: string;
   /** Actives listed on the pack front. */
   keyActives: string[];
+  /**
+   * The claim icons printed on this product's own pack, read from the
+   * photography. Not a shared constant: the set genuinely varies, and a
+   * vegan mark is omitted where the ingredient list contradicts it.
+   */
+  marks: string[];
   shortDescription: string;
   description: string;
   benefits: { title: string; body: string }[];
@@ -36,10 +42,11 @@ export const products: Product[] = [
     slug: "queens-time-reverse-anti-aging-cream",
     category: "moisturise",
     keyActives: ["Hydrolyzed Collagen", "Hydrolyzed Elastin", "Hyaluronic Acid"],
+    marks: ["Natural actives", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
-      "The richest formula in the range — collagen, elastin and hyaluronic acid held in a deep bench of Ayurvedic botanicals.",
+      "A cream built on hydrolyzed collagen, elastin and hyaluronic acid, carried in a long list of Ayurvedic botanicals.",
     description:
-      "Queen's Time Reverse is the most concentrated cream INYVA makes. Hydrolyzed collagen and elastin work alongside hyaluronic acid to soften the look of fine lines and hold moisture in the skin, while a long list of Ayurvedic extracts — Ashwagandha, Shatavari, Brahmi, Amla, Ginseng, Liquorice and Kigelia among them — carries the formula. Rich in texture but quick to settle, it is made for daily use across face and neck.",
+      "Hydrolyzed collagen and elastin sit high in this formula, alongside sodium hyaluronate and glycerin. Behind them is a long bench of Ayurvedic extracts — Ashwagandha, Shatavari, Brahmi, Amla, Ginseng, Liquorice and Kigelia among them. The pack directs it onto face and neck after cleansing, and to let it absorb before anything else goes on.",
     benefits: [
       {
         title: "Advanced anti-aging formula",
@@ -92,10 +99,11 @@ export const products: Product[] = [
     slug: "queens-time-reverse-face-serum",
     category: "moisturise",
     keyActives: ["Hydrolyzed Collagen", "Hydrolyzed Elastin", "Hyaluronic Acid"],
+    marks: ["Natural actives", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
-      "The lighter half of the Queen's Time Reverse pair — the same actives, in a serum that layers under cream.",
+      "The serum in the Queen's Time Reverse pair — the same actives in a lighter base.",
     description:
-      "Where the cream seals, the serum delivers. Hydrolyzed collagen and elastin sit high in the formula alongside sodium hyaluronate, arginine and camellia seed oil, carried by the same Ayurvedic bench as the cream. It absorbs quickly and leaves no film, so it can be worn alone in the morning or under a moisturiser at night.",
+      "Hydrolyzed collagen and elastin again sit near the top of the list, here with sodium hyaluronate, arginine, camellia seed oil and moringa seed oil, and the same Ayurvedic bench behind them. The pack directs it onto face and neck after cleansing, before other products.",
     benefits: [
       {
         title: "Revolutionary anti-aging formula",
@@ -149,10 +157,11 @@ export const products: Product[] = [
     category: "moisturise",
     size: "100 ml / 3.38 fl.oz.",
     keyActives: ["Vitamin E", "Hyaluronic Acid", "Algae Extract"],
+    marks: ["Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
-      "A night cream built on hyaluronic acid, vitamin E and algae — nourishing without the weight.",
+      "A night cream with hyaluronic acid, vitamin E and algae extract.",
     description:
-      "Starlite Radiance is the last step of the evening. Hyaluronic acid holds water in the skin overnight while cocoa and shea butters, rice bran and sweet almond oils rebuild comfort, and Manjishta, lotus, orange flower and papaya extracts work on tone. A genuinely rich cream that still absorbs quickly enough not to transfer.",
+      "Formulated for the end of the evening. Sodium hyaluronate and tocopheryl acetate sit alongside cocoa and shea butters, rice bran and sweet almond oils, with Manjistha, lotus, orange flower and papaya extracts further down the list. The pack directs it onto the face before bed, and to let it absorb before sleeping.",
     benefits: [
       {
         title: "Intensive hydration",
@@ -197,10 +206,11 @@ export const products: Product[] = [
     category: "moisturise",
     size: "100 ml / 3.38 fl.oz.",
     keyActives: ["Vitamin E", "Hyaluronic Acid", "Peptides"],
+    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
-      "A light daytime cream with peptides and hyaluronic acid, made to sit under makeup.",
+      "A light cream with peptides, hyaluronic acid and vitamin E, directed for use before makeup.",
     description:
-      "Silk Dew is the everyday moisturiser of the range. Peptides and sodium hyaluronate handle hydration and firmness, while sweet almond, apricot kernel, wheat germ and rice bran oils keep the finish soft rather than slick. Light enough for morning, and formulated to let makeup sit on top of it.",
+      "A lighter texture built on glyceryl stearate and plant oils — sweet almond, apricot kernel, wheat germ and rice bran — with a peptide, sodium hyaluronate and tocopheryl acetate. The pack directs it onto clean, dry skin in upward motions, and to let it absorb before makeup.",
     benefits: [
       {
         title: "Peptide-infused revitalization",
@@ -236,10 +246,11 @@ export const products: Product[] = [
     slug: "serene-cleanse-makeup-remover-oil",
     category: "cleanse",
     keyActives: ["Vitamin E", "Jojoba Oil"],
+    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
-      "An eleven-oil cleansing oil that dissolves long-wear makeup and rinses clean.",
+      "A cleansing oil of olive, sesame, grapeseed, jojoba, castor and rosehip, with vitamin E.",
     description:
-      "Serene Cleanse is a first cleanse. Olive, sesame, grapeseed, jojoba, castor and rosehip oils dissolve sunscreen, waterproof mascara and long-wear foundation without scrubbing, then emulsify with water and rinse away. Vitamin E sits throughout. No surfactant foam, and no tight feeling afterwards.",
+      "Twelve ingredients, and most of them are plant oils: olive, sesame, grapeseed, jojoba, hazelnut, castor, rosehip and sunflower, with caprylic/capric triglyceride, an emulsifier and tocopheryl acetate. The pack directs it onto dry skin, then to wet the hands or pad to emulsify and rinse.",
     benefits: [
       {
         title: "Effortless make-up removal",
@@ -284,10 +295,11 @@ export const products: Product[] = [
     category: "cleanse",
     size: "100 ml / 3.38 fl.oz.",
     keyActives: ["Algae Extract", "Tea Tree Oil", "Salicylic Acid"],
+    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
-      "A gel cleanser with salicylic acid and tea tree, for skin that gets oily or congested.",
+      "A gel cleanser with algae extracts, tea tree oil and salicylic acid.",
     description:
-      "Deepdive is the working cleanser of the range. Salicylic acid — under 2% — clears the pore lining while tea tree and neem address blemishes, and gentle glucoside surfactants do the lifting instead of sulfates. Algae, aloe, Manjishta and Brahmi keep it from stripping. Peppermint and menthol leave it cool on the skin.",
+      "Built on glucoside surfactants rather than sulfates, with salicylic acid — under 2%, per the brochure — tea tree and neem, and algae, aloe, Manjistha and Brahmi extracts further down the list. Menthol and peppermint oil are in the formula. The pack directs it onto damp skin, focusing on oily areas, then a thorough rinse.",
     benefits: [
       {
         title: "Deep cleansing action",
@@ -323,10 +335,11 @@ export const products: Product[] = [
     slug: "mild-mist-micellar-foaming-cleanser",
     category: "cleanse",
     keyActives: ["Peptides", "Herbal Extracts"],
+    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
-      "A soft micellar foam, gentle enough for the eye area and short enough on ingredients to stay that way.",
+      "A micellar foam, formulated with soothing properties for the delicate eye area.",
     description:
-      "The shortest formula in the range, and deliberately so. Mild Mist dispenses as an airy foam that lifts makeup and impurities without rubbing, with chamomile, rosemary and green tea for calm and a peptide for the skin barrier. The cleanser to reach for when skin is reactive, or when the day did not warrant a gel.",
+      "The pack describes a micellar foam that purifies, sweeps away makeup and lifts impurities, with soothing properties suited to the delicate eye area. The formula runs to twenty-six ingredients: glucoside and isethionate surfactants, glycerin and sorbitol, and chamomile, rosemary and green tea extracts with a peptide.",
     benefits: [
       {
         title: "Gentle yet effective cleansing",
@@ -370,10 +383,11 @@ export const products: Product[] = [
     category: "mask-exfoliate",
     size: "100 ml / 3.38 fl.oz.",
     keyActives: ["Green Tea", "Neem Leaf", "Algae", "Manjistha"],
+    marks: ["Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
-      "A cream-textured detox mask built on the four herbs Ayurveda reaches for when skin is congested.",
+      "A cream-textured detox mask with algae, green tea, Manjistha and neem leaf.",
     description:
-      "Cleanse Core is the gentler of the two INYVA masks. Rather than a drying clay, it is a rich cream carried on jojoba, beeswax and olive esters, with Fuller's earth for draw and neem, Manjistha, tulsi, green tea and Amla doing the work on blemishes and tone. Fifteen minutes, then rinse — skin comes out clear rather than tight.",
+      "A cream rather than a clay: jojoba oil, beeswax and olive esters carry the formula, with Fuller's earth, and neem, Manjistha, tulsi, green tea and Amla extracts. The pack directs a generous layer over face and neck, left for ten to fifteen minutes, then rinsed and followed with a moisturiser.",
     benefits: [
       {
         title: "Deep detoxification",
@@ -411,10 +425,11 @@ export const products: Product[] = [
     category: "mask-exfoliate",
     size: "100 ml / 3.38 fl.oz.",
     keyActives: ["Mulberry Extract", "Niacinamide", "Kokum Butter", "Vitamin E"],
+    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
-      "Activated charcoal and kaolin for draw, mulberry and niacinamide for tone — a mask that clears without stripping.",
+      "An activated charcoal mask with mulberry extract, niacinamide, kokum butter and vitamin E.",
     description:
-      "Detox Glow is the stronger mask. Activated charcoal, kaolin and bentonite pull oil and impurities out of the pore, glycolic acid loosens what sits on the surface, and niacinamide with mulberry works on the marks left behind. Kokum butter and apricot kernel oil stop it drying the skin out. Ten to fifteen minutes, two or three times a week.",
+      "Activated charcoal with kaolin and bentonite, glycolic acid, and niacinamide alongside mulberry root and liquorice extracts. Kokum butter and apricot kernel oil are in the formula. The pack directs a thin layer over clean, dry skin, avoiding eyes and lips, left for ten to fifteen minutes and used two to three times a week.",
     benefits: [
       {
         title: "Powerful detoxification",
@@ -451,10 +466,11 @@ export const products: Product[] = [
     category: "mask-exfoliate",
     size: "100 ml / 3.38 fl.oz.",
     keyActives: ["Algae", "Papaya", "Hibiscus Extract"],
+    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
-      "Walnut shell for the physical polish, papaya enzymes and hibiscus AHAs for the chemistry.",
+      "A scrub with walnut shell powder, papaya and hibiscus extracts, and algae.",
     description:
-      "Sheer Glow works two ways at once. Finely milled walnut shell powder lifts dead cells from the surface while papaya's enzymes and the AHAs in hibiscus loosen what the grains cannot reach. Sweet almond, apricot kernel and wheat germ oils are folded through, so skin is left smooth rather than raw. Two or three times a week is plenty.",
+      "Finely milled walnut shell powder does the physical exfoliation, with papaya fruit and hibiscus flower extracts, malic acid, and sweet almond, apricot kernel and wheat germ oils folded through. The pack directs it onto clean, damp skin in circular motions, two to three times a week.",
     benefits: [
       {
         title: "Natural exfoliation",
@@ -491,10 +507,11 @@ export const products: Product[] = [
     category: "body",
     size: "100 ml / 3.38 fl.oz.",
     keyActives: ["Macadamia Oil", "Vitamin E", "Multi Seed Oil"],
+    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
-      "A dry oil for body, face and hair — macadamia, evening primrose, borage and blackcurrant, and no residue.",
+      "A dry oil for body, face and hair — a blend of evening primrose, macadamia, Amla and Bhringraj.",
     description:
-      "Elixir Radiance is the most versatile thing INYVA makes, and the reason is the base: coco-caprylate and dicaprylyl carbonate carry the seed oils so the whole formula sinks in and leaves nothing behind. Macadamia and sweet almond soften; evening primrose, borage and blackcurrant bring the essential fatty acids; Bhringraj and Amla are there for hair. One bottle, three uses.",
+      "The pack describes a blend of evening primrose, macadamia, Amla and Bhringraj oils, for body, face and hair, suitable for all skin types. The base is coco-caprylate and dicaprylyl carbonate, with sesame, sweet almond, olive, sunflower, grapeseed, hazelnut, borage, blackcurrant and tomato seed oils behind them, and tocopheryl acetate throughout.",
     benefits: [
       {
         title: "Luxurious multi-purpose oil",
@@ -535,10 +552,11 @@ export const products: Product[] = [
     slug: "contour-sculpt-slimming-oil",
     category: "body",
     keyActives: ["Omega 3 & 6", "Vitamin E", "Ginger"],
+    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
-      "A warming massage oil — ginger, clove, black pepper and caffeine in a base of sesame and macadamia.",
+      "A massage oil with ginger, clove, black pepper and caffeine, in a base of sesame and macadamia.",
     description:
-      "Contour Sculpt is a body oil designed to be worked into the skin rather than smoothed over it. Sesame, macadamia and sweet almond form the base; ginger, clove, black pepper, rosemary, eucalyptus and camphor give it the warmth; caffeine, ivy, horsetail, guarana and butcher's broom are the classical botanicals for firmness. Menthol keeps the finish fresh.",
+      "Sesame, macadamia and sweet almond form the base. Ginger, clove, black pepper, rosemary, eucalyptus, camphor and menthol sit in the middle of the list, with caffeine, ivy, horsetail, guarana and butcher's broom further down. The pack directs it into cellulite-prone areas in circular motions after bathing, daily.",
     benefits: [
       {
         title: "Combat cellulite naturally",
@@ -579,10 +597,11 @@ export const products: Product[] = [
     category: "body",
     size: "200 ml / 6.76 fl.oz.",
     keyActives: ["Jasmine Extract", "Algae", "Gotu Kola"],
+    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
-      "A jasmine shower gel that turns to creamy foam, built on glucosides rather than sulfates.",
+      "A jasmine shower gel that turns to a creamy foam, with jasmine and Gotu Kola.",
     description:
-      "Floral Fresh is a gel that transforms into a creamy foam. Jasmine flower extract carries the scent, while Gotu Kola, neem, sesame and algae keep the formula from stripping skin the way a harsher body wash would. Gentle enough for daily use, and the fragrance stays on the skin afterwards.",
+      "The pack describes a gel that transforms into a creamy foam, infused with jasmine and Gotu Kola, leaving skin soft, hydrated and delicately scented, and suitable for all skin types. It is built on decyl glucoside and cocamidopropyl betaine rather than sulfates, with neem, sesame and algae extracts.",
     benefits: [
       {
         title: "Indulgent jasmine fragrance",
@@ -618,10 +637,11 @@ export const products: Product[] = [
     category: "body",
     size: "200 ml / 6.76 fl.oz.",
     keyActives: ["Vitamin B & E", "Multi Seed Oils"],
+    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
     shortDescription:
-      "A salt-and-walnut body scrub carried in oils, so it buffs without leaving skin dry.",
+      "A salt-and-walnut body scrub carried in plant oils.",
     description:
-      "Himalayan Harmony is a salt scrub first and foremost — sodium chloride leads the formula, with walnut shell powder and silica adding grip. What makes it comfortable is everything around them: grapeseed, sunflower, olive, sweet almond, castor and hazelnut oils, plus panthenol and calendula. Skin comes out of the shower smooth and already conditioned.",
+      "A salt scrub: sodium chloride leads the formula, with walnut shell powder and silica for grip. Around them sit grapeseed, sunflower, olive, sweet almond, castor, sesame and hazelnut oils, plus panthenol and calendula. The pack directs it onto a wet body in circular motions, focusing on dry spots, then a warm rinse.",
     benefits: [
       {
         title: "Gentle exfoliation",

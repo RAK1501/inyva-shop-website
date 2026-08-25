@@ -31,9 +31,8 @@ export function CollagenBand() {
             </h2>
             <span className="rule-copper mt-8" />
             <p className="mt-8 max-w-xl text-lg leading-relaxed">
-              Bioactive collagen, meeting trendsetting ingredients. A commitment to science
-              and nature that is meant to show as natural radiance, enhanced vitality and
-              results that hold.
+              “Embrace the future of skincare with INYVA, where bioactive collagen meets
+              trendsetting ingredients.” That paragraph is printed on all fourteen packs.
             </p>
             <p className="mt-6 max-w-xl leading-relaxed text-cream/60">
               In practice that means hydrolyzed collagen and elastin alongside hyaluronic

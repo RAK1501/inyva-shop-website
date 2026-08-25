@@ -8,7 +8,7 @@ import { getAllProducts } from "@/lib/products";
 export const metadata: Metadata = {
   title: "The Collection",
   description:
-    "Fourteen INYVA formulations across cleansers, masks and scrubs, serums and creams, and body care — each with its full ingredient list.",
+    "Fourteen INYVA formulations across cleansers, masks and scrubs, serums and creams, and body care, each with its full ingredient list and directions.",
 };
 
 const isCategory = (value: unknown): value is CategorySlug =>
@@ -38,7 +38,7 @@ export default async function ProductsPage({
             <p className="max-w-md text-muted md:col-span-5">
               {activeCategory
                 ? activeCategory.description
-                : "Every product carries its complete ingredient list, its benefits and its directions, exactly as they appear on the pack."}
+                : "Every product carries its complete ingredient list and the directions printed on its pack."}
             </p>
           </div>
         </Container>

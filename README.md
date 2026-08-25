@@ -62,8 +62,13 @@ Every word and image comes from the supplied source material:
 - **Directions** — verbatim from the "How to use" panel on each carton or tube.
 - **Ingredients** — verbatim from the updated ingredients document, which takes
   precedence over anything else.
-- **Contact details and registered office** — the brochure's back page and the
-  regulatory panel printed on the packs.
+- **Contact details and the marketed-by address** — the brochure's back page and
+  the regulatory panel printed on the packs.
+- **Claim marks** — read icon by icon off each product's own pack. The set is not
+  uniform: Queen's Time Reverse carries "Natural actives" where the rest carry
+  "Vegan". A vegan mark is also withheld from Starlite Radiance and Cleanse Core,
+  whose packs show it but whose ingredient lists contain beeswax — the ingredients
+  document is the source of truth, so the claim is not repeated here.
 
 Nothing is invented. Where information does not exist — prices, reviews, ratings,
 stock, social accounts, a net content for five of the products — it is simply absent

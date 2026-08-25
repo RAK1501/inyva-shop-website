@@ -5,7 +5,6 @@ import { DetailSection } from "@/components/products/detail-section";
 import { ProductCard } from "@/components/products/product-card";
 import { ProductGallery } from "@/components/products/product-gallery";
 import { Container, Eyebrow } from "@/components/ui/primitives";
-import { packMarks } from "@/data/site";
 import {
   fullName,
   getAllProducts,
@@ -133,13 +132,16 @@ export default async function ProductPage({
                 </DetailSection>
               </div>
 
-              <ul className="mt-9 flex flex-wrap gap-x-6 gap-y-2">
-                {packMarks.map((mark) => (
-                  <li key={mark} className="eyebrow text-muted">
-                    {mark}
-                  </li>
-                ))}
-              </ul>
+              <div className="mt-10 border-t border-line pt-6">
+                <p className="eyebrow text-muted">Printed on the pack</p>
+                <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+                  {product.marks.map((mark) => (
+                    <li key={mark} className="eyebrow text-ink-soft">
+                      {mark}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </Container>

@@ -3,7 +3,7 @@ export const site = {
   badge: "Collagen Boost Skincare",
   title: "INYVA — Collagen Boost Skincare",
   description:
-    "Ayurvedic botanicals and proven actives, formulated together. Discover the INYVA collection of cleansers, masks, serums, creams and body care.",
+    "Ayurvedic botanicals and scientifically backed actives in the same formula. Discover the INYVA collection of cleansers, masks, serums, creams and body care.",
   url: "https://www.inyva-skincare.com",
 } as const;
 
@@ -13,7 +13,7 @@ export const nav = [
   { href: "/contact", label: "Contact" },
 ] as const;
 
-/** Every value below appears in the brochure or is printed on the packaging. */
+/** Every value below is printed on the packaging or in the brochure. */
 export const contact = {
   email: "info@inyva.com",
   phones: [
@@ -30,5 +30,9 @@ export const contact = {
   ],
 } as const;
 
-/** Printed on every INYVA carton and tube. */
-export const packMarks = ["Vegan", "Cruelty free", "Paraben free", "Made in India"] as const;
+/**
+ * Marks carried by all fourteen packs, verified frame by frame in the product
+ * photography. "Vegan" is deliberately not here: it appears on most packs but
+ * not on Queen's Time Reverse, so it belongs to the individual product.
+ */
+export const brandMarks = ["Cruelty free", "Paraben free", "Made in India"] as const;

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Button, Container, Eyebrow, SectionHeading } from "@/components/ui/primitives";
-import { packMarks } from "@/data/site";
+import { brandMarks } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "About INYVA",
+  title: "About",
   description:
     "INYVA was built on a single idea: that nature's wisdom and scientific innovation belong in the same formula. Our story, our philosophy and what goes on every pack.",
 };
@@ -74,15 +74,14 @@ export default function AboutPage() {
             <div className="space-y-6 text-lg leading-relaxed text-ink-soft lg:col-span-7">
               <p>
                 INYVA was founded by a team carrying more than thirty years of combined
-                experience across beauty and personal care — long enough to know what the
-                category does well, and where it repeats itself.
+                experience across beauty and personal care.
               </p>
               <p>
                 The line began with a commitment to lead rather than follow, harnessing the
                 potential of ingredients like peptides, collagen, hyaluronic acid,
                 niacinamide, natural omega and salicylic acid. Integrating those
                 scientifically backed actives with the healing properties of botanicals is
-                the whole proposition.
+                the proposition.
               </p>
               <p>
                 Every product is made in India, in the Himalayas, and carries its full
@@ -117,7 +116,9 @@ export default function AboutPage() {
                 sourced to be both effective and ethically obtained.
               </p>
               <p className="text-cream/60">
-                INYVA products are PETA certified vegan and are not tested on animals.
+                INYVA products are not tested on animals. Every pack carries a
+                cruelty-free mark, and most also carry a vegan mark — though not all of
+                them, so it is set out product by product.
               </p>
             </div>
           </div>
@@ -152,16 +153,17 @@ export default function AboutPage() {
           <h2 id="pack-heading" className="display-md">
             On every pack
           </h2>
-          <ul className="mt-10 grid grid-cols-2 gap-x-8 gap-y-8 border-t border-line-strong pt-10 md:grid-cols-4">
-            {packMarks.map((mark) => (
+          <ul className="mt-10 grid grid-cols-2 gap-x-8 gap-y-8 border-t border-line-strong pt-10 md:grid-cols-3">
+            {brandMarks.map((mark) => (
               <li key={mark}>
                 <p className="font-display text-xl text-ink">{mark}</p>
               </li>
             ))}
           </ul>
           <p className="mt-10 max-w-xl text-muted">
-            Alongside the full INCI list, a 12-month period-after-opening mark, and the
-            directions printed for each individual formula.
+            Alongside the full ingredient list, a 12-month period-after-opening mark, and
+            the directions printed for each individual formula. A vegan mark appears on
+            most of the range, and is listed on each product’s own page.
           </p>
         </Container>
       </section>

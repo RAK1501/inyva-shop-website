@@ -36,9 +36,9 @@ export function IngredientFocus() {
               Two lists, one formula
             </h2>
             <p className="mt-7 max-w-md leading-relaxed text-ink-soft">
-              INYVA formulas are long because they are doing two jobs at once. The actives
-              are named on the front of every pack. The botanicals sit behind them, and
-              every one of them is declared in full on the product page.
+              INYVA ingredient lists run long. The actives are named on the front of
+              every pack; the botanicals sit further down the declaration. Both are set
+              out in full on every product page.
             </p>
           </div>
 

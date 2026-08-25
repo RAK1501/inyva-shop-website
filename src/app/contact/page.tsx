@@ -5,7 +5,7 @@ import { contact } from "@/data/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Questions about an INYVA product or its ingredients? Reach us by email or phone, or write to our office in Gurugram.",
+    "The contact details printed on INYVA packs and in the brochure: email, phone and the Gurugram address the range is marketed from.",
 };
 
 export default function ContactPage() {
@@ -17,8 +17,8 @@ export default function ContactPage() {
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
             <h1 className="display-hero lg:col-span-7">Talk to us</h1>
             <p className="max-w-md self-end text-lg leading-relaxed text-ink-soft lg:col-span-5">
-              Questions about a formula, an ingredient or where to find INYVA? Email or
-              call — a person reads and answers each one.
+              Questions about a formula or one of its ingredients? The details below are
+              the ones printed on INYVA packs and in the brochure.
             </p>
           </div>
         </Container>
@@ -70,7 +70,7 @@ export default function ContactPage() {
         <Container className="py-16 md:py-20">
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-5">
-              <p className="eyebrow text-muted">Registered office</p>
+              <p className="eyebrow text-muted">Marketed by</p>
               <address className="mt-5 not-italic leading-relaxed text-ink-soft">
                 <span className="block font-display text-xl text-ink">
                   {contact.company}
@@ -87,9 +87,9 @@ export default function ContactPage() {
               <p className="eyebrow text-muted">Ingredient enquiries</p>
               <p className="mt-5 max-w-xl leading-relaxed text-ink-soft">
                 The complete ingredient list for every INYVA product is published on its
-                own page, exactly as it appears on the pack. If something is unclear, or
-                you need to check a formula against a known sensitivity, email us and we
-                will answer directly.
+                own page, exactly as it appears in the product’s ingredient
+                declaration — so a formula can be checked against a known sensitivity
+                before getting in touch.
               </p>
               <div className="mt-9">
                 <Button href="/products" variant="outline">

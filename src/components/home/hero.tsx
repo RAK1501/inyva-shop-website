@@ -15,8 +15,9 @@ export function Hero() {
               <span className="text-copper">Scientific innovation.</span>
             </h1>
             <p className="mt-8 max-w-md text-lg leading-relaxed text-ink-soft">
-              Every INYVA formula pairs proven actives — collagen, elastin, hyaluronic
-              acid, niacinamide, peptides — with the Ayurvedic botanicals that carry them.
+              Named actives — collagen, elastin, hyaluronic acid, niacinamide,
+              peptides — formulated alongside Ayurvedic botanicals, with the full list
+              printed on every pack.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Button href="/products">Explore the collection</Button>

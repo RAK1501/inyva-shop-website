@@ -8,10 +8,10 @@ export function CategoryGrid() {
     <section aria-labelledby="categories-heading" className="reveal border-t border-line">
       <Container className="py-16 md:py-24">
         <div className="md:flex md:items-end md:justify-between md:gap-10">
-          <SectionHeading eyebrow="Four steps" title="Find where to begin" />
+          <SectionHeading eyebrow="Four groups" title="Find where to begin" />
           <p className="mt-5 max-w-sm text-muted md:mt-0 md:text-right">
-            The range is built as a routine — cleanse, treat weekly, moisturise, and carry
-            it through to the body.
+            Fourteen products in four groups: cleansers, weekly masks and scrubs,
+            serums and creams, and body care.
           </p>
         </div>
 

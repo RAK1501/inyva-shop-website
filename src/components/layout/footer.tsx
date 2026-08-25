@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/primitives";
 import { categories } from "@/data/categories";
-import { contact, nav, packMarks, site } from "@/data/site";
+import { brandMarks, contact, nav, site } from "@/data/site";
 
 export function Footer() {
   return (
@@ -18,7 +18,8 @@ export function Footer() {
               className="h-16 w-auto"
             />
             <p className="mt-6 max-w-xs text-sm leading-relaxed">
-              Ayurvedic botanicals and proven actives, formulated together.
+              Ayurvedic botanicals and scientifically backed actives, in the same
+              formula.
             </p>
           </div>
 
@@ -83,7 +84,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} {contact.company}
           </p>
           <ul className="flex flex-wrap gap-x-5 gap-y-2">
-            {packMarks.map((m) => (
+            {brandMarks.map((m) => (
               <li key={m} className="eyebrow">
                 {m}
               </li>
