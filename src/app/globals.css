@@ -30,6 +30,9 @@
        up with the container edge can derive from it rather than repeat it. */
     --page-max: 100rem;
     --page-gutter: 1.25rem;
+    /* Viewport edge to container content edge. Kept as its own property so a
+       bleeding element only has to negate one value. */
+    --bleed: max(var(--page-gutter), calc((100vw - var(--page-max)) / 2 + var(--page-gutter)));
   }
 
   @media (width >= 48rem) {

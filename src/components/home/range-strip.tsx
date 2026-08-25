@@ -27,7 +27,7 @@ export function RangeStrip() {
         </div>
       </Container>
 
-      <ul className="mt-12 flex snap-x gap-4 overflow-x-auto pb-4 pe-5 md:mt-16 md:gap-6 md:pe-10 [padding-inline-start:max(var(--page-gutter),calc((100vw-var(--page-max))/2+var(--page-gutter)))] [scroll-padding-inline-start:max(var(--page-gutter),calc((100vw-var(--page-max))/2+var(--page-gutter)))]">
+      <ul className="mt-12 flex snap-x gap-4 overflow-x-auto pb-4 pe-5 md:mt-16 md:gap-6 md:pe-10 [padding-inline-start:var(--bleed)] [scroll-padding-inline-start:var(--bleed)]">
         {products.map((product) => (
           <li key={product.slug} className="w-40 shrink-0 snap-start md:w-56">
             <Link href={`/products/${product.slug}`} className="group block">

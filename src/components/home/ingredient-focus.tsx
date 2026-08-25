@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Container, Eyebrow } from "@/components/ui/primitives";
+import { Container, Eyebrow, TextLink } from "@/components/ui/primitives";
 
 /** Both lists are drawn from the products' own ingredient declarations. */
 const actives = [
@@ -26,61 +26,100 @@ const botanicals = [
   "Liquorice",
 ];
 
+/**
+ * Reads down one path rather than across three equal columns. The statement
+ * holds the left; the right runs from the formula itself to what is in it. The
+ * photograph carries the full width of that column and runs off the right edge
+ * of the page, so it anchors the composition instead of sitting beneath the
+ * copy as a tile.
+ */
 export function IngredientFocus() {
   return (
-    <section aria-labelledby="formulation-heading" className="reveal bg-shell">
-      <Container className="py-20 md:py-28">
-        <div className="grid gap-14 lg:grid-cols-12 lg:gap-20">
-          <div className="lg:col-span-5">
+    <section
+      aria-labelledby="formulation-heading"
+      className="reveal overflow-hidden bg-shell"
+    >
+      <Container className="py-24 md:py-32">
+        <div className="grid gap-x-12 gap-y-14 lg:grid-cols-12">
+          {/* Runs the height of the column so the glossary link anchors its foot
+              rather than leaving the statement stranded at the top. */}
+          <div className="flex flex-col lg:col-span-4">
             <Eyebrow className="mb-6">Formulation</Eyebrow>
             <h2 id="formulation-heading" className="display-lg">
-              Two lists, one formula
+              Two lists,
+              <br />
+              one formula
             </h2>
-            <p className="mt-7 max-w-md leading-relaxed text-ink-soft">
+            <span className="rule-copper mt-8" />
+            <p className="mt-8 max-w-sm leading-relaxed text-ink-soft">
               INYVA ingredient lists run long. The actives are named on the front of
               every pack; the botanicals sit further down the declaration. Both are set
               out in full on every product page.
             </p>
 
-            <div className="relative mt-10 aspect-3/2 w-full max-w-md overflow-hidden bg-cream">
+            <div className="mt-10 lg:mt-auto lg:pt-16">
+              <TextLink href="/ingredients" className="text-copper">
+                The full glossary
+              </TextLink>
+            </div>
+          </div>
+
+          <div className="lg:col-span-7 lg:col-start-6">
+            <div className="relative aspect-3/2 w-full overflow-hidden bg-cream lg:[width:calc(100%+var(--bleed))]">
               <Image
                 src="/editorial/texture.webp"
                 alt="Himalayan Harmony body scrub dispensed from the tube"
                 fill
-                sizes="(min-width: 1024px) 32vw, 100vw"
+                sizes="(min-width: 1024px) 62vw, 100vw"
                 className="object-cover"
               />
             </div>
-          </div>
 
-          <div className="grid gap-12 sm:grid-cols-2 lg:col-span-7 lg:gap-16">
-            <div>
-              <p className="eyebrow border-b border-line-strong pb-4 text-muted">
-                The actives
-              </p>
-              <ul className="mt-6 space-y-3.5">
-                {actives.map((item) => (
-                  <li key={item} className="font-display text-lg text-ink">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="eyebrow border-b border-line-strong pb-4 text-muted">
-                The botanicals
-              </p>
-              <ul className="mt-6 space-y-3.5">
-                {botanicals.map((item) => (
-                  <li key={item} className="font-display text-lg text-ink">
-                    {item}
-                  </li>
-                ))}
-              </ul>
+            <div className="mt-14 grid gap-x-12 gap-y-12 sm:grid-cols-2 md:mt-16">
+              <IngredientGroup
+                label="The actives"
+                note="Named on the front of the pack."
+                items={actives}
+              />
+              <IngredientGroup
+                label="The botanicals"
+                note="Further down the declaration."
+                items={botanicals}
+              />
             </div>
           </div>
         </div>
       </Container>
     </section>
+  );
+}
+
+function IngredientGroup({
+  label,
+  note,
+  items,
+}: {
+  label: string;
+  note: string;
+  items: string[];
+}) {
+  return (
+    <div>
+      <div className="flex items-baseline justify-between gap-4 border-b border-ink pb-4">
+        <p className="eyebrow text-ink">{label}</p>
+        <p className="eyebrow text-copper">{String(items.length).padStart(2, "0")}</p>
+      </div>
+      <p className="mt-4 text-sm text-muted">{note}</p>
+      <ul className="mt-7 space-y-4">
+        {items.map((item) => (
+          <li
+            key={item}
+            className="font-display text-xl leading-snug text-ink md:text-2xl"
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
