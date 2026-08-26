@@ -24,7 +24,7 @@ export const nav = [
 
 /** The company the range is marketed by, and how to reach it. */
 export const contact = {
-  email: "info@inyva.com",
+  email: "info@inyva.shop",
   phones: [{ display: "+1 (973) 687-4765", href: "+19736874765" }],
   company: "CommerceV3 Inc",
   offices: [

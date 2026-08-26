@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { categories } from "@/data/categories";
+import { contact } from "@/data/site";
 
 const BUSINESS_TYPES = [
   "Distributor",
@@ -166,8 +167,8 @@ export function TradeForm() {
           className="mt-7 border-t border-copper pt-5 leading-relaxed text-ink-soft"
         >
           That did not send. Please try again, or email us directly at{" "}
-          <a href="mailto:info@inyva.com" className="link-underline text-copper">
-            info@inyva.com
+          <a href={`mailto:${contact.email}`} className="link-underline text-copper">
+            {contact.email}
           </a>
           .
         </p>
