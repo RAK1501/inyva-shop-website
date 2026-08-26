@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const team = [
   {
-    name: "Aarohi",
+    name: "Aarohi Mehta",
     role: "Head of Operations",
     image: "/leadership/aarohi.webp",
     bio: "Aarohi oversees day-to-day operations and helps ensure every part of the INYVA experience runs seamlessly, from internal processes to the journey behind each product.",
