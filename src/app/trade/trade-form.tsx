@@ -15,10 +15,11 @@ const BUSINESS_TYPES = [
 type Status = "idle" | "sending" | "sent" | "failed";
 
 /**
- * Posts to public/__forms.html, which is where the form's shape is declared for
- * Netlify's build-time scan. Success is only ever reported when that POST
- * actually succeeds — a form that silently swallows enquiries would be worse
- * than no form at all.
+ * Posts to the site root. public/__forms.html only declares the form's shape
+ * for Netlify's build-time scan — it is a static file, so it rejects POST, and
+ * posting there returned 404 for every real submission. Success is only ever
+ * reported when the POST actually succeeds; a form that silently swallows
+ * enquiries would be worse than no form at all.
  */
 export function TradeForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -35,7 +36,7 @@ export function TradeForm() {
         [...new FormData(form)].map(([k, v]) => [k, String(v)]),
       ).toString();
 
-      const res = await fetch("/__forms.html", {
+      const res = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body,
