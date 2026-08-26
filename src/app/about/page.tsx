@@ -157,7 +157,7 @@ export default function AboutPage() {
               <div className="relative aspect-square w-full max-w-sm overflow-hidden bg-shell lg:ml-auto">
                 <Image
                   src="/leadership/david.webp"
-                  alt="David Bonthrone, Chief Revenue Officer of INYVA SHOP"
+                  alt="David Bonthrone, Vice President of Sales at INYVA SHOP"
                   fill
                   sizes="(min-width: 1024px) 30vw, (min-width: 640px) 24rem, 100vw"
                   className="object-cover"
@@ -167,11 +167,11 @@ export default function AboutPage() {
 
             <div className="lg:col-span-7 lg:col-start-1 lg:row-start-1">
               <h3 className="display-lg">David Bonthrone</h3>
-              <p className="eyebrow mt-5 text-copper">Chief Revenue Officer, INYVA SHOP</p>
+              <p className="eyebrow mt-5 text-copper">Vice President of Sales, INYVA SHOP</p>
               <span className="rule-copper mt-7" />
               <p className="mt-8 text-lg leading-relaxed text-ink-soft">
-                A Chief Revenue Officer with 30+ years of experience building creative and
-                media solutions for brands, agencies, and startups. Via an extensive
+                A sales leader with 30+ years of experience building creative and media
+                solutions for brands, agencies, and startups. Via an extensive
                 network, David has the uncanny ability to uncover and engage with decision
                 makers, influencers, and buyers. He thrives on building strategic
                 relationships and driving new business growth.
