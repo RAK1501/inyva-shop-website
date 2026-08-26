@@ -55,13 +55,15 @@ export function IngredientFocus() {
             </div>
           </div>
 
-          <div className="lg:col-span-4 lg:col-start-9">
-            <div className="relative aspect-square w-full max-w-md overflow-hidden bg-cream lg:ml-auto">
+          <div className="lg:col-span-5 lg:col-start-8">
+            {/* The frame matches the photograph's own 3:2, so the whole image
+                shows and nothing is cropped away. */}
+            <div className="relative aspect-3/2 w-full overflow-hidden bg-cream">
               <Image
                 src="/editorial/formulation.webp"
                 alt="INYVA Sheer Glow Exfoliating Scrub laid out with amla, leaves and a swatch of the scrub"
                 fill
-                sizes="(min-width: 1024px) 28vw, (min-width: 640px) 28rem, 100vw"
+                sizes="(min-width: 1024px) 38vw, 100vw"
                 className="object-cover"
               />
             </div>
