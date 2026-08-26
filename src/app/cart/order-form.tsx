@@ -26,11 +26,10 @@ function summarise(items: Item[]): string {
 }
 
 /**
- * Captures the order so there is a record of it, exactly as the trade form
- * does: posted to the site root, with public/__forms.html only declaring the
- * shape for Netlify's build-time scan. Nothing is charged and nothing claims to
- * be: this records a request, and success is only reported when the POST
- * actually succeeds.
+ * Captures the order so there is a record of it, posted to
+ * public/__forms.html exactly as the trade form is. Nothing is charged and
+ * nothing claims to be: this records a request, and success is only reported
+ * when the POST actually succeeds.
  */
 export function OrderForm({
   items,
@@ -54,7 +53,7 @@ export function OrderForm({
         [...new FormData(form)].map(([k, v]) => [k, String(v)]),
       ).toString();
 
-      const res = await fetch("/", {
+      const res = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body,
