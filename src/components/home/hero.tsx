@@ -14,7 +14,7 @@ export function Hero() {
     <section className="relative overflow-hidden bg-[#fcf5ee] pb-16 md:pb-20 lg:pb-0">
       <div className="relative aspect-square w-full lg:aspect-16/9 lg:max-h-[46rem]">
         <Image
-          src="/editorial/hero-lifestyle.webp"
+          src="/editorial/hero-lifestyle-v2.webp"
           alt="INYVA Queen's Time Reverse Age Defying Rejuvenating Cream, held up to the light"
           fill
           priority
