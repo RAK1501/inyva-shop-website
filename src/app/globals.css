@@ -28,7 +28,7 @@
   :root {
     /* One definition of how wide the page runs, so anything that needs to line
        up with the container edge can derive from it rather than repeat it. */
-    --page-max: 100rem;
+    --page-max: 120rem;
     --page-gutter: 1.25rem;
     /* Viewport edge to container content edge. Kept as its own property so a
        bleeding element only has to negate one value. */
@@ -57,6 +57,12 @@
 
   html {
     -webkit-text-size-adjust: 100%;
+    /* The bleed is measured from 100vw, which counts the vertical scrollbar
+       that the layout viewport does not, so anything running to the edge
+       overshoots by half a scrollbar. Clip absorbs the overshoot; hidden
+       would too, but it makes a scroll container and the sticky header
+       would stop sticking. */
+    overflow-x: clip;
   }
 
   body {
@@ -68,7 +74,7 @@
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   h1,
