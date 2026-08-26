@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { nav, site } from "@/data/site";
+import { site } from "@/data/site";
 import { CartLink } from "./cart-link";
+import { NavLinks } from "./nav-links";
 import { MobileNav } from "./mobile-nav";
 
 export function Header() {
@@ -27,16 +28,7 @@ export function Header() {
 
         <nav aria-label="Primary" className="hidden md:block">
           <ul className="flex items-center gap-10">
-            {nav.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="eyebrow -my-3 block py-3 text-ink transition-colors duration-300 hover:text-copper"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            <NavLinks />
             <li>
               <CartLink />
             </li>
