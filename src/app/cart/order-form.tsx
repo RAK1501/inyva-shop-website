@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import type { Product } from "@/data/products";
 import { contact } from "@/data/site";
 import { formatPrice } from "@/lib/price";
+import { submitEnquiry } from "@/lib/submit-enquiry";
 
 type Item = { line: { qty: number }; product: Product };
 type Status = "idle" | "sending" | "sent" | "failed";
@@ -26,10 +27,10 @@ function summarise(items: Item[]): string {
 }
 
 /**
- * Captures the order so there is a record of it, posted to
- * public/__forms.html exactly as the trade form is. Nothing is charged and
+ * Captures the order so there is a record of it, through the same
+ * host-independent endpoint the trade form uses. Nothing is charged and
  * nothing claims to be: this records a request, and success is only reported
- * when the POST actually succeeds.
+ * when the submission is actually accepted.
  */
 export function OrderForm({
   items,
@@ -48,24 +49,9 @@ export function OrderForm({
     const form = event.currentTarget;
     setStatus("sending");
 
-    try {
-      const body = new URLSearchParams(
-        [...new FormData(form)].map(([k, v]) => [k, String(v)]),
-      ).toString();
-
-      const res = await fetch("/__forms.html", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body,
-      });
-
-      if (!res.ok) throw new Error(String(res.status));
-      setStatus("sent");
-    } catch {
-      setStatus("failed");
-    } finally {
-      requestAnimationFrame(() => resultRef.current?.focus());
-    }
+    const result = await submitEnquiry(form, { subject: "New order request — INYVA" });
+    setStatus(result);
+    requestAnimationFrame(() => resultRef.current?.focus());
   }
 
   if (status === "sent") {

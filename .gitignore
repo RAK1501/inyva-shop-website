@@ -5,3 +5,8 @@ next-env.d.ts
 *.tsbuildinfo
 .DS_Store
 RawAssets/
+
+# Local environment files
+.env
+.env.local
+.env.*.local

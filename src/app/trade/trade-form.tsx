@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { categories } from "@/data/categories";
 import { contact } from "@/data/site";
+import { submitEnquiry } from "@/lib/submit-enquiry";
 
 const BUSINESS_TYPES = [
   "Distributor",
@@ -16,12 +17,9 @@ const BUSINESS_TYPES = [
 type Status = "idle" | "sending" | "sent" | "failed";
 
 /**
- * Posts to public/__forms.html, which is both where the form's shape is
- * declared for Netlify's build-time scan and the path Netlify's handler
- * intercepts. Verified against the live site: posting here records a
- * submission, posting to the site root does not. Success is only ever reported
- * when that POST actually succeeds — a form that silently swallows enquiries
- * would be worse than no form at all.
+ * Sends through the shared endpoint, which is host-independent. Success is
+ * only ever reported when the submission is actually accepted — a form that
+ * silently swallows enquiries would be worse than no form at all.
  */
 export function TradeForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -32,26 +30,10 @@ export function TradeForm() {
     const form = event.currentTarget;
     setStatus("sending");
 
-    try {
-      const body = new URLSearchParams(
-        // FormData handles the repeated `interest` checkboxes correctly.
-        [...new FormData(form)].map(([k, v]) => [k, String(v)]),
-      ).toString();
-
-      const res = await fetch("/__forms.html", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body,
-      });
-
-      if (!res.ok) throw new Error(String(res.status));
-      form.reset();
-      setStatus("sent");
-    } catch {
-      setStatus("failed");
-    } finally {
-      requestAnimationFrame(() => resultRef.current?.focus());
-    }
+    const result = await submitEnquiry(form, { subject: "New trade enquiry — INYVA" });
+    if (result === "sent") form.reset();
+    setStatus(result);
+    requestAnimationFrame(() => resultRef.current?.focus());
   }
 
   if (status === "sent") {
