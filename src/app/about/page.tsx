@@ -9,6 +9,38 @@ export const metadata: Metadata = {
     "INYVA was built on a single idea: that nature's wisdom and scientific innovation belong in the same formula. Our story, our philosophy and what goes on every pack.",
 };
 
+/**
+ * What the fourteen packs carry, each with the one line that describes it.
+ * The first two read from the shared marks, so the footer and this list can
+ * never drift apart.
+ */
+const packDetails = [
+  {
+    title: brandMarks[0],
+    note: "Marked on all fourteen packs. INYVA products are not tested on animals.",
+  },
+  {
+    title: brandMarks[1],
+    note: "Marked on all fourteen packs, alongside the rest of the declaration.",
+  },
+  {
+    title: "The full ingredient list",
+    note: "Printed in full on the pack, and published on the product's own page.",
+  },
+  {
+    title: "Period after opening",
+    note: "The open-jar mark, showing twelve months from the day it is opened.",
+  },
+  {
+    title: "How to use",
+    note: "The directions, printed for each individual formula rather than the range.",
+  },
+  {
+    title: "Net contents",
+    note: "The size in millilitres and fluid ounces, on the front of every pack.",
+  },
+];
+
 const team = [
   {
     name: "Aarohi Mehta",
@@ -262,17 +294,17 @@ export default function AboutPage() {
           <h2 id="pack-heading" className="display-md">
             On every pack
           </h2>
-          <ul className="mt-10 grid grid-cols-2 gap-x-8 gap-y-8 border-t border-line-strong pt-10 md:grid-cols-3">
-            {brandMarks.map((mark) => (
-              <li key={mark}>
-                <p className="font-display text-xl text-ink">{mark}</p>
+          <ul className="mt-10 grid gap-x-10 gap-y-10 border-t border-line-strong pt-10 sm:grid-cols-2 lg:grid-cols-3">
+            {packDetails.map(({ title, note }) => (
+              <li key={title}>
+                <p className="font-display text-xl text-ink">{title}</p>
+                <p className="mt-3 text-sm leading-relaxed text-muted">{note}</p>
               </li>
             ))}
           </ul>
-          <p className="mt-10 max-w-xl text-muted">
-            Alongside the full ingredient list, a 12-month period-after-opening mark, and
-            the directions printed for each individual formula. A vegan mark appears on
-            most of the range, and is listed on each product’s own page.
+          <p className="mt-12 max-w-xl text-sm leading-relaxed text-muted">
+            A vegan mark appears on most of the range, and is listed on each
+            product&rsquo;s own page.
           </p>
         </Container>
       </section>
