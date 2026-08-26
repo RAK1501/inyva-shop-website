@@ -99,7 +99,7 @@ export default function AboutPage() {
               <div className="relative aspect-square w-full max-w-sm overflow-hidden bg-shell">
                 <Image
                   src="/leadership/rahul.webp"
-                  alt="Rahul, Chief Executive Officer of CommerceV3 Inc"
+                  alt="Rahul Amarendra, Chief Executive Officer of CommerceV3 Inc"
                   fill
                   sizes="(min-width: 1024px) 30vw, (min-width: 640px) 24rem, 100vw"
                   className="object-cover"
@@ -110,7 +110,7 @@ export default function AboutPage() {
             <div className="lg:col-span-7 lg:col-start-6">
               <Eyebrow className="mb-6">Leadership</Eyebrow>
               <h2 id="leadership-heading" className="display-lg">
-                Rahul
+                Rahul Amarendra
               </h2>
               <p className="eyebrow mt-5 text-copper">
                 Chief Executive Officer, CommerceV3 Inc
@@ -118,7 +118,7 @@ export default function AboutPage() {
               <span className="rule-copper mt-7" />
               <p className="mt-8 text-lg leading-relaxed text-ink-soft">
                 An IIM Ahmedabad and IIT Delhi graduate and an operator with twenty years
-                of experience, Rahul leads CommerceV3 Inc, the company that markets INYVA.
+                of experience, Rahul Amarendra leads CommerceV3 Inc, the company that markets INYVA.
                 His focus is on growing the range&rsquo;s reach, on the customer
                 relationships that sustain it, and on the operating discipline behind
                 both.
