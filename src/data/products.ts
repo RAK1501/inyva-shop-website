@@ -90,16 +90,6 @@ export const products: Product[] = [
         "gallery-1",
         "Queen's Time Reverse cream standing beside its carton",
       ),
-      img(
-        "queens-time-reverse-anti-aging-cream",
-        "gallery-2",
-        "Queen's Time Reverse carton showing the how-to-use panel",
-      ),
-      img(
-        "queens-time-reverse-anti-aging-cream",
-        "gallery-3",
-        "Reverse of the Queen's Time Reverse cream bottle",
-      ),
     ],
     featured: true,
   },
@@ -150,16 +140,6 @@ export const products: Product[] = [
         "gallery-1",
         "Queen's Time Reverse serum standing beside its carton",
       ),
-      img(
-        "queens-time-reverse-face-serum",
-        "gallery-2",
-        "Queen's Time Reverse serum carton showing the how-to-use panel",
-      ),
-      img(
-        "queens-time-reverse-face-serum",
-        "gallery-3",
-        "Reverse of the Queen's Time Reverse serum bottle",
-      ),
     ],
     featured: true,
   },
@@ -205,12 +185,6 @@ export const products: Product[] = [
         "gallery-1",
         "Starlite Radiance Night Cream standing beside its carton",
       ),
-      img(
-        "starlite-radiance-night-cream",
-        "gallery-2",
-        "Starlite Radiance carton showing the how-to-use panel",
-      ),
-      img("starlite-radiance-night-cream", "gallery-3", "Reverse of the Starlite Radiance tube"),
     ],
   },
   {
@@ -251,8 +225,6 @@ export const products: Product[] = [
     images: [
       img("silk-dew-light-cream", "primary", "INYVA Silk Dew Revitalizing Moisturizing Light Cream tube"),
       img("silk-dew-light-cream", "gallery-1", "Silk Dew light cream standing beside its carton"),
-      img("silk-dew-light-cream", "gallery-2", "Silk Dew carton showing the ingredient panel"),
-      img("silk-dew-light-cream", "gallery-3", "Reverse of the Silk Dew tube"),
     ],
   },
   {
@@ -297,12 +269,6 @@ export const products: Product[] = [
         "INYVA Serene Cleanse Himalayan Make-Up Remover Oil in its pump bottle",
       ),
       img("serene-cleanse-makeup-remover-oil", "gallery-1", "Serene Cleanse oil standing beside its carton"),
-      img(
-        "serene-cleanse-makeup-remover-oil",
-        "gallery-2",
-        "Serene Cleanse carton showing the ingredient panel",
-      ),
-      img("serene-cleanse-makeup-remover-oil", "gallery-3", "Reverse of the Serene Cleanse bottle"),
     ],
   },
   {
@@ -343,8 +309,6 @@ export const products: Product[] = [
     images: [
       img("deepdive-cleansing-gel", "primary", "INYVA Deepdive All-Skin Cleansing Gel tube"),
       img("deepdive-cleansing-gel", "gallery-1", "Deepdive cleansing gel standing beside its carton"),
-      img("deepdive-cleansing-gel", "gallery-2", "Deepdive carton showing the ingredient panel"),
-      img("deepdive-cleansing-gel", "gallery-3", "Reverse of the Deepdive tube"),
     ],
   },
   {
@@ -393,7 +357,6 @@ export const products: Product[] = [
         "gallery-1",
         "Mild Mist bottle with the cap removed, showing the foaming pump",
       ),
-      img("mild-mist-micellar-foaming-cleanser", "gallery-2", "Reverse of the Mild Mist bottle"),
     ],
   },
   {
@@ -434,8 +397,6 @@ export const products: Product[] = [
     images: [
       img("cleanse-core-detox-face-mask", "primary", "INYVA Cleanse Core Detox Face Mask tube"),
       img("cleanse-core-detox-face-mask", "gallery-1", "Cleanse Core mask standing beside its carton"),
-      img("cleanse-core-detox-face-mask", "gallery-2", "Cleanse Core carton showing the how-to-use panel"),
-      img("cleanse-core-detox-face-mask", "gallery-3", "Reverse of the Cleanse Core tube"),
     ],
     featured: true,
   },
@@ -477,8 +438,6 @@ export const products: Product[] = [
     images: [
       img("detox-glow-charcoal-face-mask", "primary", "INYVA Detox Glow Activated Charcoal Face Mask tube"),
       img("detox-glow-charcoal-face-mask", "gallery-1", "Detox Glow mask standing beside its carton"),
-      img("detox-glow-charcoal-face-mask", "gallery-2", "Detox Glow carton showing the how-to-use panel"),
-      img("detox-glow-charcoal-face-mask", "gallery-3", "Reverse of the Detox Glow tube"),
     ],
   },
   {
@@ -519,8 +478,6 @@ export const products: Product[] = [
     images: [
       img("sheer-glow-exfoliating-scrub", "primary", "INYVA Sheer Glow Exfoliating Scrub tube"),
       img("sheer-glow-exfoliating-scrub", "gallery-1", "Sheer Glow scrub standing beside its carton"),
-      img("sheer-glow-exfoliating-scrub", "gallery-2", "Sheer Glow carton showing the how-to-use panel"),
-      img("sheer-glow-exfoliating-scrub", "gallery-3", "Reverse of the Sheer Glow tube"),
     ],
   },
   {
@@ -565,8 +522,6 @@ export const products: Product[] = [
         "INYVA Elixir Radiance 3-in-1 Dry Beauty Oil in its glass bottle",
       ),
       img("elixir-radiance-dry-beauty-oil", "gallery-1", "Elixir Radiance oil standing beside its carton"),
-      img("elixir-radiance-dry-beauty-oil", "gallery-2", "Elixir Radiance carton showing the ingredient panel"),
-      img("elixir-radiance-dry-beauty-oil", "gallery-3", "Reverse of the Elixir Radiance bottle"),
     ],
     featured: true,
   },
@@ -612,8 +567,6 @@ export const products: Product[] = [
         "INYVA Contour Sculpt Anti-Cellulite Slimming Oil in its pump bottle",
       ),
       img("contour-sculpt-slimming-oil", "gallery-1", "Contour Sculpt oil standing beside its carton"),
-      img("contour-sculpt-slimming-oil", "gallery-2", "Contour Sculpt carton showing the how-to-use panel"),
-      img("contour-sculpt-slimming-oil", "gallery-3", "Reverse of the Contour Sculpt bottle"),
     ],
   },
   {
@@ -653,7 +606,6 @@ export const products: Product[] = [
       "Aqua (Water), Decyl Glucoside, Cocamidopropyl Betaine, Glycerin, Acrylates/Beheneth-25 Methacrylate Copolymer, Sodium Cocoyl Glycinate, Ceteareth-60 Myristyl Glycol, Parfum (Fragrance), Sodium Chloride, Sodium Benzoate, Potassium Sorbate, Caprylyl Glycol, Citric Acid, Palm Kernel/Coco Glucoside, Sodium Gluconate, Caprylhydroxamic Acid, Coco-Glucoside, Glyceryl Oleate, Chlorophytes, Azadirachta Indica Leaf Extract, Centella Asiatica Extract, Jasminum Officinale (Jasmine) Flower Extract, Ricinus Communis (Castor) Root Extract, Sesamum Indicum (Sesame) Seed Extract, Glycine, Caramel, Green Tea Extract, Dehydroacetic Acid, CI 17200 (Red 33), Sodium Sulfate, Linalool.",
     images: [
       img("floral-fresh-jasmine-shower-gel", "primary", "INYVA Floral Fresh Jasmine Bloom Shower Gel tube"),
-      img("floral-fresh-jasmine-shower-gel", "gallery-1", "Reverse of the Floral Fresh tube"),
       img("floral-fresh-jasmine-shower-gel", "gallery-2", "Floral Fresh shower gel dispensed from the tube"),
     ],
   },
@@ -694,7 +646,6 @@ export const products: Product[] = [
       "Sodium Chloride, Vitis Vinifera (Grape) Seed Oil, Silica, Caprylic/Capric Triglyceride, Helianthus Annuus (Sunflower) Seed Oil, Glyceryl Citrate/Lactate/Linoleate/Oleate, Parfum (Fragrance), Propanediol, Olea Europaea (Olive) Fruit Oil, Heptyl Undecylenate, Juglans Regia (Walnut) Shell Powder, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Ricinus Communis (Castor) Seed Oil, Copernicia Cerifera (Carnauba) Wax, Sesamum Indicum (Sesame) Seed Oil, Corylus Avellana (Hazelnut) Seed Oil, Panthenol, Calendula Officinalis Flower Oil, Tocopheryl Acetate, Potassium Sorbate, Sodium Benzoate, Linalool.",
     images: [
       img("himalayan-harmony-body-scrub", "primary", "INYVA Himalayan Harmony Body Scrub tube"),
-      img("himalayan-harmony-body-scrub", "gallery-1", "Reverse of the Himalayan Harmony tube"),
       img("himalayan-harmony-body-scrub", "gallery-2", "Himalayan Harmony body scrub dispensed from the tube"),
     ],
   },
