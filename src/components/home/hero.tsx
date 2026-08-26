@@ -19,6 +19,7 @@ export function Hero() {
           fill
           priority
           sizes="100vw"
+          quality={90}
           className="object-cover object-[100%_50%] lg:object-[50%_55%]"
         />
       </div>
