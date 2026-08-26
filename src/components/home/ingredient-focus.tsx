@@ -56,12 +56,12 @@ export function IngredientFocus() {
           </div>
 
           <div className="lg:col-span-4 lg:col-start-9">
-            <div className="relative aspect-4/5 w-full max-w-sm overflow-hidden bg-cream lg:ml-auto">
+            <div className="relative aspect-square w-full max-w-md overflow-hidden bg-cream lg:ml-auto">
               <Image
-                src="/editorial/texture.webp"
-                alt="Himalayan Harmony body scrub dispensed from the tube"
+                src="/editorial/formulation.webp"
+                alt="INYVA Sheer Glow Exfoliating Scrub laid out with amla, leaves and a swatch of the scrub"
                 fill
-                sizes="(min-width: 1024px) 26vw, (min-width: 640px) 24rem, 100vw"
+                sizes="(min-width: 1024px) 28vw, (min-width: 640px) 28rem, 100vw"
                 className="object-cover"
               />
             </div>
