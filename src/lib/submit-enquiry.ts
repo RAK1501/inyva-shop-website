@@ -12,15 +12,13 @@
 const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
 /**
- * Committed on purpose. Web3Forms describes the key as a public email alias:
- * it can only deliver to the address that registered it and can read nothing,
- * and it ships in the client bundle either way. Keeping it here means a new
- * host has nothing to configure — which is the entire reason the forms moved
- * off a platform feature. The env var still wins, for rotating it without a
- * code change.
+ * Set NEXT_PUBLIC_WEB3FORMS_KEY on the host. It is a public value — Web3Forms
+ * describes it as an email alias, it can only deliver to the address that
+ * registered it, and being NEXT_PUBLIC it is inlined into the client bundle —
+ * so this is configuration rather than a secret. It lives outside the code so
+ * it can be rotated, and so each environment can carry its own.
  */
-const ACCESS_KEY =
-  process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? "f8d3c4c8-53dd-4adf-9ff5-619b6edcbda9";
+const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
 
 /**
  * Netlify's own form handler, kept as a mirror while the switch beds in. It
@@ -51,7 +49,15 @@ export async function submitEnquiry(
   if (String(data.get(HONEYPOT) ?? "").trim() !== "") return "sent";
   data.delete(HONEYPOT);
 
-  if (!ACCESS_KEY) return postToNetlify(data);
+  if (!ACCESS_KEY) {
+    // Not silent: without this the forms quietly depend on the host being
+    // Netlify, which is the situation this endpoint exists to end.
+    console.warn(
+      "NEXT_PUBLIC_WEB3FORMS_KEY is not set — falling back to Netlify Forms, " +
+        "which only works when Netlify is the host.",
+    );
+    return postToNetlify(data);
+  }
 
   // Repeated fields — the interest checkboxes — collapse to one readable line
   // rather than arriving as a single value with the rest dropped.
