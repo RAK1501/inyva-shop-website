@@ -36,26 +36,29 @@ export default function ContactPage() {
       {/* The statement and the photograph share the row, so neither is left
           holding an empty half of the screen. */}
       <section className="border-b border-line">
-        <Container className="py-14 md:py-16 lg:py-20">
-          <div className="grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-16">
-            <div className="lg:col-span-5">
+        <Container className="py-14 md:py-16 lg:py-16">
+          {/* An explicit ratio rather than 5-of-12: the gap has to come out of
+              the text side, so the photograph gains width without growing
+              taller. */}
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] lg:items-center lg:gap-10">
+            <div>
               <Eyebrow>Contact</Eyebrow>
               <h1 className="display-hero mt-6">Talk to us</h1>
               <span className="rule-copper mt-8" />
-              <p className="mt-8 max-w-md text-lg leading-relaxed text-ink-soft">
+              <p className="mt-8 max-w-lg text-lg leading-relaxed text-ink-soft">
                 Questions about a formula or one of its ingredients? Reach the team and
                 we&rsquo;ll be happy to help.
               </p>
             </div>
 
-            <div className="lg:col-span-7">
+            <div>
               <div className="relative aspect-3/2 w-full overflow-hidden bg-shell">
                 <Image
                   src="/editorial/contact-hero.webp"
                   alt="INYVA Queen’s Time Reverse Elixir Youth Face Serum on a travertine slab, with an olive sprig, a ceramic dish and a linen cloth"
                   fill
                   priority
-                  sizes="(min-width: 1024px) 58vw, 100vw"
+                  sizes="(min-width: 1024px) 62vw, 100vw"
                   className="object-cover"
                 />
               </div>
