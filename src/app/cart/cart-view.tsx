@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import type { Product } from "@/data/products";
-import { contact } from "@/data/site";
 import { removeFromCart, setQty, useCart } from "@/lib/cart";
+import { OrderForm } from "./order-form";
 import { formatPrice } from "@/lib/price";
 
 export function CartView({ products }: { products: Product[] }) {
@@ -144,10 +144,10 @@ export function CartView({ products }: { products: Product[] }) {
           ) : null}
 
           <a
-            href={enquiryHref(items)}
+            href="#order-request"
             className="eyebrow mt-6 flex w-full items-center justify-center bg-ink px-8 py-4 text-cream transition-colors duration-300 hover:bg-copper"
           >
-            Send as an enquiry
+            Request this order
           </a>
           <Link
             href="/products"
@@ -157,28 +157,30 @@ export function CartView({ products }: { products: Product[] }) {
           </Link>
         </div>
       </div>
+
+      <section
+        id="order-request"
+        aria-labelledby="order-request-heading"
+        className="mt-16 scroll-mt-28 border-t border-line pt-12 md:mt-20 md:pt-16"
+      >
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-4">
+            <Eyebrow>Request this order</Eyebrow>
+            <h2 id="order-request-heading" className="display-md mt-6">
+              Tell us where it goes
+            </h2>
+            <p className="mt-5 text-sm leading-relaxed text-muted">
+              Online payment is not open yet, so nothing is charged here. Send the bag
+              through and the team will come back to confirm availability and how to pay.
+            </p>
+          </div>
+          <div className="lg:col-span-8">
+            <OrderForm items={items} total={total} unpriced={unpriced} />
+          </div>
+        </div>
+      </section>
     </Container>
   );
-}
-
-/** Opens the visitor's mail client with the bag written out. No backend, and
- *  nothing is claimed to have been sent on their behalf. */
-function enquiryHref(items: { line: { qty: number }; product: Product }[]): string {
-  const body = [
-    "I would like to enquire about the following:",
-    "",
-    ...items.map(
-      (i) => `${i.line.qty} x ${i.product.shortName ?? i.product.name} (${i.product.subtitle})`,
-    ),
-    "",
-    "Name:",
-    "Company (if any):",
-    "Delivery city:",
-  ].join("\n");
-
-  return `mailto:${contact.email}?subject=${encodeURIComponent(
-    "Product enquiry",
-  )}&body=${encodeURIComponent(body)}`;
 }
 
 function QtyStep({

@@ -25,5 +25,24 @@
       <textarea name="message"></textarea>
       <input type="text" name="company-website" />
     </form>
+
+    <!--
+      The bag, captured so there is a record of every order asked for while
+      online payment is not open. Field names must stay in step with
+      src/app/cart/order-form.tsx.
+    -->
+    <form name="order-request" data-netlify="true" netlify-honeypot="company-website" hidden>
+      <input type="hidden" name="form-name" value="order-request" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="city" />
+      <input type="text" name="country" />
+      <textarea name="notes"></textarea>
+      <textarea name="order"></textarea>
+      <input type="text" name="order-total" />
+      <input type="text" name="item-count" />
+      <input type="text" name="company-website" />
+    </form>
   </body>
 </html>
