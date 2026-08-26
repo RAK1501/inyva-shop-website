@@ -41,6 +41,20 @@
     }
   }
 
+  /* On a laptop the page was running almost to the bezel, so the margin keeps
+     opening as the screen widens rather than stopping at the tablet value. */
+  @media (width >= 64rem) {
+    :root {
+      --page-gutter: 3.5rem;
+    }
+  }
+
+  @media (width >= 80rem) {
+    :root {
+      --page-gutter: 4.5rem;
+    }
+  }
+
   html {
     -webkit-text-size-adjust: 100%;
   }
