@@ -78,7 +78,9 @@ export function IngredientFocus() {
             cropped away.
           */}
           <div className="lg:col-span-8 lg:col-start-5 lg:[width:calc(100%+var(--bleed))]">
-            <div className="relative aspect-3/2 w-full overflow-hidden bg-cream">
+            {/* No placeholder ground: the section's own colour has to show
+                through where the photograph dissolves into it. */}
+            <div className="relative aspect-3/2 w-full overflow-hidden lg:image-dissolve-left">
               <Image
                 src="/editorial/formulation.webp"
                 alt="INYVA Sheer Glow Exfoliating Scrub laid out with amla, leaves and a swatch of the scrub"

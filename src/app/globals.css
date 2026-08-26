@@ -139,6 +139,24 @@
   line-height: 1.15;
 }
 
+/*
+ * Dissolves a photograph's leading edge into the ground behind it, so an image
+ * set beside type reads as one surface rather than two panels butted together.
+ * Most of the ramp is spent in the first tenth, which kills the seam without
+ * washing out the part of the picture that carries the composition.
+ */
+@utility image-dissolve-left {
+  --dissolve: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.5) 9%,
+    rgba(0, 0, 0, 0.88) 18%,
+    #000 27%
+  );
+  -webkit-mask-image: var(--dissolve);
+  mask-image: var(--dissolve);
+}
+
 /* A hairline that reads as a rule, not a border. */
 @utility rule-copper {
   display: block;
