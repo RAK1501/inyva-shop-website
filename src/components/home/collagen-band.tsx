@@ -36,8 +36,8 @@ export function CollagenBand() {
             </p>
             <p className="mt-6 max-w-xl leading-relaxed text-cream/60">
               In practice that means hydrolyzed collagen and elastin alongside hyaluronic
-              acid and peptides — and, sitting beside them in the same formula, Ashwagandha,
-              Shatavari, Brahmi, Manjistha and Amla.
+              acid and peptides — and, sitting beside them in the same formula, Winter Cherry,
+              Wild Asparagus, Water Hyssop, Madder and Emblic.
             </p>
             <div className="mt-11">
               <Button href="/about" variant="outlineLight">

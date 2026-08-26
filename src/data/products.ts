@@ -56,7 +56,7 @@ export const products: Product[] = [
     shortDescription:
       "A cream built on hydrolyzed collagen, elastin and hyaluronic acid, carried in a long list of Ayurvedic botanicals.",
     description:
-      "Hydrolyzed collagen and elastin sit high in this formula, alongside sodium hyaluronate and glycerin. Behind them is a long bench of Ayurvedic extracts — Ashwagandha, Shatavari, Brahmi, Amla, Ginseng, Liquorice and Kigelia among them. The pack directs it onto face and neck after cleansing, and to let it absorb before anything else goes on.",
+      "Hydrolyzed collagen and elastin sit high in this formula, alongside sodium hyaluronate and glycerin. Behind them is a long bench of Ayurvedic extracts — Winter Cherry, Wild Asparagus, Water Hyssop, Emblic, Ginseng, Liquorice and Kigelia among them. The pack directs it onto face and neck after cleansing, and to let it absorb before anything else goes on.",
     benefits: [
       {
         title: "Advanced anti-aging formula",
@@ -155,7 +155,7 @@ export const products: Product[] = [
     shortDescription:
       "A night cream with hyaluronic acid, vitamin E and algae extract.",
     description:
-      "Formulated for the end of the evening. Sodium hyaluronate and tocopheryl acetate sit alongside cocoa and shea butters, rice bran and sweet almond oils, with Manjistha, lotus, orange flower and papaya extracts further down the list. The pack directs it onto the face before bed, and to let it absorb before sleeping.",
+      "Formulated for the end of the evening. Sodium hyaluronate and tocopheryl acetate sit alongside cocoa and shea butters, rice bran and sweet almond oils, with Madder, lotus, orange flower and papaya extracts further down the list. The pack directs it onto the face before bed, and to let it absorb before sleeping.",
     benefits: [
       {
         title: "Intensive hydration",
@@ -283,7 +283,7 @@ export const products: Product[] = [
     shortDescription:
       "A gel cleanser with algae extracts, tea tree oil and salicylic acid.",
     description:
-      "Built on glucoside surfactants rather than sulfates, with salicylic acid — under 2%, per the brochure — tea tree and neem, and algae, aloe, Manjistha and Brahmi extracts further down the list. Menthol and peppermint oil are in the formula. The pack directs it onto damp skin, focusing on oily areas, then a thorough rinse.",
+      "Built on glucoside surfactants rather than sulfates, with salicylic acid — under 2%, per the brochure — tea tree and neem, and algae, aloe, Madder and Water Hyssop extracts further down the list. Menthol and peppermint oil are in the formula. The pack directs it onto damp skin, focusing on oily areas, then a thorough rinse.",
     benefits: [
       {
         title: "Deep cleansing action",
@@ -366,16 +366,16 @@ export const products: Product[] = [
     category: "mask-exfoliate",
     size: "100 ml / 3.38 fl.oz.",
     priceUsd: 18,
-    keyActives: ["Green Tea", "Neem Leaf", "Algae", "Manjistha"],
+    keyActives: ["Green Tea", "Neem Leaf", "Algae", "Madder"],
     marks: ["Cruelty free", "Paraben free"],
     shortDescription:
-      "A cream-textured detox mask with algae, green tea, Manjistha and neem leaf.",
+      "A cream-textured detox mask with algae, green tea, Madder and neem leaf.",
     description:
-      "A cream rather than a clay: jojoba oil, beeswax and olive esters carry the formula, with Fuller's earth, and neem, Manjistha, tulsi, green tea and Amla extracts. The pack directs a generous layer over face and neck, left for ten to fifteen minutes, then rinsed and followed with a moisturiser.",
+      "A cream rather than a clay: jojoba oil, beeswax and olive esters carry the formula, with Fuller's earth, and neem, Madder, tulsi, green tea and Emblic extracts. The pack directs a generous layer over face and neck, left for ten to fifteen minutes, then rinsed and followed with a moisturiser.",
     benefits: [
       {
         title: "Deep detoxification",
-        body: "Harnesses algae, green tea, Manjistha and neem leaf extract to remove impurities and toxins from the skin.",
+        body: "Harnesses algae, green tea, Madder and neem leaf extract to remove impurities and toxins from the skin.",
       },
       {
         title: "Antioxidant-rich green tea",
@@ -383,7 +383,7 @@ export const products: Product[] = [
       },
       {
         title: "Healing herbs for clear skin",
-        body: "Manjistha and neem work together to clear blemishes, reduce acne and improve overall skin texture.",
+        body: "Madder and neem work together to clear blemishes, reduce acne and improve overall skin texture.",
       },
       {
         title: "Suitable for all skin types",
@@ -407,12 +407,12 @@ export const products: Product[] = [
     category: "mask-exfoliate",
     size: "100 ml / 3.38 fl.oz.",
     priceUsd: 18,
-    keyActives: ["Mulberry Extract", "Niacinamide", "Kokum Butter", "Vitamin E"],
+    keyActives: ["Mulberry Extract", "Niacinamide", "Garcinia Butter", "Vitamin E"],
     marks: ["Vegan", "Cruelty free", "Paraben free"],
     shortDescription:
-      "An activated charcoal mask with mulberry extract, niacinamide, kokum butter and vitamin E.",
+      "An activated charcoal mask with mulberry extract, niacinamide, Garcinia butter and vitamin E.",
     description:
-      "Activated charcoal with kaolin and bentonite, glycolic acid, and niacinamide alongside mulberry root and liquorice extracts. Kokum butter and apricot kernel oil are in the formula. The pack directs a thin layer over clean, dry skin, avoiding eyes and lips, left for ten to fifteen minutes and used two to three times a week.",
+      "Activated charcoal with kaolin and bentonite, glycolic acid, and niacinamide alongside mulberry root and liquorice extracts. Garcinia butter and apricot kernel oil are in the formula. The pack directs a thin layer over clean, dry skin, avoiding eyes and lips, left for ten to fifteen minutes and used two to three times a week.",
     benefits: [
       {
         title: "Powerful detoxification",
@@ -427,7 +427,7 @@ export const products: Product[] = [
         body: "Niacinamide strengthens the skin's barrier, improves texture and diminishes the appearance of pores, redness and fine lines.",
       },
       {
-        title: "Kokum butter and vitamin E",
+        title: "Garcinia butter and vitamin E",
         body: "Deeply moisturize and nourish so skin stays soft and supple without feeling greasy.",
       },
     ],
@@ -490,9 +490,9 @@ export const products: Product[] = [
     keyActives: ["Macadamia Oil", "Vitamin E", "Multi Seed Oil"],
     marks: ["Vegan", "Cruelty free", "Paraben free"],
     shortDescription:
-      "A dry oil for body, face and hair — a blend of evening primrose, macadamia, Amla and Bhringraj.",
+      "A dry oil for body, face and hair — a blend of evening primrose, macadamia, Emblic and False Daisy.",
     description:
-      "The pack describes a blend of evening primrose, macadamia, Amla and Bhringraj oils, for body, face and hair, suitable for all skin types. The base is coco-caprylate and dicaprylyl carbonate, with sesame, sweet almond, olive, sunflower, grapeseed, hazelnut, borage, blackcurrant and tomato seed oils behind them, and tocopheryl acetate throughout.",
+      "The pack describes a blend of evening primrose, macadamia, Emblic and False Daisy oils, for body, face and hair, suitable for all skin types. The base is coco-caprylate and dicaprylyl carbonate, with sesame, sweet almond, olive, sunflower, grapeseed, hazelnut, borage, blackcurrant and tomato seed oils behind them, and tocopheryl acetate throughout.",
     benefits: [
       {
         title: "Luxurious multi-purpose oil",
@@ -576,12 +576,12 @@ export const products: Product[] = [
     category: "body",
     size: "200 ml / 6.76 fl.oz.",
     priceUsd: 14,
-    keyActives: ["Jasmine Extract", "Algae", "Gotu Kola"],
+    keyActives: ["Jasmine Extract", "Algae", "Centella"],
     marks: ["Vegan", "Cruelty free", "Paraben free"],
     shortDescription:
-      "A jasmine shower gel that turns to a creamy foam, with jasmine and Gotu Kola.",
+      "A jasmine shower gel that turns to a creamy foam, with jasmine and Centella.",
     description:
-      "The pack describes a gel that transforms into a creamy foam, infused with jasmine and Gotu Kola, leaving skin soft, hydrated and delicately scented, and suitable for all skin types. It is built on decyl glucoside and cocamidopropyl betaine rather than sulfates, with neem, sesame and algae extracts.",
+      "The pack describes a gel that transforms into a creamy foam, infused with jasmine and Centella, leaving skin soft, hydrated and delicately scented, and suitable for all skin types. It is built on decyl glucoside and cocamidopropyl betaine rather than sulfates, with neem, sesame and algae extracts.",
     benefits: [
       {
         title: "Indulgent jasmine fragrance",

@@ -111,8 +111,8 @@ const glyphs: Record<string, ReactNode> = {
 
   /* ---------------- botanicals ---------------- */
 
-  // Indian madder: leaves in a whorl.
-  Manjistha: (
+  // Madder: leaves in a whorl.
+  Madder: (
     <>
       <path d="M12 21v-9" />
       <path d="M12 12.5c0-4-3-7-7-7 0 4 3 7 7 7z" />
@@ -132,7 +132,7 @@ const glyphs: Record<string, ReactNode> = {
   ),
 
   // Round leaves stepping up the stem.
-  Brahmi: (
+  "Water Hyssop": (
     <>
       <path d="M12 21V7" />
       <circle cx="8.2" cy="9.4" r="2.9" />
@@ -141,7 +141,7 @@ const glyphs: Record<string, ReactNode> = {
   ),
 
   // The gooseberry, ribbed, with its leaf.
-  Amla: (
+  Emblic: (
     <>
       <circle cx="12" cy="14.2" r="5.8" />
       <path d="M9.4 9.2c-.9 3.3-.9 6.7 0 10m5.2-10c.9 3.3.9 6.7 0 10" />
@@ -151,7 +151,7 @@ const glyphs: Record<string, ReactNode> = {
   ),
 
   // Winter cherry: berries above, root below.
-  Ashwagandha: (
+  "Winter Cherry": (
     <>
       <circle cx="9.4" cy="6.6" r="2.4" />
       <circle cx="14.8" cy="8.4" r="1.9" />
@@ -161,7 +161,7 @@ const glyphs: Record<string, ReactNode> = {
   ),
 
   // Feathered, like the plant's fine foliage.
-  Shatavari: (
+  "Wild Asparagus": (
     <>
       <path d="M12 21V3.6" />
       <path d="M12 7.4 7.6 5m4.4 2.4L16.4 5m-4.4 6.6L7 9.2m5 2.4 5-2.4m-5 6.6-4.4-2.4m4.4 2.4 4.4-2.4" />
@@ -169,7 +169,7 @@ const glyphs: Record<string, ReactNode> = {
   ),
 
   // The pennywort's round leaf.
-  "Gotu Kola": (
+  "Centella": (
     <>
       <circle cx="12" cy="9.8" r="5.9" />
       <path d="M12 15.7V21" />
@@ -177,8 +177,8 @@ const glyphs: Record<string, ReactNode> = {
     </>
   ),
 
-  // Holy basil, a single pointed leaf.
-  Tulsi: (
+  // A single pointed leaf.
+  "Holy Basil": (
     <>
       <path d={LEAF} />
       <path d={LEAF_VEIN} />

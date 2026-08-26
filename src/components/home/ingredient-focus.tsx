@@ -16,14 +16,14 @@ const actives = [
 ];
 
 const botanicals = [
-  "Manjistha",
+  "Madder",
   "Neem",
-  "Brahmi",
-  "Amla",
-  "Ashwagandha",
-  "Shatavari",
-  "Gotu Kola",
-  "Tulsi",
+  "Water Hyssop",
+  "Emblic",
+  "Winter Cherry",
+  "Wild Asparagus",
+  "Centella",
+  "Holy Basil",
   "Green Tea",
   "Liquorice",
 ];
@@ -83,7 +83,7 @@ export function IngredientFocus() {
             <div className="relative aspect-3/2 w-full overflow-hidden lg:image-dissolve-left">
               <Image
                 src="/editorial/formulation.webp"
-                alt="INYVA Sheer Glow Exfoliating Scrub laid out with amla, leaves and a swatch of the scrub"
+                alt="INYVA Sheer Glow Exfoliating Scrub laid out with emblic, leaves and a swatch of the scrub"
                 fill
                 sizes="(min-width: 1024px) 66vw, 100vw"
                 className="object-cover"
