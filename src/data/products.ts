@@ -605,7 +605,7 @@ export const products: Product[] = [
     ingredients:
       "Aqua (Water), Decyl Glucoside, Cocamidopropyl Betaine, Glycerin, Acrylates/Beheneth-25 Methacrylate Copolymer, Sodium Cocoyl Glycinate, Ceteareth-60 Myristyl Glycol, Parfum (Fragrance), Sodium Chloride, Sodium Benzoate, Potassium Sorbate, Caprylyl Glycol, Citric Acid, Palm Kernel/Coco Glucoside, Sodium Gluconate, Caprylhydroxamic Acid, Coco-Glucoside, Glyceryl Oleate, Chlorophytes, Azadirachta Indica Leaf Extract, Centella Asiatica Extract, Jasminum Officinale (Jasmine) Flower Extract, Ricinus Communis (Castor) Root Extract, Sesamum Indicum (Sesame) Seed Extract, Glycine, Caramel, Green Tea Extract, Dehydroacetic Acid, CI 17200 (Red 33), Sodium Sulfate, Linalool.",
     images: [
-      img("floral-fresh-jasmine-shower-gel", "primary-v2", "INYVA Floral Fresh Jasmine Bloom Shower Gel tube"),
+      img("floral-fresh-jasmine-shower-gel", "primary-v3", "INYVA Floral Fresh Jasmine Bloom Shower Gel tube"),
       img("floral-fresh-jasmine-shower-gel", "gallery-2", "Floral Fresh shower gel dispensed from the tube"),
     ],
   },
