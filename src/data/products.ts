@@ -395,8 +395,8 @@ export const products: Product[] = [
     ingredients:
       "Aqua (Water), Caprylic/Capric Triglyceride, Coco-Caprylate/Caprate, Propanediol, Cera Alba (Beeswax), Cetearyl Olivate, Glyceryl Citrate/Lactate/Linoleate/Oleate, Glyceryl Stearate, Glycerin, Cetearyl Alcohol, Sorbitan Olivate, Sodium Levulinate, Glyceryl Caprylate, Simmondsia Chinensis (Jojoba) Seed Oil, Parfum (Fragrance), Chlorophytes Extract, Azadirachta Indica Leaf Extract, Emblica Officinalis Fruit Extract, Acrylates Crosspolymer, Aloe Barbadensis Leaf Juice, Sodium Anisate, Ruscus Aculeatus Root Extract, Bacopa Monnieri Extract, Camellia Sinensis Leaf Extract, Citrus Limon (Lemon) Peel Extract, Embelia Ribes Fruit Extract, Rubia Cordifolia Stem Extract, Terminalia Chebula Fruit Extract, Allantoin, Fuller's Earth, Sodium Gluconate, Ocimum Tenuiflorum Extract, Olea Europaea (Olive) Leaf Extract, Corylus Avellana (Hazelnut) Seed Oil, Sodium Benzoate, Stearic Acid, Potassium Sorbate, Dehydroacetic Acid, CI 19140 (Yellow 5), CI 61570 (Green 5), Sodium Chloride, Sodium Sulfate, Hydroxycitronellal, Linalool, Citronellol, Hexyl Cinnamal, Limonene.",
     images: [
-      img("cleanse-core-detox-face-mask", "primary", "INYVA Cleanse Core Detox Face Mask tube"),
-      img("cleanse-core-detox-face-mask", "gallery-1", "Cleanse Core mask standing beside its carton"),
+      img("cleanse-core-detox-face-mask", "primary-v2", "INYVA Cleanse Core Detox Face Mask tube"),
+      img("cleanse-core-detox-face-mask", "gallery-1-v2", "Cleanse Core mask standing beside its carton"),
     ],
     featured: true,
   },
@@ -436,8 +436,8 @@ export const products: Product[] = [
     ingredients:
       "Aqua (Water), Cetearyl Alcohol, Kaolin, Charcoal Powder, Bentonite, Glycerin, Caprylic/Capric Triglyceride, Glycolic Acid, Ceteareth-20, Glycyrrhiza Glabra (Licorice) Stem Extract, Morus Alba Root Extract, Garcinia Indica (Kokum) Seed Butter, Polyhydroxystearic Acid, Glyceryl Citrate/Lactate/Linoleate/Oleate, Niacinamide, Magnesium Carbonate, Diheptyl Succinate, Parfum (Fragrance), Phenoxyethanol, Prunus Armeniaca (Apricot) Kernel Oil, Azadirachta Indica Seed Oil, Titanium Dioxide, Glyceryl Caprylate, CI 77499 (Iron Oxides), Sodium PCA, Sodium Stearoyl Glutamate, Tocopheryl Acetate, Dehydroxanthan Gum, Chlorphenesin, Allantoin, Sodium Gluconate, Olea Europaea (Olive) Leaf Extract, Glyceryl Undecylenate, Sodium Benzoate, Menthol, Capryloyl Glycerin/Sebacic Acid Copolymer, Sodium Chloride, Potassium Sorbate, Sodium Sulfate, Hydroxycitronellal, Linalool, Citronellol, Hexyl Cinnamal, Limonene.",
     images: [
-      img("detox-glow-charcoal-face-mask", "primary", "INYVA Detox Glow Activated Charcoal Face Mask tube"),
-      img("detox-glow-charcoal-face-mask", "gallery-1", "Detox Glow mask standing beside its carton"),
+      img("detox-glow-charcoal-face-mask", "primary-v2", "INYVA Detox Glow Activated Charcoal Face Mask tube"),
+      img("detox-glow-charcoal-face-mask", "gallery-1-v2", "Detox Glow mask standing beside its carton"),
     ],
   },
   {
@@ -605,7 +605,7 @@ export const products: Product[] = [
     ingredients:
       "Aqua (Water), Decyl Glucoside, Cocamidopropyl Betaine, Glycerin, Acrylates/Beheneth-25 Methacrylate Copolymer, Sodium Cocoyl Glycinate, Ceteareth-60 Myristyl Glycol, Parfum (Fragrance), Sodium Chloride, Sodium Benzoate, Potassium Sorbate, Caprylyl Glycol, Citric Acid, Palm Kernel/Coco Glucoside, Sodium Gluconate, Caprylhydroxamic Acid, Coco-Glucoside, Glyceryl Oleate, Chlorophytes, Azadirachta Indica Leaf Extract, Centella Asiatica Extract, Jasminum Officinale (Jasmine) Flower Extract, Ricinus Communis (Castor) Root Extract, Sesamum Indicum (Sesame) Seed Extract, Glycine, Caramel, Green Tea Extract, Dehydroacetic Acid, CI 17200 (Red 33), Sodium Sulfate, Linalool.",
     images: [
-      img("floral-fresh-jasmine-shower-gel", "primary", "INYVA Floral Fresh Jasmine Bloom Shower Gel tube"),
+      img("floral-fresh-jasmine-shower-gel", "primary-v2", "INYVA Floral Fresh Jasmine Bloom Shower Gel tube"),
       img("floral-fresh-jasmine-shower-gel", "gallery-2", "Floral Fresh shower gel dispensed from the tube"),
     ],
   },
