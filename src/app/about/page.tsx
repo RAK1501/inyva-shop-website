@@ -13,7 +13,7 @@ const team = [
   {
     name: "Aarohi Mehta",
     role: "Head of Operations",
-    image: "/leadership/aarohi.webp",
+    image: "/leadership/aarohi-mehta.webp",
     bio: "Aarohi oversees day-to-day operations and helps ensure every part of the INYVA experience runs seamlessly, from internal processes to the journey behind each product.",
   },
   {
@@ -166,6 +166,34 @@ export default function AboutPage() {
                 His focus is on growing the range&rsquo;s reach, on the customer
                 relationships that sustain it, and on the operating discipline behind
                 both.
+              </p>
+            </div>
+          </div>
+
+          {/* Mirrored, so two wide profiles in a row do not read as a column. */}
+          <div className="mt-16 grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-20 md:mt-20">
+            <div className="lg:col-span-4 lg:col-start-9 lg:row-start-1">
+              <div className="relative aspect-square w-full max-w-sm overflow-hidden bg-shell lg:ml-auto">
+                <Image
+                  src="/leadership/david.webp"
+                  alt="David Bonthrone, Chief Revenue Officer"
+                  fill
+                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 24rem, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="lg:col-span-7 lg:col-start-1 lg:row-start-1">
+              <h3 className="display-lg">David Bonthrone</h3>
+              <p className="eyebrow mt-5 text-copper">Chief Revenue Officer</p>
+              <span className="rule-copper mt-7" />
+              <p className="mt-8 text-lg leading-relaxed text-ink-soft">
+                A Chief Revenue Officer with 30+ years of experience building creative and
+                media solutions for brands, agencies, and startups. Via an extensive
+                network, David has the uncanny ability to uncover and engage with decision
+                makers, influencers, and buyers. He thrives on building strategic
+                relationships and driving new business growth.
               </p>
             </div>
           </div>
