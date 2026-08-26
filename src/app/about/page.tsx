@@ -51,7 +51,7 @@ const team = [
   {
     name: "Olivia Bennett",
     role: "Head of Customer Experience",
-    image: "/leadership/olivia-bennett.webp",
+    image: "/leadership/olivia-bennett-v2.webp",
     bio: "Olivia focuses on creating a thoughtful and seamless customer experience, helping ensure every interaction with INYVA reflects the care and attention behind the brand.",
   },
   {
