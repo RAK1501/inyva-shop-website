@@ -120,7 +120,66 @@ export default function AboutPage() {
             The team
           </h2>
 
-          <ul className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3 md:mt-16">
+          {/* The two officers lead the section; the wider setting is theirs. */}
+          <div className="mt-14 grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-20 md:mt-16">
+            <div className="lg:col-span-4">
+              <div className="relative aspect-square w-full max-w-sm overflow-hidden bg-shell">
+                <Image
+                  src="/leadership/rahul.webp"
+                  alt="Rahul Amarendra, Chief Executive Officer of INYVA SHOP"
+                  fill
+                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 24rem, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="lg:col-span-7 lg:col-start-6">
+              <h3 className="display-lg">Rahul Amarendra</h3>
+              <p className="eyebrow mt-5 text-copper">
+                Chief Executive Officer, INYVA SHOP
+              </p>
+              <span className="rule-copper mt-7" />
+              <p className="mt-8 text-lg leading-relaxed text-ink-soft">
+                An IIM Ahmedabad and IIT Delhi graduate and an operator with twenty years
+                of experience, Rahul Amarendra leads INYVA SHOP. His focus is on
+                growing the range&rsquo;s reach, on the customer
+                relationships that sustain it, and on the operating discipline behind
+                both.
+              </p>
+            </div>
+          </div>
+
+
+          {/* Mirrored, so two wide profiles in a row do not read as a column. */}
+          <div className="mt-16 grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-20 md:mt-20">
+            <div className="lg:col-span-4 lg:col-start-9 lg:row-start-1">
+              <div className="relative aspect-square w-full max-w-sm overflow-hidden bg-shell lg:ml-auto">
+                <Image
+                  src="/leadership/david.webp"
+                  alt="David Bonthrone, Chief Revenue Officer of INYVA SHOP"
+                  fill
+                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 24rem, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="lg:col-span-7 lg:col-start-1 lg:row-start-1">
+              <h3 className="display-lg">David Bonthrone</h3>
+              <p className="eyebrow mt-5 text-copper">Chief Revenue Officer, INYVA SHOP</p>
+              <span className="rule-copper mt-7" />
+              <p className="mt-8 text-lg leading-relaxed text-ink-soft">
+                A Chief Revenue Officer with 30+ years of experience building creative and
+                media solutions for brands, agencies, and startups. Via an extensive
+                network, David has the uncanny ability to uncover and engage with decision
+                makers, influencers, and buyers. He thrives on building strategic
+                relationships and driving new business growth.
+              </p>
+            </div>
+          </div>
+
+          <ul className="mt-20 grid gap-x-8 gap-y-14 border-t border-line pt-16 sm:grid-cols-2 lg:grid-cols-3 md:mt-24 md:pt-20">
             {team.map((person) => (
               <li key={person.name}>
                 <div className="relative aspect-square w-full overflow-hidden bg-shell">
@@ -139,64 +198,6 @@ export default function AboutPage() {
               </li>
             ))}
           </ul>
-
-          {/* The chief executive keeps the wider setting he already had. */}
-          <div className="mt-20 grid gap-12 border-t border-line pt-16 lg:grid-cols-12 lg:items-center lg:gap-20 md:mt-24 md:pt-20">
-            <div className="lg:col-span-4">
-              <div className="relative aspect-square w-full max-w-sm overflow-hidden bg-shell">
-                <Image
-                  src="/leadership/rahul.webp"
-                  alt="Rahul Amarendra, Chief Executive Officer of CommerceV3 Inc"
-                  fill
-                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 24rem, 100vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-
-            <div className="lg:col-span-7 lg:col-start-6">
-              <h3 className="display-lg">Rahul Amarendra</h3>
-              <p className="eyebrow mt-5 text-copper">
-                Chief Executive Officer, CommerceV3 Inc
-              </p>
-              <span className="rule-copper mt-7" />
-              <p className="mt-8 text-lg leading-relaxed text-ink-soft">
-                An IIM Ahmedabad and IIT Delhi graduate and an operator with twenty years
-                of experience, Rahul Amarendra leads CommerceV3 Inc. His focus is on
-                growing the range&rsquo;s reach, on the customer
-                relationships that sustain it, and on the operating discipline behind
-                both.
-              </p>
-            </div>
-          </div>
-
-          {/* Mirrored, so two wide profiles in a row do not read as a column. */}
-          <div className="mt-16 grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-20 md:mt-20">
-            <div className="lg:col-span-4 lg:col-start-9 lg:row-start-1">
-              <div className="relative aspect-square w-full max-w-sm overflow-hidden bg-shell lg:ml-auto">
-                <Image
-                  src="/leadership/david.webp"
-                  alt="David Bonthrone, Chief Revenue Officer"
-                  fill
-                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 24rem, 100vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-
-            <div className="lg:col-span-7 lg:col-start-1 lg:row-start-1">
-              <h3 className="display-lg">David Bonthrone</h3>
-              <p className="eyebrow mt-5 text-copper">Chief Revenue Officer</p>
-              <span className="rule-copper mt-7" />
-              <p className="mt-8 text-lg leading-relaxed text-ink-soft">
-                A Chief Revenue Officer with 30+ years of experience building creative and
-                media solutions for brands, agencies, and startups. Via an extensive
-                network, David has the uncanny ability to uncover and engage with decision
-                makers, influencers, and buyers. He thrives on building strategic
-                relationships and driving new business growth.
-              </p>
-            </div>
-          </div>
         </Container>
       </section>
 
