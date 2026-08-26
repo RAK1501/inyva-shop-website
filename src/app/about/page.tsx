@@ -9,6 +9,27 @@ export const metadata: Metadata = {
     "INYVA was built on a single idea: that nature's wisdom and scientific innovation belong in the same formula. Our story, our philosophy and what goes on every pack.",
 };
 
+const team = [
+  {
+    name: "Aarohi",
+    role: "Head of Operations",
+    image: "/leadership/aarohi.webp",
+    bio: "Aarohi oversees day-to-day operations and helps ensure every part of the INYVA experience runs seamlessly, from internal processes to the journey behind each product.",
+  },
+  {
+    name: "Olivia Bennett",
+    role: "Head of Customer Experience",
+    image: "/leadership/olivia.webp",
+    bio: "Olivia focuses on creating a thoughtful and seamless customer experience, helping ensure every interaction with INYVA reflects the care and attention behind the brand.",
+  },
+  {
+    name: "Greg Thomson",
+    role: "Director of Product Development",
+    image: "/leadership/greg.webp",
+    bio: "Greg leads product development at INYVA, bringing together thoughtful formulation, innovation, and a commitment to creating effective skincare experiences.",
+  },
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -94,7 +115,33 @@ export default function AboutPage() {
 
       <section aria-labelledby="leadership-heading" className="reveal border-t border-line">
         <Container className="py-20 md:py-28">
-          <div className="grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-20">
+          <Eyebrow className="mb-6">Leadership</Eyebrow>
+          <h2 id="leadership-heading" className="display-lg">
+            The team
+          </h2>
+
+          <ul className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3 md:mt-16">
+            {team.map((person) => (
+              <li key={person.name}>
+                <div className="relative aspect-square w-full overflow-hidden bg-shell">
+                  <Image
+                    src={person.image}
+                    alt={`${person.name}, ${person.role}`}
+                    fill
+                    sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <h3 className="mt-7 font-display text-2xl text-ink">{person.name}</h3>
+                <p className="eyebrow mt-3 text-copper">{person.role}</p>
+                <span className="rule-copper mt-5" />
+                <p className="mt-5 leading-relaxed text-ink-soft">{person.bio}</p>
+              </li>
+            ))}
+          </ul>
+
+          {/* The chief executive keeps the wider setting he already had. */}
+          <div className="mt-20 grid gap-12 border-t border-line pt-16 lg:grid-cols-12 lg:items-center lg:gap-20 md:mt-24 md:pt-20">
             <div className="lg:col-span-4">
               <div className="relative aspect-square w-full max-w-sm overflow-hidden bg-shell">
                 <Image
@@ -108,10 +155,7 @@ export default function AboutPage() {
             </div>
 
             <div className="lg:col-span-7 lg:col-start-6">
-              <Eyebrow className="mb-6">Leadership</Eyebrow>
-              <h2 id="leadership-heading" className="display-lg">
-                Rahul Amarendra
-              </h2>
+              <h3 className="display-lg">Rahul Amarendra</h3>
               <p className="eyebrow mt-5 text-copper">
                 Chief Executive Officer, CommerceV3 Inc
               </p>
