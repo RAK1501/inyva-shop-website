@@ -162,8 +162,8 @@ export default function AboutPage() {
               <span className="rule-copper mt-7" />
               <p className="mt-8 text-lg leading-relaxed text-ink-soft">
                 An IIM Ahmedabad and IIT Delhi graduate and an operator with twenty years
-                of experience, Rahul Amarendra leads CommerceV3 Inc, the company that markets INYVA.
-                His focus is on growing the range&rsquo;s reach, on the customer
+                of experience, Rahul Amarendra leads CommerceV3 Inc. His focus is on
+                growing the range&rsquo;s reach, on the customer
                 relationships that sustain it, and on the operating discipline behind
                 both.
               </p>

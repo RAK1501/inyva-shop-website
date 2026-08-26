@@ -25,16 +25,12 @@ export const nav = [
 /** The company the range is marketed by, and how to reach it. */
 export const contact = {
   email: "info@inyva.shop",
-  phones: [{ display: "+1 (973) 687-4765", href: "+19736874765" }],
-  company: "CommerceV3 Inc",
+  phones: [{ display: "+1 (917) 499-4303", href: "+19174994303" }],
+  company: "INYVA SHOP",
   offices: [
     {
       label: "Florida",
-      lines: ["131 W Washington St #1988", "Minneola, FL 34755", "USA"],
-    },
-    {
-      label: "New York",
-      lines: ["110 E 25th St", "New York, NY 10010", "USA"],
+      lines: ["135 W Washington St #1988", "Minneola, FL 34755", "USA"],
     },
   ],
 } as const;
