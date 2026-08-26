@@ -22,20 +22,20 @@ export const nav = [
   { href: "/contact", label: "Contact" },
 ] as const;
 
-/** Every value below is printed on the packaging or in the brochure. */
+/** The company the range is marketed by, and how to reach it. */
 export const contact = {
   email: "info@inyva.com",
-  phones: [
-    { display: "+91 99530 54413", href: "+919953054413" },
-    { display: "+91 91407 91215", href: "+919140791215" },
-  ],
-  website: { display: "www.inyva-skincare.com", href: "https://www.inyva-skincare.com" },
-  company: "NeuraNest Retail Pvt Ltd",
-  address: [
-    "3rd Floor, Orchid Centre",
-    "Golf Course Road, Sector 53",
-    "Gurugram 122002, Haryana",
-    "India",
+  phones: [{ display: "+1 (973) 687-4765", href: "+19736874765" }],
+  company: "CommerceV3 Inc",
+  offices: [
+    {
+      label: "Florida",
+      lines: ["131 W Washington St #1988", "Minneola, FL 34755", "USA"],
+    },
+    {
+      label: "New York",
+      lines: ["110 E 25th St", "New York, NY 10010", "USA"],
+    },
   ],
 } as const;
 
@@ -44,4 +44,4 @@ export const contact = {
  * photography. "Vegan" is deliberately not here: it appears on most packs but
  * not on Queen's Time Reverse, so it belongs to the individual product.
  */
-export const brandMarks = ["Cruelty free", "Paraben free", "Made in India"] as const;
+export const brandMarks = ["Cruelty free", "Paraben free"] as const;

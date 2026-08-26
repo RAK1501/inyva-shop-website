@@ -14,11 +14,11 @@ export function organizationSchema() {
     telephone: contact.phones.map((p) => p.display),
     address: {
       "@type": "PostalAddress",
-      streetAddress: contact.address.slice(0, 2).join(", "),
-      addressLocality: "Gurugram",
-      addressRegion: "Haryana",
-      postalCode: "122002",
-      addressCountry: "IN",
+      streetAddress: contact.offices[0].lines[0],
+      addressLocality: "Minneola",
+      addressRegion: "FL",
+      postalCode: "34755",
+      addressCountry: "US",
     },
   };
 }
@@ -34,7 +34,6 @@ export function productSchema(product: Product) {
     sku: product.slug,
     category: getCategory(product.category).name,
     brand: { "@type": "Brand", name: site.name },
-    countryOfOrigin: "IN",
     ...(product.size ? { size: product.size } : {}),
     ...(typeof product.priceUsd === "number"
       ? {

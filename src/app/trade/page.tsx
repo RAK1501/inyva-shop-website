@@ -22,7 +22,7 @@ export default function TradePage() {
               <span className="text-copper">collection</span>
             </h1>
             <p className="max-w-md self-end text-lg leading-relaxed text-ink-soft lg:col-span-5">
-              Fourteen formulations, made in India and declared in full. Tell us about
+              Fourteen formulations, every ingredient declared in full. Tell us about
               your business and we will come back to you.
             </p>
           </div>
@@ -59,14 +59,22 @@ export default function TradePage() {
 
               <div className="mt-10 border-t border-line pt-6">
                 <p className="eyebrow text-muted">Marketed by</p>
-                <address className="mt-4 not-italic text-sm leading-relaxed text-ink-soft">
-                  <span className="block text-ink">{contact.company}</span>
-                  {contact.address.map((line) => (
-                    <span key={line} className="block">
-                      {line}
-                    </span>
+                <p className="mt-4 font-display text-lg text-ink">{contact.company}</p>
+                <div className="mt-4 space-y-4">
+                  {contact.offices.map((office) => (
+                    <address
+                      key={office.label}
+                      className="not-italic text-sm leading-relaxed text-ink-soft"
+                    >
+                      <span className="eyebrow block text-muted">{office.label}</span>
+                      {office.lines.map((line) => (
+                        <span key={line} className="mt-1 block">
+                          {line}
+                        </span>
+                      ))}
+                    </address>
                   ))}
-                </address>
+                </div>
               </div>
             </aside>
           </div>

@@ -17,12 +17,12 @@ export const metadata: Metadata = {
  */
 const faqs: { q: string; a: ReactNode }[] = [
   {
-    q: "Where are INYVA products made?",
+    q: "Who markets INYVA?",
     a: (
       <p>
-        In India, in the Himalayas — it is printed on all fourteen packs. They are
-        manufactured by Vedic Cosmeceuticals Pvt. Ltd in Noida, Uttar Pradesh, and
-        marketed by {contact.company} in Gurugram, Haryana.
+        The range is marketed by {contact.company}, with offices in Florida and New
+        York. Every formula&rsquo;s full ingredient declaration is published on its own
+        product page.
       </p>
     ),
   },

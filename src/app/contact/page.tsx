@@ -5,7 +5,7 @@ import { contact } from "@/data/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "The contact details printed on INYVA packs and in the brochure: email, phone and the Gurugram address the range is marketed from.",
+    "Reach INYVA by email or phone, and the offices the range is marketed from.",
 };
 
 export default function ContactPage() {
@@ -17,8 +17,8 @@ export default function ContactPage() {
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
             <h1 className="display-hero lg:col-span-7">Talk to us</h1>
             <p className="max-w-md self-end text-lg leading-relaxed text-ink-soft lg:col-span-5">
-              Questions about a formula or one of its ingredients? The details below are
-              the ones printed on INYVA packs and in the brochure.
+              Questions about a formula or one of its ingredients? Reach the team on
+              any of the details below.
             </p>
           </div>
         </Container>
@@ -26,7 +26,7 @@ export default function ContactPage() {
 
       <section className="border-t border-line">
         <Container className="py-16 md:py-20">
-          <div className="grid gap-12 md:grid-cols-3 md:gap-10">
+          <div className="grid gap-12 md:grid-cols-2 md:gap-10">
             <div>
               <p className="eyebrow text-muted">Email</p>
               <a
@@ -53,15 +53,6 @@ export default function ContactPage() {
               </ul>
             </div>
 
-            <div>
-              <p className="eyebrow text-muted">Online</p>
-              <a
-                href={contact.website.href}
-                className="link-underline mt-5 inline-block font-display text-2xl text-ink transition-colors hover:text-copper md:text-3xl"
-              >
-                {contact.website.display}
-              </a>
-            </div>
           </div>
         </Container>
       </section>
@@ -71,16 +62,22 @@ export default function ContactPage() {
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-5">
               <p className="eyebrow text-muted">Marketed by</p>
-              <address className="mt-5 not-italic leading-relaxed text-ink-soft">
-                <span className="block font-display text-xl text-ink">
-                  {contact.company}
-                </span>
-                {contact.address.map((line) => (
-                  <span key={line} className="mt-1 block">
-                    {line}
-                  </span>
+              <p className="mt-5 font-display text-xl text-ink">{contact.company}</p>
+              <div className="mt-6 space-y-6">
+                {contact.offices.map((office) => (
+                  <address
+                    key={office.label}
+                    className="not-italic leading-relaxed text-ink-soft"
+                  >
+                    <span className="eyebrow block text-copper">{office.label}</span>
+                    {office.lines.map((line) => (
+                      <span key={line} className="mt-1 block">
+                        {line}
+                      </span>
+                    ))}
+                  </address>
                 ))}
-              </address>
+              </div>
             </div>
 
             <div className="md:col-span-7">

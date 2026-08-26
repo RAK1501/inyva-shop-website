@@ -84,8 +84,42 @@ export default function AboutPage() {
                 the proposition.
               </p>
               <p>
-                Every product is made in India, in the Himalayas, and carries its full
-                ingredient list on the pack and on this site.
+                Every product carries its full ingredient list on the pack and on this
+                site.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section aria-labelledby="leadership-heading" className="reveal border-t border-line">
+        <Container className="py-20 md:py-28">
+          <div className="grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-20">
+            <div className="lg:col-span-4">
+              <div className="relative aspect-square w-full max-w-sm overflow-hidden bg-shell">
+                <Image
+                  src="/leadership/rahul.webp"
+                  alt="Rahul, Chief Executive Officer of CommerceV3 Inc"
+                  fill
+                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 24rem, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="lg:col-span-7 lg:col-start-6">
+              <Eyebrow className="mb-6">Leadership</Eyebrow>
+              <h2 id="leadership-heading" className="display-lg">
+                Rahul
+              </h2>
+              <p className="eyebrow mt-5 text-copper">Chief Executive Officer</p>
+              <span className="rule-copper mt-7" />
+              <p className="mt-8 text-lg leading-relaxed text-ink-soft">
+                An IIM Ahmedabad and IIT Delhi graduate and an operator with 20 years of
+                experience, Rahul leads CV3&rsquo;s growth as a technology-driven commerce
+                platform. Focused on revenue expansion, customer lifecycle optimization,
+                and building the operating rigor that converts a performance eCommerce
+                platform into a durable compounding SaaS asset.
               </p>
             </div>
           </div>

@@ -52,7 +52,7 @@ export const products: Product[] = [
     size: "50 ml / 1.69 fl.oz.",
     priceUsd: 24,
     keyActives: ["Hydrolyzed Collagen", "Hydrolyzed Elastin", "Hyaluronic Acid"],
-    marks: ["Natural actives", "Cruelty free", "Paraben free", "Made in India"],
+    marks: ["Natural actives", "Cruelty free", "Paraben free"],
     shortDescription:
       "A cream built on hydrolyzed collagen, elastin and hyaluronic acid, carried in a long list of Ayurvedic botanicals.",
     description:
@@ -112,7 +112,7 @@ export const products: Product[] = [
     size: "50 ml / 1.69 fl.oz.",
     priceUsd: 22,
     keyActives: ["Hydrolyzed Collagen", "Hydrolyzed Elastin", "Hyaluronic Acid"],
-    marks: ["Natural actives", "Cruelty free", "Paraben free", "Made in India"],
+    marks: ["Natural actives", "Cruelty free", "Paraben free"],
     shortDescription:
       "The serum in the Queen's Time Reverse pair — the same actives in a lighter base.",
     description:
@@ -171,7 +171,7 @@ export const products: Product[] = [
     size: "100 ml / 3.38 fl.oz.",
     priceUsd: 18,
     keyActives: ["Vitamin E", "Hyaluronic Acid", "Algae Extract"],
-    marks: ["Cruelty free", "Paraben free", "Made in India"],
+    marks: ["Cruelty free", "Paraben free"],
     shortDescription:
       "A night cream with hyaluronic acid, vitamin E and algae extract.",
     description:
@@ -221,7 +221,7 @@ export const products: Product[] = [
     size: "100 ml / 3.38 fl.oz.",
     priceUsd: 17,
     keyActives: ["Vitamin E", "Hyaluronic Acid", "Peptides"],
-    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
+    marks: ["Vegan", "Cruelty free", "Paraben free"],
     shortDescription:
       "A light cream with peptides, hyaluronic acid and vitamin E, directed for use before makeup.",
     description:
@@ -263,7 +263,7 @@ export const products: Product[] = [
     size: "200 ml / 6.76 fl.oz.",
     priceUsd: 24,
     keyActives: ["Vitamin E", "Jojoba Oil"],
-    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
+    marks: ["Vegan", "Cruelty free", "Paraben free"],
     shortDescription:
       "A cleansing oil of olive, sesame, grapeseed, jojoba, castor and rosehip, with vitamin E.",
     description:
@@ -313,7 +313,7 @@ export const products: Product[] = [
     size: "100 ml / 3.38 fl.oz.",
     priceUsd: 14,
     keyActives: ["Algae Extract", "Tea Tree Oil", "Salicylic Acid"],
-    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
+    marks: ["Vegan", "Cruelty free", "Paraben free"],
     shortDescription:
       "A gel cleanser with algae extracts, tea tree oil and salicylic acid.",
     description:
@@ -355,7 +355,7 @@ export const products: Product[] = [
     size: "150 ml / 5.07 fl.oz.",
     priceUsd: 18,
     keyActives: ["Peptides", "Herbal Extracts"],
-    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
+    marks: ["Vegan", "Cruelty free", "Paraben free"],
     shortDescription:
       "A micellar foam, formulated with soothing properties for the delicate eye area.",
     description:
@@ -404,7 +404,7 @@ export const products: Product[] = [
     size: "100 ml / 3.38 fl.oz.",
     priceUsd: 18,
     keyActives: ["Green Tea", "Neem Leaf", "Algae", "Manjistha"],
-    marks: ["Cruelty free", "Paraben free", "Made in India"],
+    marks: ["Cruelty free", "Paraben free"],
     shortDescription:
       "A cream-textured detox mask with algae, green tea, Manjistha and neem leaf.",
     description:
@@ -447,7 +447,7 @@ export const products: Product[] = [
     size: "100 ml / 3.38 fl.oz.",
     priceUsd: 18,
     keyActives: ["Mulberry Extract", "Niacinamide", "Kokum Butter", "Vitamin E"],
-    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
+    marks: ["Vegan", "Cruelty free", "Paraben free"],
     shortDescription:
       "An activated charcoal mask with mulberry extract, niacinamide, kokum butter and vitamin E.",
     description:
@@ -489,7 +489,7 @@ export const products: Product[] = [
     size: "100 ml / 3.38 fl.oz.",
     priceUsd: 16,
     keyActives: ["Algae", "Papaya", "Hibiscus Extract"],
-    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
+    marks: ["Vegan", "Cruelty free", "Paraben free"],
     shortDescription:
       "A scrub with walnut shell powder, papaya and hibiscus extracts, and algae.",
     description:
@@ -531,7 +531,7 @@ export const products: Product[] = [
     size: "100 ml / 3.38 fl.oz.",
     priceUsd: 19,
     keyActives: ["Macadamia Oil", "Vitamin E", "Multi Seed Oil"],
-    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
+    marks: ["Vegan", "Cruelty free", "Paraben free"],
     shortDescription:
       "A dry oil for body, face and hair — a blend of evening primrose, macadamia, Amla and Bhringraj.",
     description:
@@ -578,7 +578,7 @@ export const products: Product[] = [
     size: "200 ml / 6.76 fl.oz.",
     priceUsd: 30,
     keyActives: ["Omega 3 & 6", "Vitamin E", "Ginger"],
-    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
+    marks: ["Vegan", "Cruelty free", "Paraben free"],
     shortDescription:
       "A massage oil with ginger, clove, black pepper and caffeine, in a base of sesame and macadamia.",
     description:
@@ -624,7 +624,7 @@ export const products: Product[] = [
     size: "200 ml / 6.76 fl.oz.",
     priceUsd: 14,
     keyActives: ["Jasmine Extract", "Algae", "Gotu Kola"],
-    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
+    marks: ["Vegan", "Cruelty free", "Paraben free"],
     shortDescription:
       "A jasmine shower gel that turns to a creamy foam, with jasmine and Gotu Kola.",
     description:
@@ -665,7 +665,7 @@ export const products: Product[] = [
     size: "200 ml / 6.76 fl.oz.",
     priceUsd: 17,
     keyActives: ["Vitamin B & E", "Multi Seed Oils"],
-    marks: ["Vegan", "Cruelty free", "Paraben free", "Made in India"],
+    marks: ["Vegan", "Cruelty free", "Paraben free"],
     shortDescription:
       "A salt-and-walnut body scrub carried in plant oils.",
     description:
