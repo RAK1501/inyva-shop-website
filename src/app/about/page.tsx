@@ -112,14 +112,16 @@ export default function AboutPage() {
               <h2 id="leadership-heading" className="display-lg">
                 Rahul
               </h2>
-              <p className="eyebrow mt-5 text-copper">Chief Executive Officer</p>
+              <p className="eyebrow mt-5 text-copper">
+                Chief Executive Officer, CommerceV3 Inc
+              </p>
               <span className="rule-copper mt-7" />
               <p className="mt-8 text-lg leading-relaxed text-ink-soft">
-                An IIM Ahmedabad and IIT Delhi graduate and an operator with 20 years of
-                experience, Rahul leads CV3&rsquo;s growth as a technology-driven commerce
-                platform. Focused on revenue expansion, customer lifecycle optimization,
-                and building the operating rigor that converts a performance eCommerce
-                platform into a durable compounding SaaS asset.
+                An IIM Ahmedabad and IIT Delhi graduate and an operator with twenty years
+                of experience, Rahul leads CommerceV3 Inc, the company that markets INYVA.
+                His focus is on growing the range&rsquo;s reach, on the customer
+                relationships that sustain it, and on the operating discipline behind
+                both.
               </p>
             </div>
           </div>
