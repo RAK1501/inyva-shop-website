@@ -138,7 +138,14 @@ export function TradeForm() {
         >
           {status === "sending" ? "Sending…" : "Send enquiry"}
         </button>
-        <p className="text-sm text-muted">Fields marked with an asterisk are required.</p>
+        <p className="text-sm text-muted">
+          Fields marked with an asterisk are required. We use what you send only to
+          reply &mdash; see our{" "}
+          <a href="/privacy" className="link-underline text-copper">
+            privacy policy
+          </a>
+          .
+        </p>
       </div>
 
       {status === "failed" ? (

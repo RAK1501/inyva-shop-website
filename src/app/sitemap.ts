@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/terms", priority: 0.3 },
     { path: "/shipping", priority: 0.3 },
     { path: "/returns", priority: 0.3 },
+    { path: "/accessibility", priority: 0.3 },
   ].map((r) => ({
     url: `${siteUrl}${r.path}`,
     changeFrequency: "monthly" as const,

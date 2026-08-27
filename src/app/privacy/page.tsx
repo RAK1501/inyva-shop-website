@@ -96,9 +96,9 @@ export default function PrivacyPage() {
           body: (
             <>
               <p>
-                Form submissions are delivered to us by a third-party form service, which
-                handles the message in transit and passes it to our inbox. Beyond that, we
-                share what you send us only where we are required to by law.
+                Form submissions are delivered to us by Web3Forms, which handles the message
+                in transit and passes it to our inbox. Beyond that, we share what you send
+                us only where we are required to by law.
               </p>
               <p>
                 We do not share your information with advertisers, data brokers or
@@ -148,10 +148,10 @@ export default function PrivacyPage() {
           heading: "Third-party services",
           body: (
             <p>
-              We use a third-party service to deliver form submissions, and the platform
-              hosting this site processes the requests your browser makes to it. Each
-              operates under its own privacy terms. We do not embed advertising networks,
-              social media trackers or analytics providers.
+              We use Web3Forms to deliver form submissions, and the platform hosting this
+              site processes the requests your browser makes to it. Each operates under
+              its own privacy terms. We do not embed advertising networks, social media
+              trackers or analytics providers.
             </p>
           ),
         },

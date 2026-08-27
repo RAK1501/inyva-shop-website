@@ -123,7 +123,14 @@ export function OrderForm({
         >
           {status === "sending" ? "Sending…" : "Send order request"}
         </button>
-        <p className="text-sm text-muted">Fields marked with an asterisk are required.</p>
+        <p className="text-sm text-muted">
+          Fields marked with an asterisk are required. We use what you send only to
+          reply &mdash; see our{" "}
+          <a href="/privacy" className="link-underline text-copper">
+            privacy policy
+          </a>
+          .
+        </p>
       </div>
 
       {status === "failed" ? (

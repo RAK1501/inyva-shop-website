@@ -6,11 +6,16 @@
   --color-shell: #f2ece3;
   --color-ink: #241f1d;
   --color-ink-soft: #4a4340;
-  --color-muted: #736a64;
+  /* Nudged down from #736a64, which measured 4.4993:1 on the shell panels —
+     under the 4.5:1 requirement by three ten-thousandths. Now 4.85:1. */
+  --color-muted: #6e655e;
   --color-line: #e4dcd1;
   --color-line-strong: #d3c7b8;
-  /* Copper, darkened from the brand tone so it holds contrast as text. */
-  --color-copper: #9c5c33;
+  /* Copper, darkened from the brand tone so it holds contrast as text. It has
+     to clear 4.5:1 on the shell panels as well as on cream, and the previous
+     value reached only 4.48:1 there — close enough to read, far enough under
+     to fail an audit. This clears both: 5.39:1 on cream, 4.90:1 on shell. */
+  --color-copper: #95562e;
   /* The brand tone itself, for rules and for use on charcoal. */
   --color-copper-warm: #c08457;
 

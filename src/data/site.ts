@@ -34,6 +34,7 @@ export const legal = [
   { href: "/terms", label: "Terms & Conditions" },
   { href: "/shipping", label: "Shipping Policy" },
   { href: "/returns", label: "Returns & Refunds" },
+  { href: "/accessibility", label: "Accessibility" },
 ] as const;
 
 /** The company the range is marketed by, and how to reach it. */
