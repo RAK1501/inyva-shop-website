@@ -616,7 +616,7 @@ export const products: Product[] = [
     category: "body",
     size: "200 ml / 6.76 fl.oz.",
     priceUsd: 17,
-    keyActives: ["Vitamin B & E", "Multi Seed Oils"],
+    keyActives: ["Vitamin B & E", "Multi Seed Oils", "Matcha Chlorophyll"],
     marks: ["Vegan", "Cruelty free", "Paraben free"],
     shortDescription:
       "A salt-and-walnut body scrub carried in plant oils.",
