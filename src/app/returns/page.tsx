@@ -102,8 +102,9 @@ export default function ReturnsPage() {
                 made.
               </p>
               <p>
-                How long it then takes to appear is up to your bank or payment provider
-                rather than us.
+                Refunds are processed within 5&ndash;10 business days of the returned
+                product reaching us. How long it then takes to appear on your statement
+                is up to your bank or payment provider rather than us.
               </p>
             </>
           ),

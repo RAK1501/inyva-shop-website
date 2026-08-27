@@ -23,6 +23,11 @@ export default function PrivacyPage() {
           body: (
             <>
               <p>
+                This site is operated by {contact.company}, of{" "}
+                {contact.offices[0].lines.join(", ")}, which is responsible for the
+                information described here.
+              </p>
+              <p>
                 We only collect what you choose to give us. Both forms on this site ask
                 for the details we need to reply:
               </p>

@@ -22,8 +22,9 @@ export default function TermsPage() {
           heading: "Acceptance of terms",
           body: (
             <p>
-              By using this site you agree to these terms. If you do not agree with them,
-              please do not use the site.
+              This site is operated by {contact.company}, of{" "}
+              {contact.offices[0].lines.join(", ")}. By using it you agree to these terms.
+              If you do not agree with them, please do not use the site.
             </p>
           ),
         },
@@ -154,8 +155,8 @@ export default function TermsPage() {
           heading: "Governing law",
           body: (
             <p>
-              These terms are governed by the laws applying at our registered place of
-              business, and any dispute is subject to the courts there.
+              These terms are governed by the laws of the State of Florida, USA, and any
+              dispute arising from them is subject to the courts of that state.
             </p>
           ),
         },
