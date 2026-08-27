@@ -23,6 +23,13 @@ export function organizationSchema() {
   };
 }
 
+/* Prices are reviewed rather than fixed, so the offer carries a validity a
+   year out from the build. Google warns on an offer without one, and a date
+   that quietly ages is worse than one that moves with each deploy. */
+const priceValidUntil = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000)
+  .toISOString()
+  .slice(0, 10);
+
 export function productSchema(product: Product) {
   return {
     "@context": "https://schema.org",
@@ -42,6 +49,23 @@ export function productSchema(product: Product) {
             price: product.priceUsd,
             priceCurrency: "USD",
             url: `${siteUrl}/products/${product.slug}`,
+            /* The range is available to buy; the last step is confirmed by email
+               rather than by card, which is a checkout detail rather than a
+               stock one. Without this a search engine will not show the price
+               at all, which serves nobody. */
+            availability: "https://schema.org/InStock",
+            itemCondition: "https://schema.org/NewCondition",
+            priceValidUntil,
+            hasMerchantReturnPolicy: {
+              "@type": "MerchantReturnPolicy",
+              returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+              merchantReturnDays: 14,
+              returnMethod: "https://schema.org/ReturnByMail",
+              /* returnFees is deliberately absent. The policy covers postage on
+                 a damaged or incorrect item, and says nothing about who pays on
+                 an ordinary return, so claiming free returns here would promise
+                 something the page beside it does not. */
+            },
           },
         }
       : {}),
