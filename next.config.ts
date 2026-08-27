@@ -11,6 +11,27 @@ const nextConfig: NextConfig = {
     qualities: [75, 90],
   },
   devIndicators: false,
+  /* The site serves no third-party script and takes no payment, so these cost
+     nothing and close the usual defaults: no MIME sniffing, no framing by
+     another origin, no full URL leaked to an outbound link, and no access to
+     camera, microphone or location. A content security policy is deliberately
+     left out: it needs to be written against a real deployment, not guessed. */
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -371,7 +371,7 @@ export const products: Product[] = [
     shortDescription:
       "A cream-textured detox mask with algae, green tea, Madder and neem leaf.",
     description:
-      "A cream rather than a clay: jojoba oil, beeswax and olive esters carry the formula, with Fuller's earth, and neem, Madder, tulsi, green tea and Emblic extracts. The pack directs a generous layer over face and neck, left for ten to fifteen minutes, then rinsed and followed with a moisturiser.",
+      "A cream rather than a clay: jojoba oil, beeswax and olive esters carry the formula, with Fuller's earth, and neem, Madder, holy basil, green tea and Emblic extracts. The pack directs a generous layer over face and neck, left for ten to fifteen minutes, then rinsed and followed with a moisturiser.",
     benefits: [
       {
         title: "Deep detoxification",

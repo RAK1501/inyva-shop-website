@@ -12,6 +12,16 @@ export const metadata: Metadata = {
 };
 
 /**
+ * Read from the office list rather than written out, so this answer cannot
+ * drift away from the address in the footer and on the contact page.
+ */
+const officePhrase = (() => {
+  const labels = contact.offices.map((office) => office.label);
+  if (labels.length === 1) return `an office in ${labels[0]}`;
+  return `offices in ${labels.slice(0, -1).join(", ")} and ${labels[labels.length - 1]}`;
+})();
+
+/**
  * Every answer is traceable to the packaging, the brochure or the ingredient
  * declarations. Where the sources say nothing, there is no entry — which is why
  * there is no guidance here on patch testing, storage or sensitivities.
@@ -21,9 +31,9 @@ const faqs: { q: string; a: ReactNode }[] = [
     q: "Who markets INYVA?",
     a: (
       <p>
-        The range is marketed by {contact.company}, with offices in Florida and New
-        York. Every formula&rsquo;s full ingredient declaration is published on its own
-        product page.
+        The range is marketed by {contact.company}, with {officePhrase}. Every
+        formula&rsquo;s full ingredient declaration is published on its own product
+        page.
       </p>
     ),
   },
