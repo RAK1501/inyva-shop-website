@@ -98,6 +98,8 @@ Brand assets, product photography and copy are the property of NeuraNest Retail 
 
 Hosted on Vercel and deployed from `main` — every push to that branch builds and promotes to production.
 
+The deploying repository is `RAK1501/inyva-shop-website` and the Vercel project is `inyva-shop-website`. On the Hobby plan a production build only runs when the tip commit on `main` is authored by the account owner, so other contributors' work lands through pull requests merged there.
+
 Production is https://www.inyva.shop; the apex `inyva.shop` 308-redirects to it. DNS stays at GoDaddy: an A record on `@` and a CNAME on `www` point at Vercel, alongside the existing mail records.
 
 `NEXT_PUBLIC_WEB3FORMS_KEY` must be set on the host — Production, Preview and Development. Without it the enquiry forms have no endpoint.
