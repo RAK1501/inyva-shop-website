@@ -1,11 +1,17 @@
+/** The live brand domain. Every other address the site runs on is staging. */
+export const productionUrl = "https://www.inyva.shop";
+
 /**
- * Where this build is actually served from, used for canonical and Open Graph
- * URLs. Netlify sets URL to the site's primary address, so previews and the
- * production deploy each describe themselves correctly. Set
- * NEXT_PUBLIC_SITE_URL once the brand domain points here.
+ * Where this build is actually served from, used for canonical, sitemap and
+ * Open Graph URLs. NEXT_PUBLIC_SITE_URL wins where it is set; Netlify sets URL
+ * on its own deploys, so staging describes itself rather than production; and
+ * a production build with neither falls back to the brand domain rather than
+ * to localhost, so a missing variable cannot publish a broken canonical.
  */
 export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? process.env.URL ?? "http://localhost:3000";
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  process.env.URL ??
+  (process.env.NODE_ENV === "production" ? productionUrl : "http://localhost:3000");
 
 export const site = {
   name: "INYVA",
