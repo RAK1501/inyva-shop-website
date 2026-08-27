@@ -42,11 +42,15 @@ export function OrderForm({
   unpriced: number;
 }) {
   const [status, setStatus] = useState<Status>("idle");
+  /** Read back to the customer on success, so they can see which address the
+   *  reply is coming to and catch a typo while it still matters. */
+  const [sentTo, setSentTo] = useState("");
   const resultRef = useRef<HTMLParagraphElement>(null);
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
+    setSentTo(String(new FormData(form).get("email") ?? "").trim());
     setStatus("sending");
 
     const result = await submitEnquiry(form, { subject: "New order request — INYVA" });
@@ -64,8 +68,21 @@ export function OrderForm({
       >
         <span className="block font-display text-2xl text-ink">Order request received.</span>
         <span className="mt-3 block">
-          Nothing has been charged. The INYVA team has the list and will confirm
-          availability and how to pay by email.
+          Nothing has been charged. We will reply
+          {sentTo ? (
+            <>
+              {" "}
+              to <span className="text-ink">{sentTo}</span>
+            </>
+          ) : null}{" "}
+          within one business day to confirm availability, price and delivery.
+        </span>
+        <span className="mt-3 block text-sm text-muted">
+          Not heard from us by then? Write to{" "}
+          <a href={`mailto:${contact.email}`} className="link-underline text-copper">
+            {contact.email}
+          </a>
+          .
         </span>
       </p>
     );

@@ -107,6 +107,31 @@ export default function ContactPage() {
                     ))}
                   </address>
                 ))}
+                <p className="leading-relaxed text-ink-soft">
+                  <a
+                    href={`mailto:${contact.email}`}
+                    className="link-underline text-copper"
+                  >
+                    {contact.email}
+                  </a>
+                </p>
+              </div>
+
+              <span className="mt-9 block h-px w-full bg-line-strong" />
+
+              <div className="mt-9">
+                <span className="eyebrow mb-3 block text-copper">Product safety</span>
+                <p className="leading-relaxed text-ink-soft">
+                  If a product causes a reaction, stop using it and tell us. Send the
+                  product name and the batch number printed on the pack to{" "}
+                  <a
+                    href={`mailto:${contact.email}`}
+                    className="link-underline text-copper"
+                  >
+                    {contact.email}
+                  </a>{" "}
+                  and we will respond and keep a record.
+                </p>
               </div>
 
               <BotanicalSprig
