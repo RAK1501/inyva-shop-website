@@ -22,9 +22,9 @@ export default function ReturnsPage() {
           body: (
             <p>
               Products bought directly from us can be returned where they are unused, in
-              their original packaging, and returned within the window agreed in your
-              order confirmation. If something has arrived damaged or is not what you
-              ordered, none of this applies — see below.
+              their original packaging, and sent back within 14 days of delivery. If
+              something has arrived damaged or is not what you ordered, none of this
+              applies — see below.
             </p>
           ),
         },
@@ -32,9 +32,9 @@ export default function ReturnsPage() {
           heading: "Return window",
           body: (
             <p>
-              The period in which a product can be returned is confirmed with your order,
-              since it varies with the destination and any local consumer law that gives
-              you a longer right. Nothing here reduces a statutory right you have.
+              You have 14 days from the day your order is delivered to tell us you would
+              like to return it. Where local consumer law gives you a longer period, that
+              longer period applies — nothing here reduces a statutory right you have.
             </p>
           ),
         },
@@ -65,7 +65,7 @@ export default function ReturnsPage() {
               <LegalList
                 items={[
                   "Products that have been opened, used or had their seal broken, unless they are faulty.",
-                  "Products returned outside the agreed window.",
+                  "Products returned outside the 14-day window.",
                   "Products not bought directly from us.",
                 ]}
               />
