@@ -103,6 +103,16 @@ export default async function ProductPage({
                   {product.size ? (
                     <span className="text-sm text-muted">{product.size}</span>
                   ) : null}
+                  {/* Set on the same line as the price, since the two are read
+                      together. The dot carries it at a glance, the words carry
+                      it for a screen reader. */}
+                  <span className="eyebrow flex items-center gap-2 text-ink-soft">
+                    <span
+                      aria-hidden="true"
+                      className="block h-1.5 w-1.5 rounded-full bg-copper"
+                    />
+                    In stock
+                  </span>
                 </p>
               ) : null}
 
