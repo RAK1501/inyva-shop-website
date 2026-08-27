@@ -22,6 +22,14 @@ export const nav = [
   { href: "/contact", label: "Contact" },
 ] as const;
 
+/** Policy pages. Kept out of the primary nav, always reachable from the foot. */
+export const legal = [
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms & Conditions" },
+  { href: "/shipping", label: "Shipping Policy" },
+  { href: "/returns", label: "Returns & Refunds" },
+] as const;
+
 /** The company the range is marketed by, and how to reach it. */
 export const contact = {
   email: "info@inyva.shop",

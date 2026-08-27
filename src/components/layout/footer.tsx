@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/primitives";
 import { categories } from "@/data/categories";
-import { brandMarks, contact, nav, site } from "@/data/site";
+import { brandMarks, contact, legal, nav, site } from "@/data/site";
 
 export function Footer() {
   return (
@@ -94,17 +94,31 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-5 border-t border-cream/12 pt-7 text-xs sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            &copy; {new Date().getFullYear()} {contact.company}
-          </p>
-          <ul className="flex flex-wrap gap-x-5 gap-y-2">
-            {brandMarks.map((m) => (
-              <li key={m} className="eyebrow">
-                {m}
+        <div className="mt-14 border-t border-cream/12 pt-7 text-xs">
+          {/* The policies sit on their own line above the notice: they are read
+              rarely but must always be findable. */}
+          <ul className="flex flex-wrap gap-x-6 gap-y-3">
+            {legal.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href} className="transition-colors hover:text-cream">
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
+
+          <div className="mt-6 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+            <p>
+              &copy; {new Date().getFullYear()} {contact.company}
+            </p>
+            <ul className="flex flex-wrap gap-x-5 gap-y-2">
+              {brandMarks.map((m) => (
+                <li key={m} className="eyebrow">
+                  {m}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </Container>
     </footer>
