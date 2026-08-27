@@ -107,7 +107,7 @@ export const ingredients: Ingredient[] = [
     name: "Madder",
     group: "botanicals",
     inci: ["Rubia Cordifolia"],
-    what: "Works with neem to clear blemishes, reduce acne and improve skin texture.",
+    what: "Works alongside neem on the look of blemishes and the evenness of skin texture.",
   },
   {
     name: "Neem",
@@ -197,7 +197,7 @@ export const ingredients: Ingredient[] = [
     name: "Tea Tree",
     group: "botanicals",
     inci: ["Melaleuca Alternifolia"],
-    what: "Natural antiseptic properties, used to help reduce acne and blemishes.",
+    what: "A clarifying botanical, long used on skin that looks congested or uneven.",
   },
   {
     name: "Jasmine",

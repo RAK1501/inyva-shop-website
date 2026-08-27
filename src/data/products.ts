@@ -291,11 +291,11 @@ export const products: Product[] = [
       },
       {
         title: "Gentle exfoliation",
-        body: "Salicylic acid (under 2%) removes dead skin cells and promotes cell renewal, helping prevent future breakouts.",
+        body: "Salicylic acid (under 2%) lifts away dead skin cells and encourages surface renewal, leaving pores looking clearer.",
       },
       {
-        title: "Tea tree for blemishes",
-        body: "Known for its natural antiseptic properties, tea tree oil helps reduce acne and skin blemishes.",
+        title: "Tea tree for a clearer look",
+        body: "Tea tree oil, long valued in skincare, helps skin look clearer and less congested.",
       },
       {
         title: "For all skin types",
@@ -382,8 +382,8 @@ export const products: Product[] = [
         body: "Helps combat environmental stressors, reducing signs of aging and promoting a radiant complexion.",
       },
       {
-        title: "Healing herbs for clear skin",
-        body: "Madder and neem work together to clear blemishes, reduce acne and improve overall skin texture.",
+        title: "Botanicals for a clearer look",
+        body: "Madder and neem work together on the appearance of blemishes and the evenness of skin texture.",
       },
       {
         title: "Suitable for all skin types",
