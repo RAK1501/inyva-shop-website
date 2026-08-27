@@ -3,6 +3,7 @@ import { LegalList, LegalPage } from "@/components/legal/legal-page";
 import { contact } from "@/data/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/shipping" },
   title: "Shipping Policy",
   description:
     "How an INYVA order is processed, where we ship, and how delivery costs and timings are confirmed.",

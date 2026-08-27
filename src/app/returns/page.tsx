@@ -3,6 +3,7 @@ import { LegalList, LegalPage } from "@/components/legal/legal-page";
 import { contact } from "@/data/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/returns" },
   title: "Returns & Refunds",
   description:
     "When an INYVA product can be returned, what condition it needs to be in, and how a refund or exchange is handled.",

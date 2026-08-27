@@ -3,6 +3,7 @@ import { LegalList, LegalPage } from "@/components/legal/legal-page";
 import { contact } from "@/data/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/privacy" },
   title: "Privacy Policy",
   description:
     "What INYVA collects when you use this site or get in touch, how it is used, and how to ask for it to be removed.",

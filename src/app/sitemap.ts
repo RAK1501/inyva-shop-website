@@ -11,6 +11,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/trade", priority: 0.7 },
     { path: "/faq", priority: 0.6 },
     { path: "/contact", priority: 0.6 },
+    { path: "/privacy", priority: 0.3 },
+    { path: "/terms", priority: 0.3 },
+    { path: "/shipping", priority: 0.3 },
+    { path: "/returns", priority: 0.3 },
   ].map((r) => ({
     url: `${siteUrl}${r.path}`,
     changeFrequency: "monthly" as const,

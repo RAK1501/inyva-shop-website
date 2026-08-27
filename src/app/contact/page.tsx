@@ -15,6 +15,7 @@ import {
 } from "./contact-icons";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact",
   description:
     "Reach INYVA by email or phone, and the offices the range is marketed from.",

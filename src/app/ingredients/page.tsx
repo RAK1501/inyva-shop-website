@@ -6,6 +6,7 @@ import { ingredientGroups } from "@/data/ingredients";
 import { getIngredientEntries } from "@/lib/ingredients";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ingredients" },
   title: "Ingredient Glossary",
   description:
     "The actives, Ayurvedic botanicals and oils that recur across the INYVA range — what each one is, and which of the fourteen formulas it appears in.",

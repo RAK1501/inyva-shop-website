@@ -6,6 +6,7 @@ import { categories, type CategorySlug } from "@/data/categories";
 import { getAllProducts } from "@/lib/products";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/products" },
   title: "The Collection",
   description:
     "Fourteen INYVA formulations across cleansers, masks and scrubs, serums and creams, and body care, each with its full ingredient list and directions.",

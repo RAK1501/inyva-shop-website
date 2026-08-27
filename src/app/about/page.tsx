@@ -4,6 +4,7 @@ import { Button, Container, Eyebrow, SectionHeading } from "@/components/ui/prim
 import { brandMarks } from "@/data/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
   title: "About",
   description:
     "INYVA was built on a single idea: that nature's wisdom and scientific innovation belong in the same formula. Our story, our philosophy and what goes on every pack.",

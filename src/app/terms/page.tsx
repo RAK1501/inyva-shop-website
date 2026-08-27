@@ -3,6 +3,7 @@ import { LegalList, LegalPage } from "@/components/legal/legal-page";
 import { contact } from "@/data/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/terms" },
   title: "Terms & Conditions",
   description:
     "The terms on which INYVA makes this site available, and what applies when you send an order request or a trade enquiry.",

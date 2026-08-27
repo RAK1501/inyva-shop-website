@@ -4,6 +4,7 @@ import { Container, Eyebrow } from "@/components/ui/primitives";
 import { contact } from "@/data/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/trade" },
   title: "Trade Enquiries",
   description:
     "Wholesale and distribution enquiries for the INYVA range — fourteen formulations across cleansers, masks and scrubs, serums and creams, and body care.",

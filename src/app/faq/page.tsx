@@ -5,6 +5,7 @@ import { Button, Container, Eyebrow } from "@/components/ui/primitives";
 import { contact } from "@/data/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/faq" },
   title: "Questions",
   description:
     "What is printed on an INYVA pack, which products carry a vegan mark, where they are made, and where to find each full ingredient list.",
