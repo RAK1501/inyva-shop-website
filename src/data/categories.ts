@@ -12,7 +12,7 @@ export const categories = [
     name: "Mask & Exfoliate",
     tagline: "Weekly resets",
     description: "Masks and a scrub, for two or three times a week.",
-    image: "/editorial/category-mask.webp",
+    image: "/editorial/category-mask-v2.webp",
     imageAlt: "INYVA Cleanse Core Detox Face Mask",
   },
   {
