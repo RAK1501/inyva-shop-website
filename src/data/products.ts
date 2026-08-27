@@ -31,7 +31,22 @@ export type Product = {
   benefits: { title: string; body: string }[];
   /** Verbatim from the carton or tube. */
   howToUse: string;
-  /** Verbatim from the updated ingredients document. */
+  /**
+   * From the supplier's ingredients document, reconciled against the printed
+   * cartons where those have been read. Nine of the fourteen have been checked
+   * that way, and every one of them listed something the document did not.
+   *
+   * The fragrance allergens each carton prints have been appended to the six
+   * declarations missing them: they belong at the end of a declaration by
+   * convention, so no position had to be guessed, and they are what someone
+   * with a sensitivity actually reads. Twelve entries sitting mid-list are
+   * deliberately still absent, because order carries strength and that cannot
+   * be read off a photograph.
+   *
+   * So parts of this field now come from the packs rather than the document.
+   * Which of the two is current is a question for the supplier, and until it
+   * is answered the mid-list gaps are known rather than fixed.
+   */
   ingredients: string;
   images: ProductImage[];
   featured?: boolean;
@@ -221,7 +236,7 @@ export const products: Product[] = [
     howToUse:
       "Take a small amount onto fingertips. Gently massage onto clean, dry skin in upward motions. Focus on dry or dull areas. Allow absorption before makeup. Use daily for refreshed, radiant skin.",
     ingredients:
-      "Aqua (Water), Glyceryl Stearate, Glycerin, Caprylic/Capric Triglyceride, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Helianthus Annuus (Sunflower) Seed Oil, Propanediol, Diheptyl Succinate, Glyceryl Caprylate, Aloe Barbadensis Leaf Juice, Steareth-21, Cetearyl Olivate, Prunus Armeniaca (Apricot) Kernel Oil, Tocopheryl Acetate, Triticum Vulgare (Wheat) Germ Oil, Carbomer, Arginine, Sorbitan Olivate, Parfum (Fragrance), Benzyl Alcohol, Olea Europaea (Olive) Fruit Oil, Sodium Benzoate, Potassium Sorbate, Sodium PCA, Glyceryl Undecylenate, Oryza Sativa (Rice) Bran Oil, Sodium Gluconate, Sodium Stearoyl Glutamate, Xanthan Gum, Stearic Acid, Capryloyl Glycerin/Sebacic Acid Copolymer, Sodium Hyaluronate, Peptide.",
+      "Aqua (Water), Glyceryl Stearate, Glycerin, Caprylic/Capric Triglyceride, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Helianthus Annuus (Sunflower) Seed Oil, Propanediol, Diheptyl Succinate, Glyceryl Caprylate, Aloe Barbadensis Leaf Juice, Steareth-21, Cetearyl Olivate, Prunus Armeniaca (Apricot) Kernel Oil, Tocopheryl Acetate, Triticum Vulgare (Wheat) Germ Oil, Carbomer, Arginine, Sorbitan Olivate, Parfum (Fragrance), Benzyl Alcohol, Olea Europaea (Olive) Fruit Oil, Sodium Benzoate, Potassium Sorbate, Sodium PCA, Glyceryl Undecylenate, Oryza Sativa (Rice) Bran Oil, Sodium Gluconate, Sodium Stearoyl Glutamate, Xanthan Gum, Stearic Acid, Capryloyl Glycerin/Sebacic Acid Copolymer, Sodium Hyaluronate, Peptide, Hexyl Cinnamal, Alpha-Isomethyl Ionone, Benzyl Benzoate, Citronellol, Limonene, Linalool.",
     images: [
       img("silk-dew-light-cream", "primary", "INYVA Silk Dew Revitalizing Moisturizing Light Cream tube"),
       img("silk-dew-light-cream", "gallery-1", "Silk Dew light cream standing beside its carton"),
@@ -261,7 +276,7 @@ export const products: Product[] = [
     howToUse:
       "Dispense oil onto dry hands or a cotton pad. Gently massage onto dry skin, focusing on makeup areas. Enjoy its melting texture. Wet hands or pad to emulsify, then rinse for refreshed skin.",
     ingredients:
-      "Caprylic/Capric Triglyceride, Olea Europaea (Olive) Fruit Oil, Sorbeth-30 Tetraoleate, Sesamum Indicum (Sesame) Seed Oil, Vitis Vinifera (Grape) Seed Oil, Tocopheryl Acetate, Parfum/Fragrance, Simmondsia Chinensis (Jojoba) Seed Oil, Corylus Avellana (Hazel) Seed Oil, Ricinus Communis (Castor) Seed Oil, Rosa Moschata (Rose Hip) Seed Oil, Helianthus Annuus (Sunflower) Seed Oil.",
+      "Caprylic/Capric Triglyceride, Olea Europaea (Olive) Fruit Oil, Sorbeth-30 Tetraoleate, Sesamum Indicum (Sesame) Seed Oil, Vitis Vinifera (Grape) Seed Oil, Tocopheryl Acetate, Parfum/Fragrance, Simmondsia Chinensis (Jojoba) Seed Oil, Corylus Avellana (Hazel) Seed Oil, Ricinus Communis (Castor) Seed Oil, Rosa Moschata (Rose Hip) Seed Oil, Helianthus Annuus (Sunflower) Seed Oil, Benzyl Salicylate, Hydroxycitronellal, Limonene, Linalool, Hexyl Cinnamal, Benzyl Benzoate, Citronellol.",
     images: [
       img(
         "serene-cleanse-makeup-remover-oil",
@@ -305,7 +320,7 @@ export const products: Product[] = [
     howToUse:
       "Wet your face, dispense a small amount of the cleansing gel onto fingertips, massage onto damp skin focusing on oily areas, rinse thoroughly, pat dry, and follow with moisturizer.",
     ingredients:
-      "Aqua (Water), Decyl Glucoside, Glycerin, Cocamidopropyl Betaine, Acrylates Copolymer, Sodium Cocoamphoacetate, Lauryl Glucoside, Sodium Cocoyl Glycinate, 1,3-Propanediol, Sodium Chloride, Benzyl Alcohol, Parfum (Fragrance), Sodium Cocoyl Glutamate, Sodium Lauryl Glucose Carboxylate, Agar, Sodium Hydroxide, Menthol, Sodium Gluconate, Ethylhexylglycerin, Salicylic Acid, Chlorophytes Extract, Aloe Barbadensis Leaf Juice, Rubia Cordifolia Stem Extract, Embelia Ribes Fruit Extract, Bacopa Monnieri Extract, Citrus Limon (Lemon) Peel Extract, Azadirachta Indica Leaf Extract, Cistus Ladaniferus Leaf/Stem Extract, Sodium Benzoate, Glycine, Melaleuca Alternifolia (Tea Tree) Leaf Oil, Sorbic Acid, Cucumis Sativus (Cucumber) Seed Oil, Mentha Piperita (Peppermint) Leaf Oil, Green Tea Extract, Potassium Sorbate, Dehydroacetic Acid, CI 19140 (Yellow 5), CI 11680, CI 74160, CI 61570 (Green 5), Sodium Sulfate, Hydroxycitronellal, Linalool, Hexyl Cinnamal, Limonene.",
+      "Aqua (Water), Decyl Glucoside, Glycerin, Cocamidopropyl Betaine, Acrylates Copolymer, Sodium Cocoamphoacetate, Lauryl Glucoside, Sodium Cocoyl Glycinate, 1,3-Propanediol, Sodium Chloride, Benzyl Alcohol, Parfum (Fragrance), Sodium Cocoyl Glutamate, Sodium Lauryl Glucose Carboxylate, Agar, Sodium Hydroxide, Menthol, Sodium Gluconate, Ethylhexylglycerin, Salicylic Acid, Chlorophytes Extract, Aloe Barbadensis Leaf Juice, Rubia Cordifolia Stem Extract, Embelia Ribes Fruit Extract, Bacopa Monnieri Extract, Citrus Limon (Lemon) Peel Extract, Azadirachta Indica Leaf Extract, Cistus Ladaniferus Leaf/Stem Extract, Sodium Benzoate, Glycine, Melaleuca Alternifolia (Tea Tree) Leaf Oil, Sorbic Acid, Cucumis Sativus (Cucumber) Seed Oil, Mentha Piperita (Peppermint) Leaf Oil, Green Tea Extract, Potassium Sorbate, Dehydroacetic Acid, CI 19140 (Yellow 5), CI 11680, CI 74160, CI 61570 (Green 5), Sodium Sulfate, Hydroxycitronellal, Linalool, Hexyl Cinnamal, Limonene, Benzyl Benzoate, Citronellol.",
     images: [
       img("deepdive-cleansing-gel", "primary", "INYVA Deepdive All-Skin Cleansing Gel tube"),
       img("deepdive-cleansing-gel", "gallery-1", "Deepdive cleansing gel standing beside its carton"),
@@ -393,7 +408,7 @@ export const products: Product[] = [
     howToUse:
       "Begin with clean, dry skin. Apply a generous layer of the mask on your face and neck. Leave for 10-15 minutes to detoxify. Rinse and moisturize for refreshed, hydrated skin.",
     ingredients:
-      "Aqua (Water), Caprylic/Capric Triglyceride, Coco-Caprylate/Caprate, Propanediol, Cera Alba (Beeswax), Cetearyl Olivate, Glyceryl Citrate/Lactate/Linoleate/Oleate, Glyceryl Stearate, Glycerin, Cetearyl Alcohol, Sorbitan Olivate, Sodium Levulinate, Glyceryl Caprylate, Simmondsia Chinensis (Jojoba) Seed Oil, Parfum (Fragrance), Chlorophytes Extract, Azadirachta Indica Leaf Extract, Emblica Officinalis Fruit Extract, Acrylates Crosspolymer, Aloe Barbadensis Leaf Juice, Sodium Anisate, Ruscus Aculeatus Root Extract, Bacopa Monnieri Extract, Camellia Sinensis Leaf Extract, Citrus Limon (Lemon) Peel Extract, Embelia Ribes Fruit Extract, Rubia Cordifolia Stem Extract, Terminalia Chebula Fruit Extract, Allantoin, Fuller's Earth, Sodium Gluconate, Ocimum Tenuiflorum Extract, Olea Europaea (Olive) Leaf Extract, Corylus Avellana (Hazelnut) Seed Oil, Sodium Benzoate, Stearic Acid, Potassium Sorbate, Dehydroacetic Acid, CI 19140 (Yellow 5), CI 61570 (Green 5), Sodium Chloride, Sodium Sulfate, Hydroxycitronellal, Linalool, Citronellol, Hexyl Cinnamal, Limonene.",
+      "Aqua (Water), Caprylic/Capric Triglyceride, Coco-Caprylate/Caprate, Propanediol, Cera Alba (Beeswax), Cetearyl Olivate, Glyceryl Citrate/Lactate/Linoleate/Oleate, Glyceryl Stearate, Glycerin, Cetearyl Alcohol, Sorbitan Olivate, Sodium Levulinate, Glyceryl Caprylate, Simmondsia Chinensis (Jojoba) Seed Oil, Parfum (Fragrance), Chlorophytes Extract, Azadirachta Indica Leaf Extract, Emblica Officinalis Fruit Extract, Acrylates Crosspolymer, Aloe Barbadensis Leaf Juice, Sodium Anisate, Ruscus Aculeatus Root Extract, Bacopa Monnieri Extract, Camellia Sinensis Leaf Extract, Citrus Limon (Lemon) Peel Extract, Embelia Ribes Fruit Extract, Rubia Cordifolia Stem Extract, Terminalia Chebula Fruit Extract, Allantoin, Fuller's Earth, Sodium Gluconate, Ocimum Tenuiflorum Extract, Olea Europaea (Olive) Leaf Extract, Corylus Avellana (Hazelnut) Seed Oil, Sodium Benzoate, Stearic Acid, Potassium Sorbate, Dehydroacetic Acid, CI 19140 (Yellow 5), CI 61570 (Green 5), Sodium Chloride, Sodium Sulfate, Hydroxycitronellal, Linalool, Citronellol, Hexyl Cinnamal, Limonene, Benzyl Benzoate.",
     images: [
       img("cleanse-core-detox-face-mask", "primary-v2", "INYVA Cleanse Core Detox Face Mask tube"),
       img("cleanse-core-detox-face-mask", "gallery-1-v2", "Cleanse Core mask standing beside its carton"),
@@ -474,7 +489,7 @@ export const products: Product[] = [
     howToUse:
       "Start with clean, damp skin. Apply a small amount to fingertips, massage onto face in circular motions, focusing on rough areas. Rinse with lukewarm water, pat dry. Use 2-3 times weekly.",
     ingredients:
-      "Aqua (Water), Cetearyl Alcohol, Glyceryl Stearate, Juglans Regia (Walnut) Shell Powder, Glycerin, Palmitic Acid, Propanediol, Isopropyl Myristate, Cetyl Alcohol, Heptyl Undecylenate, Stearic Acid, Glyceryl Caprylate, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Parfum (Fragrance), Ceteareth-20, Chlorophytes Extract, Carica Papaya (Papaya) Fruit Extract, Hibiscus Rosa-Sinensis Flower Extract, Triticum Vulgare (Wheat) Germ Oil, Benzyl Alcohol, Sodium Benzoate, Potassium Sorbate, Prunus Armeniaca (Apricot) Kernel Oil, Aloe Barbadensis Leaf Juice, Malic Acid, Glyceryl Undecylenate, Decyl Glucoside, Green Tea Extract, Dehydroacetic Acid, CI 77947 (Zinc Oxide), Titanium Dioxide, Sodium Chloride, Sodium Sulfate, Linalool, Hexyl Cinnamal, Limonene, Alpha-Isomethyl Ionone.",
+      "Aqua (Water), Cetearyl Alcohol, Glyceryl Stearate, Juglans Regia (Walnut) Shell Powder, Glycerin, Palmitic Acid, Propanediol, Isopropyl Myristate, Cetyl Alcohol, Heptyl Undecylenate, Stearic Acid, Glyceryl Caprylate, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Parfum (Fragrance), Ceteareth-20, Chlorophytes Extract, Carica Papaya (Papaya) Fruit Extract, Hibiscus Rosa-Sinensis Flower Extract, Triticum Vulgare (Wheat) Germ Oil, Benzyl Alcohol, Sodium Benzoate, Potassium Sorbate, Prunus Armeniaca (Apricot) Kernel Oil, Aloe Barbadensis Leaf Juice, Malic Acid, Glyceryl Undecylenate, Decyl Glucoside, Green Tea Extract, Dehydroacetic Acid, CI 77947 (Zinc Oxide), Titanium Dioxide, Sodium Chloride, Sodium Sulfate, Linalool, Hexyl Cinnamal, Limonene, Alpha-Isomethyl Ionone, Eugenol, Hydroxycitronellal, Benzyl Salicylate, Citronellol, Benzyl Cinnamate.",
     images: [
       img("sheer-glow-exfoliating-scrub", "primary", "INYVA Sheer Glow Exfoliating Scrub tube"),
       img("sheer-glow-exfoliating-scrub", "gallery-1", "Sheer Glow scrub standing beside its carton"),
@@ -514,7 +529,7 @@ export const products: Product[] = [
     howToUse:
       "Dispense a small amount onto palm. For face, massage onto clean, dry skin in upward motions. For body, apply to damp skin after bathing, focusing on dry areas. For hair, distribute evenly, focusing on ends. Use daily.",
     ingredients:
-      "Coco-Caprylate/Caprate, Sesamum Indicum (Sesame) Seed Oil, Caprylic/Capric Triglyceride, Dicaprylyl Carbonate, Macadamia Ternifolia Seed Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Olea Europaea (Olive) Fruit Oil, Helianthus Annuus (Sunflower) Seed Oil, Parfum (Fragrance), Corylus Avellana (Hazel) Seed Oil, Vitis Vinifera (Grape) Seed Oil, Tocopheryl Acetate, Oenothera Biennis (Evening Primrose) Oil, Emblica Officinalis (Indian Gooseberry) Fruit Extract, Aloe Barbadensis (Aloe Vera) Extract, Borago Officinalis (Borage) Seed Oil, Eclipta Prostrata (False Daisy) Leaf Oil, Ribes Nigrum (Blackcurrant) Seed Oil, Solanum Lycopersicum (Tomato) Seed Oil, Tocopherol, Geraniol.",
+      "Coco-Caprylate/Caprate, Sesamum Indicum (Sesame) Seed Oil, Caprylic/Capric Triglyceride, Dicaprylyl Carbonate, Macadamia Ternifolia Seed Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Olea Europaea (Olive) Fruit Oil, Helianthus Annuus (Sunflower) Seed Oil, Parfum (Fragrance), Corylus Avellana (Hazel) Seed Oil, Vitis Vinifera (Grape) Seed Oil, Tocopheryl Acetate, Oenothera Biennis (Evening Primrose) Oil, Emblica Officinalis (Indian Gooseberry) Fruit Extract, Aloe Barbadensis (Aloe Vera) Extract, Borago Officinalis (Borage) Seed Oil, Eclipta Prostrata (False Daisy) Leaf Oil, Ribes Nigrum (Blackcurrant) Seed Oil, Solanum Lycopersicum (Tomato) Seed Oil, Tocopherol, Geraniol, Hexyl Cinnamal, Alpha-Isomethyl Ionone, Benzyl Benzoate.",
     images: [
       img(
         "elixir-radiance-dry-beauty-oil",
