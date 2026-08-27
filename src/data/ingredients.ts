@@ -69,7 +69,7 @@ export const ingredients: Ingredient[] = [
     name: "Peptides",
     group: "actives",
     inci: ["Peptide"],
-    what: "Support collagen production, visibly reducing fine lines and enhancing firmness.",
+    what: "A long-standing active in firming formulas, for the look of fine lines and firmness.",
   },
   {
     name: "Salicylic Acid",

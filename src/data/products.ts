@@ -79,7 +79,7 @@ export const products: Product[] = [
     benefits: [
       {
         title: "Advanced anti-aging formula",
-        body: "Crafted with hydrolyzed collagen and elastin to significantly reduce the appearance of wrinkles and fine lines.",
+        body: "Crafted with hydrolyzed collagen and elastin, for the look of smoother skin and softer fine lines.",
       },
       {
         title: "Deep hydration with hyaluronic acid",
@@ -226,7 +226,7 @@ export const products: Product[] = [
     benefits: [
       {
         title: "Peptide-infused revitalization",
-        body: "Enriched with peptides to support collagen production, visibly reducing fine lines and enhancing firmness.",
+        body: "Enriched with peptides, for skin that looks firmer and fine lines that look softer.",
       },
       {
         title: "Deep hydration with hyaluronic acid",

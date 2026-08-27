@@ -249,8 +249,8 @@ export default function AboutPage() {
             <div className="space-y-6 text-lg leading-relaxed lg:col-span-7">
               <p>
                 Each product is a composition of botanical extracts and scientifically
-                validated ingredients, designed to nourish, rejuvenate and transform the
-                skin — without giving up natural integrity to do it.
+                validated ingredients, chosen to nourish the skin and leave it
+                looking better for it — without giving up natural integrity to do it.
               </p>
               <p>
                 We believe in transparency, sustainability and efficacy. Formulas are
