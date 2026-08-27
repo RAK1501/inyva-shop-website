@@ -643,7 +643,7 @@ export const products: Product[] = [
     howToUse:
       "Wet your body before applying the scrub. Massage generously in circular motions, focusing on dry spots like elbows and knees. Rinse with warm water, towel dry, then moisturize for hydrated, smooth skin.",
     ingredients:
-      "Sodium Chloride, Vitis Vinifera (Grape) Seed Oil, Silica, Caprylic/Capric Triglyceride, Helianthus Annuus (Sunflower) Seed Oil, Glyceryl Citrate/Lactate/Linoleate/Oleate, Parfum (Fragrance), Propanediol, Olea Europaea (Olive) Fruit Oil, Heptyl Undecylenate, Juglans Regia (Walnut) Shell Powder, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Ricinus Communis (Castor) Seed Oil, Copernicia Cerifera (Carnauba) Wax, Sesamum Indicum (Sesame) Seed Oil, Corylus Avellana (Hazelnut) Seed Oil, Panthenol, Calendula Officinalis Flower Oil, Tocopheryl Acetate, Potassium Sorbate, Sodium Benzoate, Linalool.",
+      "Sodium Chloride, Vitis Vinifera (Grape) Seed Oil, Silica, Caprylic/Capric Triglyceride, Helianthus Annuus (Sunflower) Seed Oil, Glyceryl Citrate/Lactate/Linoleate/Oleate, Parfum (Fragrance), Propanediol, Olea Europaea (Olive) Fruit Oil, Heptyl Undecylenate, Juglans Regia (Walnut) Shell Powder, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Ricinus Communis (Castor) Seed Oil, Copernicia Cerifera (Carnauba) Wax, Sesamum Indicum (Sesame) Seed Oil, Corylus Avellana (Hazelnut) Seed Oil, Panthenol, Calendula Officinalis Flower Oil, Matcha Chlorophyll, Tocopheryl Acetate, Potassium Sorbate, Sodium Benzoate, Linalool.",
     images: [
       img("himalayan-harmony-body-scrub", "primary", "INYVA Himalayan Harmony Body Scrub tube"),
       img("himalayan-harmony-body-scrub", "gallery-2", "Himalayan Harmony body scrub dispensed from the tube"),
