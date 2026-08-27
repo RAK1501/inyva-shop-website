@@ -540,8 +540,8 @@ export const products: Product[] = [
       "Sesame, macadamia and sweet almond form the base. Ginger, clove, black pepper, rosemary, eucalyptus, camphor and menthol sit in the middle of the list, with caffeine, ivy, horsetail, guarana and butcher's broom further down. The pack directs it into cellulite-prone areas in circular motions after bathing, daily.",
     benefits: [
       {
-        title: "Combat cellulite naturally",
-        body: "Formulated with natural omega 3, 6 and vitamin E to target and reduce the appearance of cellulite for smoother, firmer skin.",
+        title: "Smoother-looking skin",
+        body: "Natural omega 3, 6 and vitamin E in a massage oil, for skin that looks smoother and feels firmer.",
       },
       {
         title: "Nourishing fatty acids",
@@ -553,7 +553,7 @@ export const products: Product[] = [
       },
       {
         title: "Suitable for all skin types",
-        body: "Gentle yet effective, so everyone can benefit from its slimming and toning properties.",
+        body: "Gentle yet effective, and made for daily use across larger areas of the body.",
       },
     ],
     howToUse:
