@@ -81,7 +81,7 @@ export const ingredients: Ingredient[] = [
     name: "Vitamin E",
     group: "actives",
     inci: ["Tocopheryl Acetate", "Tocopherol"],
-    what: "Antioxidant protection, supporting skin repair and defending against environmental stressors.",
+    what: "Antioxidant protection, helping skin look replenished and defending against environmental stressors.",
   },
   {
     name: "Panthenol",
@@ -167,7 +167,7 @@ export const ingredients: Ingredient[] = [
     name: "Algae",
     group: "botanicals",
     inci: ["Chlorophytes"],
-    what: "Rich in minerals and antioxidants. Detoxifies and revitalises while helping skin retain moisture.",
+    what: "Rich in minerals and antioxidants. Clarifies and revitalises while helping skin retain moisture.",
   },
   {
     name: "Aloe Vera",
@@ -221,7 +221,7 @@ export const ingredients: Ingredient[] = [
     name: "Activated Charcoal",
     group: "botanicals",
     inci: ["Charcoal Powder"],
-    what: "Draws out impurities, toxins and excess oil.",
+    what: "Draws out impurities and excess oil.",
   },
 
   // ---- oils, butters and minerals -----------------------------------------

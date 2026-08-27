@@ -247,7 +247,7 @@ export const products: Product[] = [
       },
       {
         title: "Nourishing vitamin E",
-        body: "The antioxidant power of vitamin E helps protect and repair the skin against environmental stressors.",
+        body: "The antioxidant power of vitamin E helps protect the skin against environmental stressors and keeps it looking replenished.",
       },
       {
         title: "Hydrating jojoba oil",
@@ -374,8 +374,8 @@ export const products: Product[] = [
       "A cream rather than a clay: jojoba oil, beeswax and olive esters carry the formula, with Fuller's earth, and neem, Madder, holy basil, green tea and Emblic extracts. The pack directs a generous layer over face and neck, left for ten to fifteen minutes, then rinsed and followed with a moisturiser.",
     benefits: [
       {
-        title: "Deep detoxification",
-        body: "Harnesses algae, green tea, Madder and neem leaf extract to remove impurities and toxins from the skin.",
+        title: "A deep clean",
+        body: "Algae, green tea, Madder and neem leaf extract lift away impurities and excess oil, leaving skin looking clear.",
       },
       {
         title: "Antioxidant-rich green tea",
@@ -415,8 +415,8 @@ export const products: Product[] = [
       "Activated charcoal with kaolin and bentonite, glycolic acid, and niacinamide alongside mulberry root and liquorice extracts. Garcinia butter and apricot kernel oil are in the formula. The pack directs a thin layer over clean, dry skin, avoiding eyes and lips, left for ten to fifteen minutes and used two to three times a week.",
     benefits: [
       {
-        title: "Powerful detoxification",
-        body: "Activated charcoal draws out impurities, toxins and excess oil, leaving skin clean and refreshed.",
+        title: "A thorough clean",
+        body: "Activated charcoal draws out impurities and excess oil, leaving skin clean and refreshed.",
       },
       {
         title: "Brightening mulberry extract",
@@ -549,7 +549,7 @@ export const products: Product[] = [
       },
       {
         title: "Antioxidant protection",
-        body: "Vitamin E supports skin repair and protects against environmental damage for healthier, more resilient skin.",
+        body: "Vitamin E protects against environmental damage, for skin that looks replenished and more resilient.",
       },
       {
         title: "Suitable for all skin types",
