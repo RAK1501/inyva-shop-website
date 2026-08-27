@@ -113,7 +113,7 @@ export const ingredients: Ingredient[] = [
     name: "Neem",
     group: "botanicals",
     inci: ["Azadirachta Indica"],
-    what: "Long used for its healing properties, and paired with Madder for clarity.",
+    what: "A botanical with a long history in skincare, paired here with Madder for clarity.",
   },
   {
     name: "Water Hyssop",
@@ -143,7 +143,7 @@ export const ingredients: Ingredient[] = [
     name: "Centella",
     group: "botanicals",
     inci: ["Centella Asiatica"],
-    what: "Known for its healing properties, and used to support firmness and elasticity.",
+    what: "A long-established skincare botanical, used here for the appearance of firmness and elasticity.",
   },
   {
     name: "Holy Basil",

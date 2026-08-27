@@ -134,7 +134,7 @@ export default function AboutPage() {
                 The line began with a commitment to lead rather than follow, harnessing the
                 potential of ingredients like peptides, collagen, hyaluronic acid,
                 niacinamide, natural omega and salicylic acid. Integrating those
-                scientifically backed actives with the healing properties of botanicals is
+                scientifically backed actives with the traditional strengths of botanicals is
                 the proposition.
               </p>
               <p>
@@ -275,8 +275,8 @@ export default function AboutPage() {
             </div>
             <div className="space-y-6 text-lg leading-relaxed text-ink-soft lg:col-span-7">
               <p>
-                The skincare market often falls short of blending nature&rsquo;s healing
-                elements with scientific efficacy, leaving a choice between products that
+                The skincare market often falls short of blending what nature offers
+                with scientific efficacy, leaving a choice between products that
                 respect the skin&rsquo;s natural balance and products that are grounded in
                 research.
               </p>
