@@ -93,3 +93,11 @@ by a one-off script:
 ## Licence
 
 Brand assets, product photography and copy are the property of NeuraNest Retail Pvt Ltd.
+
+## Deployment
+
+Hosted on Vercel and deployed from `main` — every push to that branch builds and promotes to production.
+
+Production is https://www.inyva.shop; the apex `inyva.shop` 308-redirects to it. DNS stays at GoDaddy: an A record on `@` and a CNAME on `www` point at Vercel, alongside the existing mail records.
+
+`NEXT_PUBLIC_WEB3FORMS_KEY` must be set on the host — Production, Preview and Development. Without it the enquiry forms have no endpoint.
