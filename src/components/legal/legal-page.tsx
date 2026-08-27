@@ -4,6 +4,12 @@ import { Container, Eyebrow } from "@/components/ui/primitives";
 export type LegalSection = { heading: string; body: ReactNode };
 
 /**
+ * The date all four policies took effect. One constant rather than four
+ * literals, so a revision moves them together and none is left behind.
+ */
+export const policyEffectiveDate = "27 February 2025";
+
+/**
  * The shared frame for the policy pages. It borrows the questions page's
  * opening — eyebrow, display heading, a short statement set beside it — so the
  * legal pages read as part of the site rather than as something bolted on.
@@ -27,9 +33,12 @@ export function LegalPage({
           <Eyebrow className="mb-7">{eyebrow}</Eyebrow>
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
             <h1 className="display-hero lg:col-span-7">{title}</h1>
-            <p className="max-w-md self-end text-lg leading-relaxed text-ink-soft lg:col-span-5">
-              {intro}
-            </p>
+            <div className="max-w-md self-end lg:col-span-5">
+              <p className="text-lg leading-relaxed text-ink-soft">{intro}</p>
+              <p className="eyebrow mt-6 text-muted">
+                Effective {policyEffectiveDate}
+              </p>
+            </div>
           </div>
         </Container>
       </section>

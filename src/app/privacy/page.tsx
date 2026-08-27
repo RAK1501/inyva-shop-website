@@ -74,6 +74,24 @@ export default function PrivacyPage() {
           ),
         },
         {
+          heading: "Do Not Track signals",
+          body: (
+            <>
+              <p>
+                Some browsers can send a &ldquo;Do Not Track&rdquo; signal asking sites
+                not to follow you across the web. There is no agreed standard for how a
+                site should answer one, so many say nothing at all. Ours is simple:
+              </p>
+              <p>
+                We do not track you across other websites or over time, whether or not
+                you send the signal, because there is nothing here that does it. No
+                analytics, no advertising network and no tracking cookie is present on
+                this site, so a Do Not Track signal has nothing to switch off.
+              </p>
+            </>
+          ),
+        },
+        {
           heading: "How we share information",
           body: (
             <>
