@@ -31,13 +31,7 @@ export type Product = {
   benefits: { title: string; body: string }[];
   /** Verbatim from the carton or tube. */
   howToUse: string;
-  /**
-   * Verbatim from the updated ingredients document, except where the printed
-   * carton was checked and differs: there the carton wins, because it is the
-   * declaration a customer can hold up against this page. Elixir Radiance and
-   * Contour Sculpt have been reconciled that way; the rest still follow the
-   * document, and have not been read off the packs.
-   */
+  /** Verbatim from the updated ingredients document. */
   ingredients: string;
   images: ProductImage[];
   featured?: boolean;
@@ -183,7 +177,7 @@ export const products: Product[] = [
     howToUse:
       "Before bed, cleanse skin. Take a small amount of cream onto fingertips, gently massage onto face in upward motions. Allow absorption before sleeping.",
     ingredients:
-      "Aqua (Water), Caprylic/Capric Triglyceride, Cetearyl Alcohol, Glycerin, Glyceryl Stearate, Rubia Cordifolia (Manjishta) Root Extract, Aloe Barbadensis Leaf Juice, Citrus Aurantium Dulcis (Orange) Flower Extract, Nelumbo Nucifera (Lotus) Flower Extract, Theobroma Cacao (Cocoa) Seed Butter, Cera Alba (Beeswax), Butyrospermum Parkii (Shea) Butter Extract, Diheptyl Succinate, Carica Papaya (Papaya) Fruit Extract, Emblica Officinalis Fruit Extract, Caprylyl Glycol, Sodium Stearoyl Glutamate, Oryza Sativa (Rice) Bran Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Steareth-21, Ceteareth-20, Arachidyl Alcohol, Chlorophytes, Tocopheryl Acetate, Parfum (Fragrance), Behenyl Alcohol, Allantoin, Helianthus Annuus (Sunflower) Seed Oil, Arachidyl Glucoside, Caprylhydroxamic Acid, Sodium Gluconate, Arginine, Sodium Benzoate, Carbomer, Cetearyl Glucoside, Stearic Acid, Capryloyl Glycerin/Sebacic Acid Copolymer, Sodium Cocoamphoacetate, Lauryl Glucoside, Sodium Hyaluronate, Sodium Cocoyl Glutamate, Sodium Lauryl Glucose Carboxylate, Potassium Sorbate, Green Tea Extract, Dehydroacetic Acid, Linalool, Limonene, Geraniol, Hexyl Cinnamal, Coumarin, Hydroxycitronellal, Citronellol.",
+      "Aqua (Water), Caprylic/Capric Triglyceride, Cetearyl Alcohol, Glycerin, Glyceryl Stearate, Rubia Cordifolia (Madder) Root Extract, Aloe Barbadensis Leaf Juice, Citrus Aurantium Dulcis (Orange) Flower Extract, Nelumbo Nucifera (Lotus) Flower Extract, Theobroma Cacao (Cocoa) Seed Butter, Cera Alba (Beeswax), Butyrospermum Parkii (Shea) Butter Extract, Diheptyl Succinate, Carica Papaya (Papaya) Fruit Extract, Emblica Officinalis Fruit Extract, Caprylyl Glycol, Sodium Stearoyl Glutamate, Oryza Sativa (Rice) Bran Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Steareth-21, Ceteareth-20, Arachidyl Alcohol, Chlorophytes, Tocopheryl Acetate, Parfum (Fragrance), Behenyl Alcohol, Allantoin, Helianthus Annuus (Sunflower) Seed Oil, Arachidyl Glucoside, Caprylhydroxamic Acid, Sodium Gluconate, Arginine, Sodium Benzoate, Carbomer, Cetearyl Glucoside, Stearic Acid, Capryloyl Glycerin/Sebacic Acid Copolymer, Sodium Cocoamphoacetate, Lauryl Glucoside, Sodium Hyaluronate, Sodium Cocoyl Glutamate, Sodium Lauryl Glucose Carboxylate, Potassium Sorbate, Green Tea Extract, Dehydroacetic Acid, Linalool, Limonene, Geraniol, Hexyl Cinnamal, Coumarin, Hydroxycitronellal, Citronellol.",
     images: [
       img("starlite-radiance-night-cream", "primary", "INYVA Starlite Radiance Night Cream tube"),
       img(
@@ -520,7 +514,7 @@ export const products: Product[] = [
     howToUse:
       "Dispense a small amount onto palm. For face, massage onto clean, dry skin in upward motions. For body, apply to damp skin after bathing, focusing on dry areas. For hair, distribute evenly, focusing on ends. Use daily.",
     ingredients:
-      "Coco-Caprylate/Caprate, Sesamum Indicum (Sesame) Seed Oil, Caprylic/Capric Triglyceride, Dicaprylyl Carbonate, Macadamia Ternifolia Seed Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Olea Europaea (Olive) Fruit Oil, Helianthus Annuus (Sunflower) Seed Oil, Parfum (Fragrance), Corylus Avellana (Hazel) Seed Oil, Vitis Vinifera (Grape) Seed Oil, Tocopheryl Acetate, Oenothera Biennis (Evening Primrose) Oil, Emblica Officinalis Seed Oil, Aloe Barbadensis (Aloe Vera) Extract, Borago Officinalis (Borage) Seed Oil, Eclipta Alba Shrub Oil, Ribes Nigrum (Blackcurrant) Seed Oil, Solanum Lycopersicum (Tomato) Seed Oil, Tocopherol, Geraniol.",
+      "Coco-Caprylate/Caprate, Sesamum Indicum (Sesame) Seed Oil, Caprylic/Capric Triglyceride, Dicaprylyl Carbonate, Macadamia Ternifolia Seed Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Olea Europaea (Olive) Fruit Oil, Helianthus Annuus (Sunflower) Seed Oil, Parfum (Fragrance), Corylus Avellana (Hazel) Seed Oil, Vitis Vinifera (Grape) Seed Oil, Tocopheryl Acetate, Oenothera Biennis (Evening Primrose) Oil, Emblica Officinalis (Indian Gooseberry) Fruit Extract, Aloe Barbadensis (Aloe Vera) Extract, Borago Officinalis (Borage) Seed Oil, Eclipta Prostrata (False Daisy) Leaf Oil, Ribes Nigrum (Blackcurrant) Seed Oil, Solanum Lycopersicum (Tomato) Seed Oil, Tocopherol, Geraniol.",
     images: [
       img(
         "elixir-radiance-dry-beauty-oil",
@@ -565,7 +559,7 @@ export const products: Product[] = [
     howToUse:
       "After bathing, pat your skin dry and dispense a small amount of Contour Sculpt onto your palms. Massage into cellulite-prone areas using circular motions until fully absorbed. Use daily for optimal results.",
     ingredients:
-      "Sesamum Indicum (Sesame) Seed Oil, Macadamia Ternifolia Seed Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Caprylic/Capric Triglyceride, Citrus Aurantium Dulcis (Orange) Oil, Citrus Medica Limonum (Lemon) Peel Oil, Helianthus Annuus (Sunflower) Seed Oil, Brassica Juncea (Mustard) Seed Oil, Menthol, Centella Asiatica Extract, Tocopheryl Acetate, Polyglyceryl-3 Oleate, Camphor, Rubia Cordifolia Oil, Camellia Sinensis (Green Tea) Leaf Extract, Acorus Calamus Root Extract, Vitis Vinifera (Grape) Seed Oil, Ruscus Aculeatus (Butcher's Broom) Root Extract, Cupressus Sempervirens Oil, Piper Nigrum (Pepper) Seed Oil, Zingiber Officinale (Ginger) Root Oil, Eugenia Caryophyllus (Clove) Oil, Rosmarinus Officinalis (Rosemary) Leaf Oil, Pogostemon Cablin (Patchouli) Leaf Oil, Eucalyptus Globulus (Eucalyptus) Leaf Oil, Tocopheryl Acetate, Curcuma Longa (Turmeric) Rhizome Extract, Hedera Helix (Ivy) Leaf Extract, Ginkgo Biloba Leaf Extract, Paullinia Cupana (Guarana) Fruit Extract, Equisetum Arvense (Horsetail) Extract, Carum Copticum (Ajowan) Fruit Extract, Hydnocarpus Laurifolia (Chaulmoogra) Seed Extract, Crocus Sativus (Saffron) Flower Extract, Caffeine, Eugenol, Linalool, Limonene, Citral.",
+      "Sesamum Indicum (Sesame) Seed Oil, Macadamia Ternifolia Seed Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Caprylic/Capric Triglyceride, Citrus Aurantium Dulcis (Orange) Oil, Citrus Medica Limonum (Lemon) Peel Oil, Helianthus Annuus (Sunflower) Seed Oil, Brassica Juncea (Mustard) Seed Oil, Menthol, Centella Asiatica Extract, Tocopheryl Acetate, Polyglyceryl-3 Oleate, Camphor, Rubia Cordifolia (Madder) Root Extract, Camellia Sinensis (Green Tea) Leaf Extract, Acorus Calamus Root Extract, Vitis Vinifera (Grape) Seed Oil, Ruscus Aculeatus (Butcher's Broom) Root Extract, Cupressus Sempervirens Oil, Piper Nigrum (Pepper) Seed Oil, Zingiber Officinale (Ginger) Root Oil, Eugenia Caryophyllus (Clove) Oil, Rosmarinus Officinalis (Rosemary) Leaf Oil, Pogostemon Cablin (Patchouli) Leaf Oil, Eucalyptus Globulus (Eucalyptus) Leaf Oil, Tocopheryl Acetate, Curcuma Longa (Turmeric) Rhizome Extract, Hedera Helix (Ivy) Leaf Extract, Ginkgo Biloba Leaf Extract, Paullinia Cupana (Guarana) Fruit Extract, Equisetum Arvense (Horsetail) Extract, Carum Copticum (Ajowan) Fruit Extract, Hydnocarpus Laurifolia (Chaulmoogra) Seed Extract, Crocus Sativus (Saffron) Flower Extract, Caffeine, Eugenol, Linalool, Limonene, Citral.",
     images: [
       img(
         "contour-sculpt-slimming-oil",
