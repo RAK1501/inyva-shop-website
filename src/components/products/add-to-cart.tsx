@@ -56,12 +56,23 @@ export function AddToCart({ slug }: { slug: string }) {
         </button>
       </div>
 
-      <p aria-live="polite" className="mt-3 min-h-5 text-sm text-muted">
-        {added
-          ? `Added. ${inBag} in your bag.`
-          : inBag > 0
-            ? `${inBag} already in your bag.`
-            : ""}
+      {/* The confirmation used to be a dead end: it said the bag had changed
+          and left finding the bag to the reader. The way on sits in the same
+          line, and only once there is something there to go to. */}
+      <p
+        aria-live="polite"
+        className="mt-3 flex min-h-5 flex-wrap items-baseline gap-x-3 text-sm text-muted"
+      >
+        {added ? (
+          <span>Added. {inBag} in your bag.</span>
+        ) : inBag > 0 ? (
+          <span>{inBag} already in your bag.</span>
+        ) : null}
+        {inBag > 0 ? (
+          <a href="/cart" className="link-underline text-copper">
+            View bag
+          </a>
+        ) : null}
       </p>
     </div>
   );

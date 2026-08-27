@@ -237,8 +237,8 @@ export const products: Product[] = [
         body: "Vitamin E offers antioxidant protection while improving skin texture and radiance.",
       },
       {
-        title: "Dermatologist-tested",
-        body: "Dermatologist-tested and free from harsh chemicals, suited to all skin types including sensitive skin.",
+        title: "Gentle enough for sensitive skin",
+        body: "Free from harsh chemicals, and formulated to suit all skin types including sensitive skin.",
       },
     ],
     howToUse:
