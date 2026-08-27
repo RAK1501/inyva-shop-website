@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import type { Product } from "@/data/products";
-import { removeFromCart, setQty, useCart } from "@/lib/cart";
+import { MAX_QTY, removeFromCart, setQty, useCart } from "@/lib/cart";
 import { OrderForm } from "./order-form";
 import { formatPrice } from "@/lib/price";
 
@@ -92,9 +92,13 @@ export function CartView({ products }: { products: Product[] }) {
                   role="group"
                   aria-label={`Quantity for ${product.name}`}
                 >
+                  {/* Stops at one. Dropping below used to delete the line,
+                      which is a surprising way to lose a product when there is
+                      a Remove control right beside it. */}
                   <QtyStep
                     label="Decrease quantity"
                     onClick={() => setQty(product.slug, line.qty - 1)}
+                    disabled={line.qty <= 1}
                   >
                     <span className="block h-px w-3 bg-current" />
                   </QtyStep>
@@ -102,6 +106,7 @@ export function CartView({ products }: { products: Product[] }) {
                   <QtyStep
                     label="Increase quantity"
                     onClick={() => setQty(product.slug, line.qty + 1)}
+                    disabled={line.qty >= MAX_QTY}
                   >
                     <span className="relative block h-3 w-3">
                       <span className="absolute left-0 top-1/2 block h-px w-3 -translate-y-1/2 bg-current" />
@@ -186,18 +191,21 @@ export function CartView({ products }: { products: Product[] }) {
 function QtyStep({
   label,
   onClick,
+  disabled = false,
   children,
 }: {
   label: string;
   onClick: () => void;
+  disabled?: boolean;
   children: React.ReactNode;
 }) {
   return (
     <button
       type="button"
       onClick={onClick}
+      disabled={disabled}
       aria-label={label}
-      className="flex h-11 w-11 items-center justify-center text-ink transition-colors duration-300 hover:text-copper"
+      className="flex h-11 w-11 items-center justify-center text-ink transition-colors duration-300 hover:text-copper disabled:cursor-not-allowed disabled:text-line-strong disabled:hover:text-line-strong"
     >
       <span aria-hidden="true">{children}</span>
     </button>

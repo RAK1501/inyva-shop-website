@@ -5,7 +5,7 @@ import { useSyncExternalStore } from "react";
 export type CartLine = { slug: string; qty: number };
 
 const KEY = "inyva.cart.v1";
-const MAX_QTY = 99;
+export const MAX_QTY = 99;
 
 let lines: CartLine[] = [];
 const listeners = new Set<() => void>();
